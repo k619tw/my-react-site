@@ -1,0 +1,292 @@
+/* Generated tokens - typography
+   Font Family: Inter
+*/
+:root {
+
+  /* ========================================
+     FONT FAMILIES
+     ======================================== */
+
+  --yuanhhou-font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --yuanhhou-font-family-mono: 'Monaco', 'Courier New', monospace;
+
+
+  /* ========================================
+     FONT WEIGHTS
+     ======================================== */
+
+  --yuanhhou-font-weight-300: 300;  /* Light */
+  --yuanhhou-font-weight-400: 400;  /* Regular / Normal */
+  --yuanhhou-font-weight-500: 500;  /* Medium */
+  --yuanhhou-font-weight-600: 600;  /* Semibold */
+  --yuanhhou-font-weight-700: 700;  /* Bold */
+
+
+  /* ========================================
+     FONT SIZES
+     ======================================== */
+
+  /* Display/Hero sizes */
+  --yuanhhou-font-size-display-lg: 48px;
+  --yuanhhou-font-size-display-md: 40px;
+  --yuanhhou-font-size-display-sm: 32px;
+
+  /* Heading sizes */
+  --yuanhhou-font-size-heading-lg: 28px;
+  --yuanhhou-font-size-heading-md: 24px;
+  --yuanhhou-font-size-heading-sm: 20px;
+  --yuanhhou-font-size-heading-xs: 18px;
+
+  /* Body/Paragraph sizes */
+  --yuanhhou-font-size-body-lg: 16px;
+  --yuanhhou-font-size-body-md: 14px;
+  --yuanhhou-font-size-body-sm: 12px;
+
+  /* Small/Caption sizes */
+  --yuanhhou-font-size-caption-lg: 12px;
+  --yuanhhou-font-size-caption-md: 11px;
+  --yuanhhou-font-size-caption-sm: 10px;
+
+
+  /* ========================================
+     LINE HEIGHTS
+     ======================================== */
+
+  /* Display line heights */
+  --yuanhhou-line-height-display-lg: 56px;  /* 48px * 1.17 */
+  --yuanhhou-line-height-display-md: 48px;  /* 40px * 1.2 */
+  --yuanhhou-line-height-display-sm: 40px;  /* 32px * 1.25 */
+
+  /* Heading line heights */
+  --yuanhhou-line-height-heading-lg: 36px;  /* 28px * 1.29 */
+  --yuanhhou-line-height-heading-md: 32px;  /* 24px * 1.33 */
+  --yuanhhou-line-height-heading-sm: 28px;  /* 20px * 1.4 */
+  --yuanhhou-line-height-heading-xs: 24px;  /* 18px * 1.33 */
+
+  /* Body line heights */
+  --yuanhhou-line-height-body-lg: 24px;  /* 16px * 1.5 */
+  --yuanhhou-line-height-body-md: 20px;  /* 14px * 1.43 */
+  --yuanhhou-line-height-body-sm: 18px;  /* 12px * 1.5 */
+
+  /* Caption line heights */
+  --yuanhhou-line-height-caption-lg: 16px;  /* 12px * 1.33 */
+  --yuanhhou-line-height-caption-md: 16px;  /* 11px * 1.45 */
+  --yuanhhou-line-height-caption-sm: 14px;  /* 10px * 1.4 */
+
+
+  /* ========================================
+     LETTER SPACING
+     ======================================== */
+
+  --yuanhhou-letter-spacing-tight: -0.5px;
+  --yuanhhou-letter-spacing-normal: 0px;
+  --yuanhhou-letter-spacing-loose: 0.5px;
+  --yuanhhou-letter-spacing-looser: 1px;
+
+
+  /* ========================================
+     SEMANTIC TYPOGRAPHY STYLES
+     ======================================== */
+
+  /* Display styles - Hero / Page titles */
+   --yuanhhou-display-lg-font-size: var(--yuanhhou-font-size-display-lg);
+   --yuanhhou-display-lg-line-height: var(--yuanhhou-line-height-display-lg);
+   --yuanhhou-display-lg-font-weight: var(--yuanhhou-font-weight-700);
+   --yuanhhou-display-lg-letter-spacing: var(--yuanhhou-letter-spacing-tight);
+
+   --yuanhhou-display-md-font-size: var(--yuanhhou-font-size-display-md);
+   --yuanhhou-display-md-line-height: var(--yuanhhou-line-height-display-md);
+   --yuanhhou-display-md-font-weight: var(--yuanhhou-font-weight-700);
+   --yuanhhou-display-md-letter-spacing: var(--yuanhhou-letter-spacing-tight);
+
+   --yuanhhou-display-sm-font-size: var(--yuanhhou-font-size-display-sm);
+   --yuanhhou-display-sm-line-height: var(--yuanhhou-line-height-display-sm);
+   --yuanhhou-display-sm-font-weight: var(--yuanhhou-font-weight-700);
+   --yuanhhou-display-sm-letter-spacing: var(--yuanhhou-letter-spacing-tight);
+
+  /* Heading styles - Section titles */
+  --yuanhhou-heading-lg-font-size: 28px;
+   --yuanhhou-heading-lg-line-height: var(--yuanhhou-line-height-heading-lg);
+   --yuanhhou-heading-lg-font-weight: var(--yuanhhou-font-weight-700);
+   --yuanhhou-heading-lg-letter-spacing: var(--yuanhhou-letter-spacing-normal);
+
+   --yuanhhou-heading-md-font-size: var(--yuanhhou-font-size-heading-md);
+   --yuanhhou-heading-md-line-height: var(--yuanhhou-line-height-heading-md);
+   --yuanhhou-heading-md-font-weight: var(--yuanhhou-font-weight-600);
+   --yuanhhou-heading-md-letter-spacing: var(--yuanhhou-letter-spacing-normal);
+
+   --yuanhhou-heading-sm-font-size: var(--yuanhhou-font-size-heading-sm);
+   --yuanhhou-heading-sm-line-height: var(--yuanhhou-line-height-heading-sm);
+   --yuanhhou-heading-sm-font-weight: var(--yuanhhou-font-weight-600);
+   --yuanhhou-heading-sm-letter-spacing: var(--yuanhhou-letter-spacing-normal);
+
+   --yuanhhou-heading-xs-font-size: var(--yuanhhou-font-size-heading-xs);
+   --yuanhhou-heading-xs-line-height: var(--yuanhhou-line-height-heading-xs);
+   --yuanhhou-heading-xs-font-weight: var(--yuanhhou-font-weight-600);
+   --yuanhhou-heading-xs-letter-spacing: var(--yuanhhou-letter-spacing-normal);
+
+  /* Body/Paragraph styles - Main content */
+  --yuanhhou-body-lg-font-size: 16px;
+   --yuanhhou-body-lg-line-height: var(--yuanhhou-line-height-body-lg);
+   --yuanhhou-body-lg-font-weight: var(--yuanhhou-font-weight-400);
+   --yuanhhou-body-lg-letter-spacing: var(--yuanhhou-letter-spacing-normal);
+
+   --yuanhhou-body-md-font-size: var(--yuanhhou-font-size-body-md);
+   --yuanhhou-body-md-line-height: var(--yuanhhou-line-height-body-md);
+   --yuanhhou-body-md-font-weight: var(--yuanhhou-font-weight-400);
+   --yuanhhou-body-md-letter-spacing: var(--yuanhhou-letter-spacing-normal);
+
+   --yuanhhou-body-sm-font-size: var(--yuanhhou-font-size-body-sm);
+   --yuanhhou-body-sm-line-height: var(--yuanhhou-line-height-body-sm);
+   --yuanhhou-body-sm-font-weight: var(--yuanhhou-font-weight-400);
+   --yuanhhou-body-sm-letter-spacing: var(--yuanhhou-letter-spacing-normal);
+
+  /* Caption/Label styles - Secondary text */
+  --yuanhhou-caption-lg-font-size: 12px;
+   --yuanhhou-caption-lg-line-height: var(--yuanhhou-line-height-caption-lg);
+   --yuanhhou-caption-lg-font-weight: var(--yuanhhou-font-weight-500);
+   --yuanhhou-caption-lg-letter-spacing: var(--yuanhhou-letter-spacing-normal);
+
+   --yuanhhou-caption-md-font-size: var(--yuanhhou-font-size-caption-md);
+   --yuanhhou-caption-md-line-height: var(--yuanhhou-line-height-caption-md);
+   --yuanhhou-caption-md-font-weight: var(--yuanhhou-font-weight-500);
+   --yuanhhou-caption-md-letter-spacing: 0.5px;
+
+   --yuanhhou-caption-sm-font-size: var(--yuanhhou-font-size-caption-sm);
+   --yuanhhou-caption-sm-line-height: var(--yuanhhou-line-height-caption-sm);
+   --yuanhhou-caption-sm-font-weight: var(--yuanhhou-font-weight-500);
+   --yuanhhou-caption-sm-letter-spacing: 0.5px;
+
+  /* Button / Interactive styles */
+  --yuanhhou-button-lg-font-size: 16px;
+   --yuanhhou-button-lg-line-height: var(--yuanhhou-line-height-body-lg);
+   --yuanhhou-button-lg-font-weight: var(--yuanhhou-font-weight-600);
+   --yuanhhou-button-lg-letter-spacing: var(--yuanhhou-letter-spacing-normal);
+
+   --yuanhhou-button-md-font-size: var(--yuanhhou-font-size-body-md);
+   --yuanhhou-button-md-line-height: var(--yuanhhou-line-height-body-md);
+   --yuanhhou-button-md-font-weight: var(--yuanhhou-font-weight-600);
+   --yuanhhou-button-md-letter-spacing: var(--yuanhhou-letter-spacing-normal);
+
+   --yuanhhou-button-sm-font-size: var(--yuanhhou-font-size-caption-lg);
+   --yuanhhou-button-sm-line-height: var(--yuanhhou-line-height-caption-lg);
+   --yuanhhou-button-sm-font-weight: var(--yuanhhou-font-weight-600);
+   --yuanhhou-button-sm-letter-spacing: var(--yuanhhou-letter-spacing-normal);
+
+   /* ========================================
+       NAMED TYPOGRAPHY STYLES (PROJECT)
+       Mappings for: Large title, Title 1, Title 2, Title 3,
+       Headline, Body 1, Body 2, Button 1, Button 2,
+       Sunhead, Label, Footnote, Footnote-emphasized, Caption
+       ======================================== */
+
+   /* Large title (H1) */
+   --yuanhhou-type-large-title-font-size: var(--yuanhhou-display-lg-font-size);
+   --yuanhhou-type-large-title-line-height: var(--yuanhhou-display-lg-line-height);
+   --yuanhhou-type-large-title-font-weight: var(--yuanhhou-display-lg-font-weight);
+   --yuanhhou-type-large-title-letter-spacing: var(--yuanhhou-display-lg-letter-spacing);
+
+   /* Title 1 (H1/H2) */
+   --yuanhhou-type-title-1-font-size: var(--yuanhhou-display-md-font-size);
+   --yuanhhou-type-title-1-line-height: var(--yuanhhou-display-md-line-height);
+   --yuanhhou-type-title-1-font-weight: var(--yuanhhou-display-md-font-weight);
+   --yuanhhou-type-title-1-letter-spacing: var(--yuanhhou-display-md-letter-spacing);
+
+   /* Title 2 (H2) */
+   --yuanhhou-type-title-2-font-size: var(--yuanhhou-heading-lg-font-size);
+   --yuanhhou-type-title-2-line-height: var(--yuanhhou-heading-lg-line-height);
+   --yuanhhou-type-title-2-font-weight: var(--yuanhhou-heading-lg-font-weight);
+   --yuanhhou-type-title-2-letter-spacing: var(--yuanhhou-heading-lg-letter-spacing);
+
+   /* Title 3 (H3) */
+   --yuanhhou-type-title-3-font-size: var(--yuanhhou-heading-md-font-size);
+   --yuanhhou-type-title-3-line-height: var(--yuanhhou-heading-md-line-height);
+   --yuanhhou-type-title-3-font-weight: var(--yuanhhou-heading-md-font-weight);
+   --yuanhhou-type-title-3-letter-spacing: var(--yuanhhou-heading-md-letter-spacing);
+
+   /* Headline */
+   --yuanhhou-type-headline-font-size: var(--yuanhhou-heading-sm-font-size);
+   --yuanhhou-type-headline-line-height: var(--yuanhhou-heading-sm-line-height);
+   --yuanhhou-type-headline-font-weight: var(--yuanhhou-heading-sm-font-weight);
+   --yuanhhou-type-headline-letter-spacing: var(--yuanhhou-heading-sm-letter-spacing);
+
+   /* Body 1 (primary body) */
+   --yuanhhou-type-body-1-font-size: var(--yuanhhou-body-lg-font-size);
+   --yuanhhou-type-body-1-line-height: var(--yuanhhou-body-lg-line-height);
+   --yuanhhou-type-body-1-font-weight: var(--yuanhhou-body-lg-font-weight);
+   --yuanhhou-type-body-1-letter-spacing: var(--yuanhhou-body-lg-letter-spacing);
+
+   /* Body 2 (secondary body) */
+   --yuanhhou-type-body-2-font-size: var(--yuanhhou-body-md-font-size);
+   --yuanhhou-type-body-2-line-height: var(--yuanhhou-body-md-line-height);
+   --yuanhhou-type-body-2-font-weight: var(--yuanhhou-body-md-font-weight);
+   --yuanhhou-type-body-2-letter-spacing: var(--yuanhhou-body-md-letter-spacing);
+
+   /* Button 1 (primary CTA) */
+   --yuanhhou-type-button-1-font-size: var(--yuanhhou-button-lg-font-size);
+   --yuanhhou-type-button-1-line-height: var(--yuanhhou-button-lg-line-height);
+   --yuanhhou-type-button-1-font-weight: var(--yuanhhou-button-lg-font-weight);
+   --yuanhhou-type-button-1-letter-spacing: var(--yuanhhou-button-lg-letter-spacing);
+
+   /* Button 2 (secondary CTA) */
+   --yuanhhou-type-button-2-font-size: var(--yuanhhou-button-md-font-size);
+   --yuanhhou-type-button-2-line-height: var(--yuanhhou-button-md-line-height);
+   --yuanhhou-type-button-2-font-weight: var(--yuanhhou-button-md-font-weight);
+   --yuanhhou-type-button-2-letter-spacing: var(--yuanhhou-button-md-letter-spacing);
+
+   /* Sunhead (compact prominent heading) */
+   --yuanhhou-type-sunhead-font-size: var(--yuanhhou-display-sm-font-size);
+   --yuanhhou-type-sunhead-line-height: var(--yuanhhou-display-sm-line-height);
+   --yuanhhou-type-sunhead-font-weight: var(--yuanhhou-display-sm-font-weight);
+   --yuanhhou-type-sunhead-letter-spacing: var(--yuanhhou-display-sm-letter-spacing);
+
+   /* Label */
+   --yuanhhou-type-label-font-size: var(--yuanhhou-caption-lg-font-size);
+   --yuanhhou-type-label-line-height: var(--yuanhhou-caption-lg-line-height);
+   --yuanhhou-type-label-font-weight: var(--yuanhhou-caption-lg-font-weight);
+   --yuanhhou-type-label-letter-spacing: var(--yuanhhou-caption-lg-letter-spacing);
+
+   /* Footnote */
+   --yuanhhou-type-footnote-font-size: var(--yuanhhou-caption-md-font-size);
+   --yuanhhou-type-footnote-line-height: var(--yuanhhou-caption-md-line-height);
+   --yuanhhou-type-footnote-font-weight: var(--yuanhhou-caption-md-font-weight);
+   --yuanhhou-type-footnote-letter-spacing: var(--yuanhhou-caption-md-letter-spacing);
+
+   /* Footnote - emphasized (same size as footnote but heavier) */
+   --yuanhhou-type-footnote-emphasized-font-size: var(--yuanhhou-caption-md-font-size);
+   --yuanhhou-type-footnote-emphasized-line-height: var(--yuanhhou-caption-md-line-height);
+   --yuanhhou-type-footnote-emphasized-font-weight: 600;
+   --yuanhhou-type-footnote-emphasized-letter-spacing: var(--yuanhhou-caption-md-letter-spacing);
+
+   /* Caption */
+   --yuanhhou-type-caption-font-size: var(--yuanhhou-caption-sm-font-size);
+   --yuanhhou-type-caption-line-height: var(--yuanhhou-caption-sm-line-height);
+   --yuanhhou-type-caption-font-weight: var(--yuanhhou-caption-sm-font-weight);
+   --yuanhhou-type-caption-letter-spacing: var(--yuanhhou-caption-sm-letter-spacing);
+
+  /* ========================================
+     COMPOSITE / BUNDLED TOKENS
+     Each token contains: font-size / line-height / font-weight / letter-spacing
+     Format: <font-size> / <line-height> / <font-weight> / <letter-spacing>
+  ======================================== */
+
+  --yuanhhou-type-large-title: var(--yuanhhou-type-large-title-font-size) / var(--yuanhhou-type-large-title-line-height) / var(--yuanhhou-type-large-title-font-weight) / var(--yuanhhou-type-large-title-letter-spacing);
+  --yuanhhou-type-title-1: var(--yuanhhou-type-title-1-font-size) / var(--yuanhhou-type-title-1-line-height) / var(--yuanhhou-type-title-1-font-weight) / var(--yuanhhou-type-title-1-letter-spacing);
+  --yuanhhou-type-title-2: var(--yuanhhou-type-title-2-font-size) / var(--yuanhhou-type-title-2-line-height) / var(--yuanhhou-type-title-2-font-weight) / var(--yuanhhou-type-title-2-letter-spacing);
+  --yuanhhou-type-title-3: var(--yuanhhou-type-title-3-font-size) / var(--yuanhhou-type-title-3-line-height) / var(--yuanhhou-type-title-3-font-weight) / var(--yuanhhou-type-title-3-letter-spacing);
+  --yuanhhou-type-headline: var(--yuanhhou-type-headline-font-size) / var(--yuanhhou-type-headline-line-height) / var(--yuanhhou-type-headline-font-weight) / var(--yuanhhou-type-headline-letter-spacing);
+  --yuanhhou-type-body-1: var(--yuanhhou-type-body-1-font-size) / var(--yuanhhou-type-body-1-line-height) / var(--yuanhhou-type-body-1-font-weight) / var(--yuanhhou-type-body-1-letter-spacing);
+  --yuanhhou-type-body-2: var(--yuanhhou-type-body-2-font-size) / var(--yuanhhou-type-body-2-line-height) / var(--yuanhhou-type-body-2-font-weight) / var(--yuanhhou-type-body-2-letter-spacing);
+  --yuanhhou-type-button-1: var(--yuanhhou-type-button-1-font-size) / var(--yuanhhou-type-button-1-line-height) / var(--yuanhhou-type-button-1-font-weight) / var(--yuanhhou-type-button-1-letter-spacing);
+  --yuanhhou-type-button-2: var(--yuanhhou-type-button-2-font-size) / var(--yuanhhou-type-button-2-line-height) / var(--yuanhhou-type-button-2-font-weight) / var(--yuanhhou-type-button-2-letter-spacing);
+  --yuanhhou-type-sunhead: var(--yuanhhou-type-sunhead-font-size) / var(--yuanhhou-type-sunhead-line-height) / var(--yuanhhou-type-sunhead-font-weight) / var(--yuanhhou-type-sunhead-letter-spacing);
+  --yuanhhou-type-label: var(--yuanhhou-type-label-font-size) / var(--yuanhhou-type-label-line-height) / var(--yuanhhou-type-label-font-weight) / var(--yuanhhou-type-label-letter-spacing);
+  --yuanhhou-type-footnote: var(--yuanhhou-type-footnote-font-size) / var(--yuanhhou-type-footnote-line-height) / var(--yuanhhou-type-footnote-font-weight) / var(--yuanhhou-type-footnote-letter-spacing);
+  --yuanhhou-type-footnote-emphasized: var(--yuanhhou-type-footnote-emphasized-font-size) / var(--yuanhhou-type-footnote-emphasized-line-height) / var(--yuanhhou-type-footnote-emphasized-font-weight) / var(--yuanhhou-type-footnote-emphasized-letter-spacing);
+  --yuanhhou-type-caption: var(--yuanhhou-type-caption-font-size) / var(--yuanhhou-type-caption-line-height) / var(--yuanhhou-type-caption-font-weight) / var(--yuanhhou-type-caption-letter-spacing);
+
+
+
+}
+
+/* EOF */

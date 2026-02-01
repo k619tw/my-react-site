@@ -1,0 +1,462 @@
+/* ========================================
+   DESIGN TOKENS - PRIMITIVES
+   ========================================
+   Raw color palette values - shared across all products/themes.
+   These are the building blocks that semantic tokens reference.
+   
+   Naming convention: --yuanhhou-{hue}-{shade}-alpha-{opacity}
+   ======================================== */
+
+:root {
+  /* ——— BLUE ——— */
+  --yuanhhou-blue-50-alpha-100: rgba(241, 249, 255, 1.0);
+  --yuanhhou-blue-100-alpha-100: rgba(221, 237, 248, 1.0);
+  --yuanhhou-blue-200-alpha-100: rgba(179, 214, 239, 1.0);
+  --yuanhhou-blue-300-alpha-100: rgba(141, 192, 232, 1.0);
+  --yuanhhou-blue-400-alpha-100: rgba(81, 160, 220, 1.0);
+  --yuanhhou-blue-450-alpha-100: rgba(38, 147, 219, 1.0);
+  --yuanhhou-blue-500-alpha-5: rgba(0, 121, 200, 0.05);
+  --yuanhhou-blue-500-alpha-10: rgba(0, 121, 200, 0.1);
+  --yuanhhou-blue-500-alpha-15: rgba(0, 121, 200, 0.15);
+  --yuanhhou-blue-500-alpha-20: rgba(0, 121, 200, 0.2);
+  --yuanhhou-blue-500-alpha-25: rgba(0, 121, 200, 0.25);
+  --yuanhhou-blue-500-alpha-30: rgba(0, 121, 200, 0.3);
+  --yuanhhou-blue-500-alpha-35: rgba(0, 121, 200, 0.35);
+  --yuanhhou-blue-500-alpha-40: rgba(0, 121, 200, 0.4);
+  --yuanhhou-blue-500-alpha-45: rgba(0, 121, 200, 0.45);
+  --yuanhhou-blue-500-alpha-50: rgba(0, 121, 200, 0.5);
+  --yuanhhou-blue-500-alpha-55: rgba(0, 121, 200, 0.55);
+  --yuanhhou-blue-500-alpha-60: rgba(0, 121, 200, 0.6);
+  --yuanhhou-blue-500-alpha-65: rgba(0, 121, 200, 0.65);
+  --yuanhhou-blue-500-alpha-70: rgba(0, 121, 200, 0.7);
+  --yuanhhou-blue-500-alpha-75: rgba(0, 121, 200, 0.75);
+  --yuanhhou-blue-500-alpha-80: rgba(0, 121, 200, 0.8);
+  --yuanhhou-blue-500-alpha-85: rgba(0, 121, 200, 0.85);
+  --yuanhhou-blue-500-alpha-90: rgba(0, 121, 200, 0.9);
+  --yuanhhou-blue-500-alpha-95: rgba(0, 121, 200, 0.95);
+  --yuanhhou-blue-500-alpha-100: rgba(0, 121, 200, 1.0);
+  --yuanhhou-blue-550-alpha-100: rgba(0, 112, 190, 1.0);
+  --yuanhhou-blue-600-alpha-100: rgba(6, 82, 174, 1.0);
+  --yuanhhou-blue-700-alpha-100: rgba(0, 57, 138, 1.0);
+  --yuanhhou-blue-800-alpha-100: rgba(15, 36, 96, 1.0);
+  --yuanhhou-blue-900-alpha-100: rgba(13, 24, 70, 1.0);
+  --yuanhhou-blue-950-alpha-100: rgba(12, 18, 41, 1.0);
+  --yuanhhou-blue-990-alpha-100: rgba(3, 7, 23, 1.0);
+
+  /* ——— BRIGHT BLUE ——— */
+  --yuanhhou-bright-blue-500-alpha-5: rgba(20, 162, 255, 0.05);
+  --yuanhhou-bright-blue-500-alpha-10: rgba(20, 162, 255, 0.1);
+  --yuanhhou-bright-blue-500-alpha-15: rgba(20, 162, 255, 0.15);
+  --yuanhhou-bright-blue-500-alpha-20: rgba(20, 162, 255, 0.2);
+  --yuanhhou-bright-blue-500-alpha-25: rgba(20, 162, 255, 0.25);
+  --yuanhhou-bright-blue-500-alpha-30: rgba(20, 162, 255, 0.3);
+  --yuanhhou-bright-blue-500-alpha-35: rgba(20, 162, 255, 0.35);
+  --yuanhhou-bright-blue-500-alpha-40: rgba(20, 162, 255, 0.4);
+  --yuanhhou-bright-blue-500-alpha-45: rgba(20, 162, 255, 0.45);
+  --yuanhhou-bright-blue-500-alpha-50: rgba(20, 162, 255, 0.5);
+  --yuanhhou-bright-blue-500-alpha-55: rgba(20, 162, 255, 0.55);
+  --yuanhhou-bright-blue-500-alpha-60: rgba(20, 162, 255, 0.6);
+  --yuanhhou-bright-blue-500-alpha-65: rgba(20, 162, 255, 0.65);
+  --yuanhhou-bright-blue-500-alpha-70: rgba(20, 162, 255, 0.7);
+  --yuanhhou-bright-blue-500-alpha-75: rgba(20, 162, 255, 0.75);
+  --yuanhhou-bright-blue-500-alpha-80: rgba(20, 162, 255, 0.8);
+  --yuanhhou-bright-blue-500-alpha-85: rgba(20, 162, 255, 0.85);
+  --yuanhhou-bright-blue-500-alpha-90: rgba(20, 162, 255, 0.9);
+  --yuanhhou-bright-blue-500-alpha-95: rgba(20, 162, 255, 0.95);
+  --yuanhhou-bright-blue-500-alpha-100: rgba(20, 162, 255, 1.0);
+
+  /* ——— FUCHSIA ——— */
+  --yuanhhou-fuchsia-100: rgba(252, 236, 244, 1.0);
+  --yuanhhou-fuchsia-200: rgba(251, 211, 232, 1.0);
+  --yuanhhou-fuchsia-300: rgba(250, 166, 201, 1.0);
+  --yuanhhou-fuchsia-400: rgba(242, 108, 172, 1.0);
+  --yuanhhou-fuchsia-500: rgba(208, 38, 112, 1.0);
+  --yuanhhou-fuchsia-600: rgba(159, 24, 83, 1.0);
+  --yuanhhou-fuchsia-700: rgba(116, 9, 55, 1.0);
+  --yuanhhou-fuchsia-800: rgba(81, 2, 36, 1.0);
+  --yuanhhou-fuchsia-900: rgba(44, 12, 26, 1.0);
+
+  /* ——— GREEN ——— */
+  --yuanhhou-green-100-alpha-100: rgba(221, 252, 230, 1.0);
+  --yuanhhou-green-200-alpha-100: rgba(161, 246, 183, 1.0);
+  --yuanhhou-green-300-alpha-100: rgba(99, 232, 135, 1.0);
+  --yuanhhou-green-400-alpha-05: rgba(62, 202, 102, 0.05);
+  --yuanhhou-green-400-alpha-10: rgba(62, 202, 102, 0.1);
+  --yuanhhou-green-400-alpha-15: rgba(62, 202, 102, 0.15);
+  --yuanhhou-green-400-alpha-20: rgba(62, 202, 102, 0.2);
+  --yuanhhou-green-400-alpha-25: rgba(62, 202, 102, 0.25);
+  --yuanhhou-green-400-alpha-30: rgba(62, 202, 102, 0.3);
+  --yuanhhou-green-400-alpha-35: rgba(62, 202, 102, 0.35);
+  --yuanhhou-green-400-alpha-40: rgba(62, 202, 102, 0.4);
+  --yuanhhou-green-400-alpha-45: rgba(62, 202, 102, 0.45);
+  --yuanhhou-green-400-alpha-50: rgba(62, 202, 102, 0.5);
+  --yuanhhou-green-400-alpha-55: rgba(62, 202, 102, 0.55);
+  --yuanhhou-green-400-alpha-60: rgba(62, 202, 102, 0.6);
+  --yuanhhou-green-400-alpha-65: rgba(62, 202, 102, 0.65);
+  --yuanhhou-green-400-alpha-70: rgba(62, 202, 102, 0.7);
+  --yuanhhou-green-400-alpha-75: rgba(62, 202, 102, 0.75);
+  --yuanhhou-green-400-alpha-80: rgba(62, 202, 102, 0.8);
+  --yuanhhou-green-400-alpha-85: rgba(62, 202, 102, 0.85);
+  --yuanhhou-green-400-alpha-90: rgba(62, 202, 102, 0.9);
+  --yuanhhou-green-400-alpha-95: rgba(62, 202, 102, 0.95);
+  --yuanhhou-green-400-alpha-100: rgba(62, 202, 102, 1.0);
+  --yuanhhou-green-500-alpha-05: rgba(27, 136, 60, 0.05);
+  --yuanhhou-green-500-alpha-10: rgba(27, 136, 60, 0.1);
+  --yuanhhou-green-500-alpha-15: rgba(27, 136, 60, 0.15);
+  --yuanhhou-green-500-alpha-20: rgba(27, 136, 60, 0.2);
+  --yuanhhou-green-500-alpha-25: rgba(27, 136, 60, 0.25);
+  --yuanhhou-green-500-alpha-30: rgba(27, 136, 60, 0.3);
+  --yuanhhou-green-500-alpha-35: rgba(27, 136, 60, 0.35);
+  --yuanhhou-green-500-alpha-40: rgba(27, 136, 60, 0.4);
+  --yuanhhou-green-500-alpha-45: rgba(27, 136, 60, 0.45);
+  --yuanhhou-green-500-alpha-50: rgba(27, 136, 60, 0.5);
+  --yuanhhou-green-500-alpha-55: rgba(27, 136, 60, 0.55);
+  --yuanhhou-green-500-alpha-60: rgba(27, 136, 60, 0.6);
+  --yuanhhou-green-500-alpha-65: rgba(27, 136, 60, 0.65);
+  --yuanhhou-green-500-alpha-70: rgba(27, 136, 60, 0.7);
+  --yuanhhou-green-500-alpha-75: rgba(27, 136, 60, 0.75);
+  --yuanhhou-green-500-alpha-80: rgba(27, 136, 60, 0.8);
+  --yuanhhou-green-500-alpha-85: rgba(27, 136, 60, 0.85);
+  --yuanhhou-green-500-alpha-90: rgba(27, 136, 60, 0.9);
+  --yuanhhou-green-500-alpha-95: rgba(27, 136, 60, 0.95);
+  --yuanhhou-green-500-alpha-100: rgba(27, 136, 60, 1.0);
+  --yuanhhou-green-600-alpha-100: rgba(14, 96, 39, 1.0);
+  --yuanhhou-green-700-alpha-100: rgba(4, 67, 23, 1.0);
+  --yuanhhou-green-800-alpha-100: rgba(2, 45, 13, 1.0);
+  --yuanhhou-green-900-alpha-100: rgba(7, 25, 8, 1.0);
+
+  /* ——— GREY ——— */
+  --yuanhhou-grey-0-alpha-1: rgba(255, 255, 255, 0.01);
+  --yuanhhou-grey-0-alpha-05: rgba(255, 255, 255, 0.05);
+  --yuanhhou-grey-0-alpha-10: rgba(255, 255, 255, 0.1);
+  --yuanhhou-grey-0-alpha-15: rgba(255, 255, 255, 0.15);
+  --yuanhhou-grey-0-alpha-20: rgba(255, 255, 255, 0.2);
+  --yuanhhou-grey-0-alpha-25: rgba(255, 255, 255, 0.25);
+  --yuanhhou-grey-0-alpha-30: rgba(255, 255, 255, 0.3);
+  --yuanhhou-grey-0-alpha-35: rgba(255, 255, 255, 0.35);
+  --yuanhhou-grey-0-alpha-40: rgba(255, 255, 255, 0.4);
+  --yuanhhou-grey-0-alpha-45: rgba(255, 255, 255, 0.45);
+  --yuanhhou-grey-0-alpha-50: rgba(255, 255, 255, 0.5);
+  --yuanhhou-grey-0-alpha-55: rgba(255, 255, 255, 0.55);
+  --yuanhhou-grey-0-alpha-60: rgba(255, 255, 255, 0.6);
+  --yuanhhou-grey-0-alpha-65: rgba(255, 255, 255, 0.65);
+  --yuanhhou-grey-0-alpha-70: rgba(255, 255, 255, 0.7);
+  --yuanhhou-grey-0-alpha-75: rgba(255, 255, 255, 0.75);
+  --yuanhhou-grey-0-alpha-80: rgba(255, 255, 255, 0.8);
+  --yuanhhou-grey-0-alpha-85: rgba(255, 255, 255, 0.85);
+  --yuanhhou-grey-0-alpha-90: rgba(255, 255, 255, 0.9);
+  --yuanhhou-grey-0-alpha-95: rgba(255, 255, 255, 0.95);
+  --yuanhhou-grey-0-alpha-100: rgba(255, 255, 255, 1.0);
+  --yuanhhou-grey-50-alpha-05: rgba(242, 244, 247, 0.05);
+  --yuanhhou-grey-50-alpha-10: rgba(244, 245, 247, 0.1);
+  --yuanhhou-grey-50-alpha-15: rgba(244, 245, 247, 0.15);
+  --yuanhhou-grey-50-alpha-20: rgba(244, 245, 247, 0.2);
+  --yuanhhou-grey-50-alpha-25: rgba(244, 245, 247, 0.25);
+  --yuanhhou-grey-50-alpha-30: rgba(244, 245, 247, 0.3);
+  --yuanhhou-grey-50-alpha-35: rgba(244, 245, 247, 0.35);
+  --yuanhhou-grey-50-alpha-40: rgba(244, 245, 247, 0.4);
+  --yuanhhou-grey-50-alpha-45: rgba(244, 245, 247, 0.45);
+  --yuanhhou-grey-50-alpha-50: rgba(244, 245, 247, 0.5);
+  --yuanhhou-grey-50-alpha-55: rgba(244, 245, 247, 0.55);
+  --yuanhhou-grey-50-alpha-60: rgba(244, 245, 247, 0.6);
+  --yuanhhou-grey-50-alpha-65: rgba(244, 245, 247, 0.65);
+  --yuanhhou-grey-50-alpha-70: rgba(244, 245, 247, 0.7);
+  --yuanhhou-grey-50-alpha-75: rgba(244, 245, 247, 0.75);
+  --yuanhhou-grey-50-alpha-80: rgba(244, 245, 247, 0.8);
+  --yuanhhou-grey-50-alpha-85: rgba(244, 245, 247, 0.85);
+  --yuanhhou-grey-50-alpha-90: rgba(244, 245, 247, 0.9);
+  --yuanhhou-grey-50-alpha-95: rgba(244, 245, 247, 0.95);
+  --yuanhhou-grey-50-alpha-100: rgba(244, 245, 247, 1.0);
+  --yuanhhou-grey-100-alpha-05: rgba(241, 242, 244, 0.05);
+  --yuanhhou-grey-100-alpha-10: rgba(241, 242, 244, 0.1);
+  --yuanhhou-grey-100-alpha-15: rgba(241, 242, 244, 0.15);
+  --yuanhhou-grey-100-alpha-20: rgba(241, 242, 244, 0.2);
+  --yuanhhou-grey-100-alpha-25: rgba(241, 242, 244, 0.25);
+  --yuanhhou-grey-100-alpha-30: rgba(241, 242, 244, 0.3);
+  --yuanhhou-grey-100-alpha-35: rgba(241, 242, 244, 0.35);
+  --yuanhhou-grey-100-alpha-40: rgba(241, 242, 244, 0.4);
+  --yuanhhou-grey-100-alpha-45: rgba(241, 242, 244, 0.45);
+  --yuanhhou-grey-100-alpha-50: rgba(241, 242, 244, 0.5);
+  --yuanhhou-grey-100-alpha-55: rgba(241, 242, 244, 0.55);
+  --yuanhhou-grey-100-alpha-60: rgba(241, 242, 244, 0.6);
+  --yuanhhou-grey-100-alpha-65: rgba(241, 242, 244, 0.65);
+  --yuanhhou-grey-100-alpha-70: rgba(241, 242, 244, 0.7);
+  --yuanhhou-grey-100-alpha-75: rgba(241, 242, 244, 0.75);
+  --yuanhhou-grey-100-alpha-80: rgba(241, 242, 244, 0.8);
+  --yuanhhou-grey-100-alpha-85: rgba(241, 242, 244, 0.85);
+  --yuanhhou-grey-100-alpha-90: rgba(241, 242, 244, 0.9);
+  --yuanhhou-grey-100-alpha-95: rgba(241, 242, 244, 0.95);
+  --yuanhhou-grey-100-alpha-100: rgba(241, 242, 244, 1.0);
+  --yuanhhou-grey-200-alpha-5: rgba(235, 238, 242, 0.05);
+  --yuanhhou-grey-200-alpha-10: rgba(235, 238, 242, 0.1);
+  --yuanhhou-grey-200-alpha-15: rgba(235, 238, 242, 0.15);
+  --yuanhhou-grey-200-alpha-20: rgba(235, 238, 242, 0.2);
+  --yuanhhou-grey-200-alpha-25: rgba(235, 238, 242, 0.25);
+  --yuanhhou-grey-200-alpha-30: rgba(235, 238, 242, 0.3);
+  --yuanhhou-grey-200-alpha-35: rgba(235, 238, 242, 0.35);
+  --yuanhhou-grey-200-alpha-40: rgba(235, 238, 242, 0.4);
+  --yuanhhou-grey-200-alpha-45: rgba(235, 238, 242, 0.45);
+  --yuanhhou-grey-200-alpha-50: rgba(235, 238, 242, 0.5);
+  --yuanhhou-grey-200-alpha-55: rgba(235, 238, 242, 0.55);
+  --yuanhhou-grey-200-alpha-60: rgba(235, 238, 242, 0.6);
+  --yuanhhou-grey-200-alpha-65: rgba(235, 238, 242, 0.65);
+  --yuanhhou-grey-200-alpha-70: rgba(235, 238, 242, 0.7);
+  --yuanhhou-grey-200-alpha-75: rgba(235, 238, 242, 0.75);
+  --yuanhhou-grey-200-alpha-80: rgba(235, 238, 242, 0.8);
+  --yuanhhou-grey-200-alpha-85: rgba(235, 238, 242, 0.85);
+  --yuanhhou-grey-200-alpha-90: rgba(235, 238, 242, 0.9);
+  --yuanhhou-grey-200-alpha-95: rgba(235, 238, 242, 0.95);
+  --yuanhhou-grey-200-alpha-100: rgba(235, 238, 242, 1.0);
+  --yuanhhou-grey-300-alpha-100: rgba(221, 225, 230, 1.0);
+  --yuanhhou-grey-400-alpha-100: rgba(189, 195, 201, 1.0);
+  --yuanhhou-grey-500-alpha-100: rgba(146, 155, 162, 1.0);
+  --yuanhhou-grey-600-alpha-5: rgba(107, 113, 122, 0.05);
+  --yuanhhou-grey-600-alpha-10: rgba(107, 113, 122, 0.1);
+  --yuanhhou-grey-600-alpha-15: rgba(107, 113, 122, 0.15);
+  --yuanhhou-grey-600-alpha-20: rgba(107, 113, 122, 0.2);
+  --yuanhhou-grey-600-alpha-25: rgba(107, 113, 122, 0.25);
+  --yuanhhou-grey-600-alpha-30: rgba(107, 113, 122, 0.3);
+  --yuanhhou-grey-600-alpha-35: rgba(107, 113, 122, 0.35);
+  --yuanhhou-grey-600-alpha-40: rgba(107, 113, 122, 0.4);
+  --yuanhhou-grey-600-alpha-45: rgba(107, 113, 122, 0.45);
+  --yuanhhou-grey-600-alpha-50: rgba(107, 113, 122, 0.5);
+  --yuanhhou-grey-600-alpha-55: rgba(107, 113, 122, 0.55);
+  --yuanhhou-grey-600-alpha-60: rgba(107, 113, 122, 0.6);
+  --yuanhhou-grey-600-alpha-65: rgba(107, 113, 122, 0.65);
+  --yuanhhou-grey-600-alpha-70: rgba(107, 113, 122, 0.7);
+  --yuanhhou-grey-600-alpha-75: rgba(107, 113, 122, 0.75);
+  --yuanhhou-grey-600-alpha-80: rgba(107, 113, 122, 0.8);
+  --yuanhhou-grey-600-alpha-85: rgba(107, 113, 122, 0.85);
+  --yuanhhou-grey-600-alpha-90: rgba(107, 113, 122, 0.9);
+  --yuanhhou-grey-600-alpha-95: rgba(107, 113, 122, 0.95);
+  --yuanhhou-grey-600-alpha-100: rgba(107, 113, 122, 1.0);
+  --yuanhhou-grey-700-alpha-100: rgba(75, 81, 88, 1.0);
+  --yuanhhou-grey-800-alpha-01: rgba(50, 56, 63, 0.01);
+  --yuanhhou-grey-800-alpha-05: rgba(50, 56, 63, 0.05);
+  --yuanhhou-grey-800-alpha-10: rgba(50, 56, 63, 0.1);
+  --yuanhhou-grey-800-alpha-15: rgba(50, 56, 63, 0.15);
+  --yuanhhou-grey-800-alpha-20: rgba(50, 56, 63, 0.2);
+  --yuanhhou-grey-800-alpha-25: rgba(50, 56, 63, 0.25);
+  --yuanhhou-grey-800-alpha-30: rgba(50, 56, 63, 0.3);
+  --yuanhhou-grey-800-alpha-35: rgba(50, 56, 63, 0.35);
+  --yuanhhou-grey-800-alpha-40: rgba(50, 56, 63, 0.4);
+  --yuanhhou-grey-800-alpha-45: rgba(50, 56, 63, 0.45);
+  --yuanhhou-grey-800-alpha-50: rgba(50, 56, 63, 0.5);
+  --yuanhhou-grey-800-alpha-55: rgba(50, 56, 63, 0.55);
+  --yuanhhou-grey-800-alpha-60: rgba(50, 56, 63, 0.6);
+  --yuanhhou-grey-800-alpha-65: rgba(50, 56, 63, 0.65);
+  --yuanhhou-grey-800-alpha-70: rgba(50, 56, 63, 0.7);
+  --yuanhhou-grey-800-alpha-75: rgba(50, 56, 63, 0.75);
+  --yuanhhou-grey-800-alpha-80: rgba(50, 56, 63, 0.8);
+  --yuanhhou-grey-800-alpha-85: rgba(50, 56, 63, 0.85);
+  --yuanhhou-grey-800-alpha-90: rgba(50, 56, 63, 0.9);
+  --yuanhhou-grey-800-alpha-95: rgba(50, 56, 63, 0.95);
+  --yuanhhou-grey-800-alpha-100: rgba(50, 56, 63, 1.0);
+  --yuanhhou-grey-900-alpha-100: rgba(33, 39, 42, 1.0);
+  --yuanhhou-grey-950-alpha-5: rgba(28, 33, 35, 0.05);
+  --yuanhhou-grey-950-alpha-10: rgba(28, 33, 35, 0.1);
+  --yuanhhou-grey-950-alpha-15: rgba(28, 33, 35, 0.15);
+  --yuanhhou-grey-950-alpha-20: rgba(28, 33, 35, 0.2);
+  --yuanhhou-grey-950-alpha-25: rgba(28, 33, 35, 0.25);
+  --yuanhhou-grey-950-alpha-30: rgba(28, 33, 35, 0.3);
+  --yuanhhou-grey-950-alpha-35: rgba(28, 33, 35, 0.35);
+  --yuanhhou-grey-950-alpha-40: rgba(28, 33, 35, 0.4);
+  --yuanhhou-grey-950-alpha-45: rgba(28, 33, 35, 0.45);
+  --yuanhhou-grey-950-alpha-50: rgba(28, 33, 35, 0.5);
+  --yuanhhou-grey-950-alpha-55: rgba(28, 33, 35, 0.55);
+  --yuanhhou-grey-950-alpha-60: rgba(28, 33, 35, 0.6);
+  --yuanhhou-grey-950-alpha-65: rgba(28, 33, 35, 0.65);
+  --yuanhhou-grey-950-alpha-70: rgba(28, 33, 35, 0.7);
+  --yuanhhou-grey-950-alpha-75: rgba(28, 33, 35, 0.75);
+  --yuanhhou-grey-950-alpha-80: rgba(28, 33, 35, 0.8);
+  --yuanhhou-grey-950-alpha-85: rgba(28, 33, 35, 0.85);
+  --yuanhhou-grey-950-alpha-90: rgba(28, 33, 35, 0.9);
+  --yuanhhou-grey-950-alpha-95: rgba(28, 33, 35, 0.95);
+  --yuanhhou-grey-950-alpha-100: rgba(28, 33, 35, 1.0);
+  --yuanhhou-grey-990-alpha-100: rgba(21, 25, 27, 1.0);
+  --yuanhhou-grey-1000-alpha-5: rgba(0, 0, 0, 0.05);
+  --yuanhhou-grey-1000-alpha-10: rgba(0, 0, 0, 0.1);
+  --yuanhhou-grey-1000-alpha-15: rgba(0, 0, 0, 0.15);
+  --yuanhhou-grey-1000-alpha-20: rgba(0, 0, 0, 0.2);
+  --yuanhhou-grey-1000-alpha-25: rgba(0, 0, 0, 0.25);
+  --yuanhhou-grey-1000-alpha-30: rgba(0, 0, 0, 0.3);
+  --yuanhhou-grey-1000-alpha-35: rgba(0, 0, 0, 0.35);
+  --yuanhhou-grey-1000-alpha-40: rgba(0, 0, 0, 0.4);
+  --yuanhhou-grey-1000-alpha-45: rgba(0, 0, 0, 0.45);
+  --yuanhhou-grey-1000-alpha-50: rgba(0, 0, 0, 0.5);
+  --yuanhhou-grey-1000-alpha-55: rgba(0, 0, 0, 0.55);
+  --yuanhhou-grey-1000-alpha-60: rgba(0, 0, 0, 0.6);
+  --yuanhhou-grey-1000-alpha-65: rgba(0, 0, 0, 0.65);
+  --yuanhhou-grey-1000-alpha-70: rgba(0, 0, 0, 0.7);
+  --yuanhhou-grey-1000-alpha-75: rgba(0, 0, 0, 0.75);
+  --yuanhhou-grey-1000-alpha-80: rgba(0, 0, 0, 0.8);
+  --yuanhhou-grey-1000-alpha-85: rgba(0, 0, 0, 0.85);
+  --yuanhhou-grey-1000-alpha-90: rgba(0, 0, 0, 0.9);
+  --yuanhhou-grey-1000-alpha-95: rgba(0, 0, 0, 0.95);
+  --yuanhhou-grey-1000-alpha-100: rgba(0, 0, 0, 1.0);
+
+  /* ——— ORANGE (includes NERV warning shades) ——— */
+  --yuanhhou-orange-50: rgba(255, 247, 237, 1.0);       /* very light orange */
+  --yuanhhou-orange-100: rgba(251, 234, 207, 1.0);
+  --yuanhhou-orange-200: rgba(248, 208, 158, 1.0);
+  --yuanhhou-orange-300: rgba(255, 180, 100, 1.0);      /* warm orange */
+  --yuanhhou-orange-350: rgba(255, 120, 0, 1.0);        /* #ff7800 - NERV warning */
+  --yuanhhou-orange-400: rgba(236, 137, 56, 1.0);
+  --yuanhhou-orange-500: rgba(234, 94, 0, 1.0);
+  --yuanhhou-orange-600: rgba(183, 41, 0, 1.0);
+  --yuanhhou-orange-700: rgba(120, 24, 0, 1.0);
+  --yuanhhou-orange-800: rgba(87, 13, 0, 1.0);
+  --yuanhhou-orange-900: rgba(56, 4, 0, 1.0);
+
+  /* ——— PURPLE (includes EVA Unit-01 inspired shades) ——— */
+  --yuanhhou-purple-50: rgba(250, 245, 255, 1.0);       /* very light purple */
+  --yuanhhou-purple-100: rgba(238, 220, 255, 1.0);      /* #eedcff - light eva purple */
+  --yuanhhou-purple-200: rgba(210, 170, 255, 1.0);      /* #d2aaff */
+  --yuanhhou-purple-300: rgba(180, 120, 245, 1.0);      /* #b478f5 */
+  --yuanhhou-purple-400: rgba(148, 70, 225, 1.0);       /* #9446e1 */
+  --yuanhhou-purple-500: rgba(128, 0, 200, 1.0);        /* #8000c8 - EVA-01 primary purple */
+  --yuanhhou-purple-600: rgba(100, 0, 160, 1.0);        /* #6400a0 */
+  --yuanhhou-purple-700: rgba(75, 0, 120, 1.0);         /* #4b0078 */
+  --yuanhhou-purple-800: rgba(50, 0, 80, 1.0);          /* #320050 */
+  --yuanhhou-purple-900: rgba(30, 5, 50, 1.0);          /* #1e0532 - deep eva purple */
+  --yuanhhou-purple-950: rgba(20, 2, 35, 1.0);          /* #140223 - near black purple */
+
+  /* ——— RED ——— */
+  --yuanhhou-red-100: rgba(255, 235, 238, 1.0);
+  --yuanhhou-red-200: rgba(255, 200, 210, 1.0);
+  --yuanhhou-red-300: rgba(255, 150, 170, 1.0);
+  --yuanhhou-red-400-alpha-100: rgba(240, 69, 97, 1.0);
+  --yuanhhou-red-500-alpha-5: rgba(214, 0, 35, 0.05);
+  --yuanhhou-red-500-alpha-10: rgba(214, 0, 35, 0.1);
+  --yuanhhou-red-500-alpha-15: rgba(214, 0, 35, 0.15);
+  --yuanhhou-red-500-alpha-20: rgba(214, 0, 35, 0.2);
+  --yuanhhou-red-500-alpha-25: rgba(214, 0, 35, 0.25);
+  --yuanhhou-red-500-alpha-30: rgba(214, 0, 35, 0.3);
+  --yuanhhou-red-500-alpha-35: rgba(214, 0, 35, 0.35);
+  --yuanhhou-red-500-alpha-40: rgba(214, 0, 35, 0.4);
+  --yuanhhou-red-500-alpha-45: rgba(214, 0, 35, 0.45);
+  --yuanhhou-red-500-alpha-50: rgba(214, 0, 35, 0.5);
+  --yuanhhou-red-500-alpha-55: rgba(214, 0, 35, 0.55);
+  --yuanhhou-red-500-alpha-60: rgba(214, 0, 35, 0.6);
+  --yuanhhou-red-500-alpha-65: rgba(214, 0, 35, 0.65);
+  --yuanhhou-red-500-alpha-70: rgba(214, 0, 35, 0.7);
+  --yuanhhou-red-500-alpha-75: rgba(214, 0, 35, 0.75);
+  --yuanhhou-red-500-alpha-80: rgba(214, 0, 35, 0.8);
+  --yuanhhou-red-500-alpha-85: rgba(214, 0, 35, 0.85);
+  --yuanhhou-red-500-alpha-90: rgba(214, 0, 35, 0.9);
+  --yuanhhou-red-500-alpha-95: rgba(214, 0, 35, 0.95);
+  --yuanhhou-red-500-alpha-100: rgba(214, 0, 35, 1.0);
+  --yuanhhou-red-600: rgba(170, 0, 28, 1.0);
+  --yuanhhou-red-700: rgba(130, 0, 22, 1.0);
+  --yuanhhou-red-800: rgba(90, 0, 15, 1.0);
+  --yuanhhou-red-900: rgba(50, 5, 10, 1.0);
+
+  /* ——— TEAL ——— */
+  --yuanhhou-teal-100: rgba(210, 251, 251, 1.0);
+  --yuanhhou-teal-200: rgba(158, 240, 240, 1.0);
+  --yuanhhou-teal-300: rgba(86, 219, 219, 1.0);
+  --yuanhhou-teal-400: rgba(5, 184, 181, 1.0);
+  --yuanhhou-teal-500: rgba(0, 125, 121, 1.0);
+  --yuanhhou-teal-600: rgba(0, 93, 93, 1.0);
+  --yuanhhou-teal-700: rgba(0, 65, 68, 1.0);
+  --yuanhhou-teal-800: rgba(2, 43, 48, 1.0);
+  --yuanhhou-teal-900: rgba(8, 26, 28, 1.0);
+
+  /* ——— WARM GREY ——— */
+  --yuanhhou-warm-grey-100: rgba(247, 245, 242, 1.0);
+  --yuanhhou-warm-grey-200: rgba(241, 239, 235, 1.0);
+  --yuanhhou-warm-grey-300: rgba(229, 226, 216, 1.0);
+
+  /* ——— LUXURY (Quiet Luxury / Old Money palette) ——— */
+  /* Camel - Loro Piana signature */
+  --yuanhhou-camel-100: rgba(245, 235, 220, 1.0);     /* #f5ebdc - light camel */
+  --yuanhhou-camel-200: rgba(230, 210, 180, 1.0);     /* #e6d2b4 - soft camel */
+  --yuanhhou-camel-300: rgba(210, 180, 140, 1.0);     /* #d2b48c - classic camel/tan */
+  --yuanhhou-camel-400: rgba(190, 155, 110, 1.0);     /* #be9b6e - rich camel */
+  --yuanhhou-camel-500: rgba(165, 130, 85, 1.0);      /* #a58255 - deep camel */
+  --yuanhhou-camel-600: rgba(140, 105, 65, 1.0);      /* #8c6941 - dark camel */
+  --yuanhhou-camel-700: rgba(110, 80, 50, 1.0);       /* #6e5032 - espresso */
+  --yuanhhou-camel-800: rgba(80, 58, 38, 1.0);        /* #503a26 - dark brown */
+  --yuanhhou-camel-900: rgba(50, 38, 28, 1.0);        /* #32261c - near black warm */
+  
+  /* Sage - muted green, Auralee signature */
+  --yuanhhou-sage-100: rgba(240, 243, 238, 1.0);      /* #f0f3ee - whisper sage */
+  --yuanhhou-sage-200: rgba(220, 228, 215, 1.0);      /* #dce4d7 - light sage */
+  --yuanhhou-sage-300: rgba(195, 208, 185, 1.0);      /* #c3d0b9 - soft sage */
+  --yuanhhou-sage-400: rgba(165, 180, 150, 1.0);      /* #a5b496 - classic sage */
+  --yuanhhou-sage-500: rgba(135, 150, 120, 1.0);      /* #879678 - deep sage */
+  --yuanhhou-sage-600: rgba(105, 120, 95, 1.0);       /* #69785f - forest sage */
+  --yuanhhou-sage-700: rgba(75, 90, 68, 1.0);         /* #4b5a44 - dark sage */
+  --yuanhhou-sage-800: rgba(50, 60, 45, 1.0);         /* #323c2d - deep forest */
+  
+  /* ——— YELLOW ——— */
+  --yuanhhou-yellow-50: rgba(254, 252, 232, 1.0);
+  --yuanhhou-yellow-100: rgba(254, 249, 195, 1.0);
+  --yuanhhou-yellow-200: rgba(254, 240, 138, 1.0);
+  --yuanhhou-yellow-300: rgba(253, 224, 71, 1.0);
+  --yuanhhou-yellow-400: rgba(250, 204, 21, 1.0);
+  --yuanhhou-yellow-500: rgba(234, 179, 8, 1.0);
+  --yuanhhou-yellow-600: rgba(202, 138, 4, 1.0);
+  --yuanhhou-yellow-700: rgba(161, 98, 7, 1.0);
+  --yuanhhou-yellow-800: rgba(133, 77, 14, 1.0);
+  --yuanhhou-yellow-900: rgba(113, 63, 18, 1.0);
+  --yuanhhou-yellow-950: rgba(66, 32, 6, 1.0);
+
+  /* ——— CYAN ——— */
+  --yuanhhou-cyan-50: rgba(236, 254, 255, 1.0);
+  --yuanhhou-cyan-100: rgba(207, 250, 254, 1.0);
+  --yuanhhou-cyan-200: rgba(165, 243, 252, 1.0);
+  --yuanhhou-cyan-300: rgba(103, 232, 249, 1.0);
+  --yuanhhou-cyan-400: rgba(34, 211, 238, 1.0);
+  --yuanhhou-cyan-500: rgba(6, 182, 212, 1.0);
+  --yuanhhou-cyan-600: rgba(8, 145, 178, 1.0);
+  --yuanhhou-cyan-700: rgba(14, 116, 144, 1.0);
+  --yuanhhou-cyan-800: rgba(21, 94, 117, 1.0);
+  --yuanhhou-cyan-900: rgba(22, 78, 99, 1.0);
+  --yuanhhou-cyan-950: rgba(8, 51, 68, 1.0);
+
+  /* ——— LIME (includes EVA neon green shades) ——— */
+  --yuanhhou-lime-50: rgba(247, 254, 231, 1.0);
+  --yuanhhou-lime-100: rgba(220, 255, 180, 1.0);        /* #dcffb4 - light neon */
+  --yuanhhou-lime-200: rgba(190, 255, 120, 1.0);        /* #beff78 */
+  --yuanhhou-lime-300: rgba(160, 255, 60, 1.0);         /* #a0ff3c - bright neon (EVA accent) */
+  --yuanhhou-lime-400: rgba(130, 230, 0, 1.0);          /* #82e600 - EVA-01 accent green */
+  --yuanhhou-lime-500: rgba(100, 200, 0, 1.0);          /* #64c800 */
+  --yuanhhou-lime-600: rgba(70, 150, 0, 1.0);           /* #469600 */
+  --yuanhhou-lime-700: rgba(50, 110, 0, 1.0);           /* #326e00 */
+  --yuanhhou-lime-800: rgba(35, 75, 5, 1.0);            /* #234b05 */
+  --yuanhhou-lime-900: rgba(20, 45, 10, 1.0);           /* #142d0a */
+  --yuanhhou-lime-950: rgba(10, 25, 5, 1.0);            /* very dark lime */
+  --yuanhhou-lime-700: rgba(77, 124, 15, 1.0);
+  --yuanhhou-lime-800: rgba(63, 98, 18, 1.0);
+  --yuanhhou-lime-900: rgba(54, 83, 20, 1.0);
+  --yuanhhou-lime-950: rgba(26, 46, 5, 1.0);
+
+  /* ——— PINK ——— */
+  --yuanhhou-pink-50: rgba(253, 242, 248, 1.0);
+  --yuanhhou-pink-100: rgba(252, 231, 243, 1.0);
+  --yuanhhou-pink-200: rgba(251, 207, 232, 1.0);
+  --yuanhhou-pink-300: rgba(249, 168, 212, 1.0);
+  --yuanhhou-pink-400: rgba(244, 114, 182, 1.0);
+  --yuanhhou-pink-500: rgba(236, 72, 153, 1.0);
+  --yuanhhou-pink-600: rgba(219, 39, 119, 1.0);
+  --yuanhhou-pink-700: rgba(190, 24, 93, 1.0);
+  --yuanhhou-pink-800: rgba(157, 23, 77, 1.0);
+  --yuanhhou-pink-900: rgba(131, 24, 67, 1.0);
+  --yuanhhou-pink-950: rgba(80, 7, 36, 1.0);
+
+  /* ——— INDIGO ——— */
+  --yuanhhou-indigo-50: rgba(238, 242, 255, 1.0);
+  --yuanhhou-indigo-100: rgba(224, 231, 255, 1.0);
+  --yuanhhou-indigo-200: rgba(199, 210, 254, 1.0);
+  --yuanhhou-indigo-300: rgba(165, 180, 252, 1.0);
+  --yuanhhou-indigo-400: rgba(129, 140, 248, 1.0);
+  --yuanhhou-indigo-500: rgba(99, 102, 241, 1.0);
+  --yuanhhou-indigo-600: rgba(79, 70, 229, 1.0);
+  --yuanhhou-indigo-700: rgba(67, 56, 202, 1.0);
+  --yuanhhou-indigo-800: rgba(55, 48, 163, 1.0);
+  --yuanhhou-indigo-900: rgba(49, 46, 129, 1.0);
+  --yuanhhou-indigo-950: rgba(30, 27, 75, 1.0);
+}
+
+/* EOF */

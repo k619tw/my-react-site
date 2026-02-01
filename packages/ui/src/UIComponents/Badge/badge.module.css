@@ -1,0 +1,60 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-badge);
+  font-family: var(--yuanhhou-font-family-primary);
+  gap: var(--yuanhhou-spacing-50);
+  /* Mobile-first: ensure readable touch targets */
+  min-height: 24px;
+}
+
+/* Mobile-first: slightly larger padding for touch */
+.small {
+  font-size: var(--yuanhhou-type-button-2-font-size);
+  line-height: var(--yuanhhou-type-button-2-line-height);
+  font-weight: var(--yuanhhou-type-button-2-font-weight);
+  letter-spacing: var(--yuanhhou-type-button-2-letter-spacing);
+  padding: var(--yuanhhou-spacing-50) var(--yuanhhou-spacing-100);
+}
+
+.large {
+  font-size: var(--yuanhhou-type-button-1-font-size);
+  line-height: var(--yuanhhou-type-button-1-line-height);
+  font-weight: var(--yuanhhou-type-button-1-font-weight);
+  letter-spacing: var(--yuanhhou-type-button-1-letter-spacing);
+  padding: var(--yuanhhou-spacing-100) var(--yuanhhou-spacing-150);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--yuanhhou-size-200);
+  height: var(--yuanhhou-size-200);
+}
+
+.label {
+  display: inline;
+}
+
+/* Color variants */
+.neutral {
+  background: var(--background-card-primary);
+  color: var(--foreground-primary);
+}
+.danger {
+  background: var(--background-danger-secondary);
+  color: var(--foreground-danger-on-secondary);
+}
+.warning {
+  background: var(--background-warning-secondary);
+  color: var(--foreground-warning-on-secondary);
+}
+.success {
+  background: var(--background-success-secondary);
+  color: var(--foreground-success-on-secondary);
+}
+.promote {
+  background: var(--background-promote-secondary);
+  color: var(--foreground-promote-on-secondary);
+}

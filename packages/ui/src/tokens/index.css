@@ -1,0 +1,20 @@
+/* ========================================
+   DESIGN TOKENS - MAIN ENTRY
+   ========================================
+   Import order matters:
+   1. Primitives first (raw values)
+   2. Semantic themes (reference primitives)
+   
+   Components should only use semantic tokens,
+   never reference primitives directly.
+   ======================================== */
+
+/* Base primitives - shared color palette */
+@import './primitives.css';
+
+/* Product themes - semantic mappings */
+@import './semantics-product-a.css';  /* Default/Light theme - Blue brand */
+@import './semantics-product-b.css';  /* Dark theme - Purple brand */
+@import './semantics-product-c.css';  /* Light theme - Teal/Cyan brand */
+
+/* EOF */

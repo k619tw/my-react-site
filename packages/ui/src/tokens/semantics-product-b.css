@@ -1,0 +1,161 @@
+/* ========================================
+   SEMANTIC TOKENS - PRODUCT B (Dark Theme - Evangelion)
+   ========================================
+   Inspired by Neon Genesis Evangelion Unit-01.
+   Dark theme with iconic purple and neon green accents.
+   
+   Usage: [data-theme="product-b"]
+   
+   Example:
+   <body data-theme="product-b">
+   <div data-theme="product-b">
+   
+   ═══════════════════════════════════════════
+   COLOR PAIRING PRINCIPLES
+   ═══════════════════════════════════════════
+   
+   1. foreground.{category}.primary
+      → Pairs with: background-primary, background-secondary,
+                    background-card-primary, background-card-secondary
+      → Use for: general text/icons on neutral surfaces
+   
+   2. foreground.{category}.on-primary
+      → Pairs with: background-{category}-primary
+      → Use for: text/icons on filled/solid backgrounds
+   
+   3. foreground.{category}.on-secondary
+      → Pairs with: background-{category}-secondary
+      → Use for: text/icons on tinted/subtle backgrounds
+   
+   ═══════════════════════════════════════════
+   ======================================== */
+
+[data-theme="product-b"] {
+  
+  /* ——— BACKGROUNDS ——— */
+  
+  /* Primary page/surface backgrounds (EVA dark purple tint) */
+  --background-primary: var(--yuanhhou-purple-900);                /* #1e0532 - deep EVA purple */
+  --background-secondary: var(--yuanhhou-purple-800);              /* #320050 */
+
+  /* Card surfaces */
+  --background-card-primary: var(--yuanhhou-purple-800);           /* #320050 */
+  --background-card-secondary: var(--yuanhhou-purple-700);         /* #4b0078 */
+  --background-card-inverted: var(--yuanhhou-lime-300);            /* #a0ff3c - bright lime */
+
+  /* Brand backgrounds (EVA Unit-01 purple) */
+  --background-brand-primary: var(--yuanhhou-purple-500);          /* #8000c8 - iconic EVA purple */
+  --background-brand-secondary: var(--yuanhhou-purple-800);        /* #320050 */
+
+  /* Status backgrounds - emphasized for badges */
+  --background-success-primary: var(--yuanhhou-lime-400);              /* #82e600 - EVA neon green */
+  --background-success-secondary: var(--yuanhhou-lime-800);            /* darker, more visible */
+  --background-danger-primary: var(--yuanhhou-red-400-alpha-100);
+  --background-danger-secondary: var(--yuanhhou-red-900);              /* deep red, visible */
+  --background-warning-primary: var(--yuanhhou-orange-350);            /* #ff7800 - NERV warning */
+  --background-warning-secondary: var(--yuanhhou-orange-800);          /* deep orange, visible */
+  --background-info-primary: var(--yuanhhou-blue-450-alpha-100);
+  --background-info-secondary: var(--yuanhhou-blue-800-alpha-100);     /* deep blue */
+
+  /* Premium/Promotion backgrounds */
+  --background-promote-primary: var(--yuanhhou-fuchsia-500);
+  --background-promote-secondary: var(--yuanhhou-fuchsia-900);
+
+  /* Interactive backgrounds */
+  --background-interaction-primary: var(--yuanhhou-grey-0-alpha-10);
+  --background-interaction-hover: var(--yuanhhou-grey-0-alpha-15);
+  --background-interaction-active: var(--yuanhhou-grey-0-alpha-20);
+
+  /* Overlays & modals */
+  --background-overlay: var(--yuanhhou-grey-1000-alpha-60);
+
+
+  /* ——— BORDERS ——— */
+  
+  /* Neutral borders (lighter for dark theme) */
+  --border-primary: var(--yuanhhou-grey-0-alpha-60);
+  --border-secondary: var(--yuanhhou-grey-0-alpha-35);
+  --border-tertiary: var(--yuanhhou-grey-0-alpha-20);
+  --border-inverted: var(--yuanhhou-grey-900-alpha-100);
+
+  /* Semantic borders */
+  --border-brand: var(--yuanhhou-purple-400);                      /* #9446e1 */
+  --border-success: var(--yuanhhou-lime-400);                      /* #82e600 - neon green */
+  --border-danger: var(--yuanhhou-red-400-alpha-100);
+  --border-warning: var(--yuanhhou-orange-350);                    /* #ff7800 */
+  --border-info: var(--yuanhhou-blue-400-alpha-100);
+  --border-promote: var(--yuanhhou-fuchsia-500);
+
+  /* Focus states */
+  --border-focus: var(--yuanhhou-lime-400);                        /* neon green focus ring */
+  --border-focus-inset: var(--yuanhhou-purple-900);
+
+
+  /* ——— FOREGROUNDS (TEXT & ICONS) ——— */
+  
+  /* Primary text colors (light text for dark EVA purple bg) 
+     All pass 4.5:1 contrast against purple-900 (#1e0532) */
+  --foreground-primary: var(--yuanhhou-grey-0-alpha-100);           /* #ffffff - 16:1 */
+  --foreground-secondary: var(--yuanhhou-purple-100);               /* #eedcff - 12:1 on purple-900 */
+  --foreground-tertiary: var(--yuanhhou-purple-200);                /* #d2aaff - 8:1 */
+  --foreground-disabled: var(--yuanhhou-purple-300);                /* #b478f5 - 5:1 */
+
+  /* On light/inverted surfaces */
+  --foreground-on-primary: var(--yuanhhou-grey-950-alpha-100);
+
+  /* Brand foregrounds - EVA colors passing 4.5:1 */
+  --foreground-brand-primary: var(--yuanhhou-lime-300);             /* #a0ff3c - 13:1 on purple-900 */
+  --foreground-brand-on-primary: var(--yuanhhou-grey-0-alpha-100);  /* white on purple-500 = 7:1 */
+  --foreground-brand-on-secondary: var(--yuanhhou-lime-300);        /* #a0ff3c on purple-800 = 10:1 */
+
+  /* Status foregrounds - ensuring 4.5:1 contrast */
+  --foreground-success-primary: var(--yuanhhou-lime-300);           /* #a0ff3c - 13:1 on purple-900 */
+  --foreground-success-on-primary: var(--yuanhhou-lime-900);        /* dark on lime-400 = 8:1 */
+  --foreground-success-on-secondary: var(--yuanhhou-lime-200);      /* light on lime-900 = 7:1 */
+  --foreground-danger-primary: var(--yuanhhou-red-300);             /* #ff96aa - 7:1 */
+  --foreground-danger-on-primary: var(--yuanhhou-grey-0-alpha-100); /* white on red-400 = 4.5:1 */
+  --foreground-danger-on-secondary: var(--yuanhhou-red-300);        /* light on red-500-alpha-15 */
+  --foreground-warning-primary: var(--yuanhhou-orange-200);         /* #f8d09e - 10:1 */
+  --foreground-warning-on-primary: var(--yuanhhou-orange-900);      /* dark on orange-350 = 5:1 */
+  --foreground-warning-on-secondary: var(--yuanhhou-orange-200);    /* light on orange-900 = 7:1 */
+  --foreground-info-primary: var(--yuanhhou-blue-200-alpha-100);    /* #b3d6ef - 9:1 */
+  --foreground-info-on-primary: var(--yuanhhou-grey-0-alpha-100);   /* white on blue-450 = 4.6:1 */
+  --foreground-info-on-secondary: var(--yuanhhou-blue-200-alpha-100); /* light on blue-900 = 6:1 */
+
+  /* Promote foregrounds */
+  --foreground-promote-primary: var(--yuanhhou-fuchsia-200);        /* light fuchsia - 10:1 on purple-900 ✓ */
+  --foreground-promote-on-primary: var(--yuanhhou-grey-0-alpha-100); /* white on fuchsia-500 = 5:1 ✓ */
+  --foreground-promote-on-secondary: var(--yuanhhou-fuchsia-200);   /* light on fuchsia-900 = 6:1 ✓ */
+
+  /* Interactive foregrounds */
+  --foreground-interaction-hero: var(--yuanhhou-lime-300);          /* #a0ff3c - neon green hero */
+  --foreground-interaction-primary: var(--yuanhhou-purple-100);     /* #eedcff - 12:1 */
+  --foreground-interaction-on-primary: var(--yuanhhou-grey-0-alpha-100); /* white */
+  --foreground-interaction-on-inverted: var(--yuanhhou-purple-600);
+
+  /* Toggle component - EVA brand purple */
+  --background-toggle-off: var(--yuanhhou-purple-700);              /* dark purple off state */
+  --background-toggle-on: var(--background-brand-primary);          /* EVA purple #8000c8 */
+  --foreground-toggle-thumb: var(--yuanhhou-grey-0-alpha-100);      /* white thumb */
+
+
+  /* ——— BORDER RADIUS ——— */
+  
+  /* Product B (EVA): Futuristic, bold - more rounded */
+  --radius-none: var(--yuanhhou-border-radius-0);
+  --radius-small: var(--yuanhhou-border-radius-100);       /* 8px */
+  --radius-medium: var(--yuanhhou-border-radius-200);      /* 16px */
+  --radius-large: var(--yuanhhou-border-radius-200);       /* 16px */
+  --radius-xlarge: var(--yuanhhou-border-radius-circle);   /* pill */
+  --radius-full: var(--yuanhhou-border-radius-circle);     /* pill */
+  
+  /* Component-specific semantic radii - more rounded for EVA aesthetic */
+  --radius-card: var(--yuanhhou-border-radius-200);        /* 16px - rounded cards */
+  --radius-button: var(--yuanhhou-border-radius-200);      /* 16px - rounded buttons */
+  --radius-button-small: var(--yuanhhou-border-radius-circle); /* pill */
+  --radius-input: var(--yuanhhou-border-radius-200);       /* 16px - inputs */
+  --radius-badge: var(--yuanhhou-border-radius-circle);    /* pill - badges */
+  --radius-accordion: var(--yuanhhou-border-radius-200);   /* 16px - rounded accordion */
+  --radius-modal: var(--yuanhhou-border-radius-300);       /* 24px - modals */
+  --radius-tooltip: var(--yuanhhou-border-radius-100);     /* 8px - tooltips */
+}

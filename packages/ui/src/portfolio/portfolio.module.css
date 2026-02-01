@@ -1,0 +1,511 @@
+/* ========================================
+   PORTFOLIO PAGE STYLES
+   ======================================== */
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ——— NAVIGATION BAR ——— */
+.navbar {
+  background: var(--background-primary);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: var(--yuanhhou-spacing-400) var(--yuanhhou-spacing-400);
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.navInner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  font-size: var(--yuanhhou-font-size-heading-sm);
+  font-weight: var(--yuanhhou-font-weight-700);
+  color: var(--foreground-brand-primary);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo span {
+  display: flex;
+  align-items: center;
+  height: var(--yuanhhou-spacing-500, 40px);
+}
+
+/* Navigation Links */
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: var(--yuanhhou-spacing-300, 24px);
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li a {
+  color: var(--foreground-primary);
+  text-decoration: none;
+  font-weight: var(--yuanhhou-font-weight-500);
+  font-size: var(--yuanhhou-font-size-body-md);
+  transition: color 0.2s ease;
+  padding: var(--yuanhhou-spacing-100, 8px) var(--yuanhhou-spacing-150, 12px);
+  border-radius: var(--radius-small);
+}
+
+.navLinks li a:hover {
+  color: var(--foreground-brand-primary);
+  background: var(--background-interaction-hover);
+}
+
+.navLinks li a:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+.navLinks li a.active {
+  color: var(--foreground-brand-primary);
+  background: var(--background-interaction-active);
+}
+
+/* Controls - Theme Only */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--yuanhhou-spacing-200, 16px);
+  margin-left: auto;
+}
+
+.divider {
+  width: var(--yuanhhou-spacing-10);
+  height: var(--yuanhhou-spacing-300);
+  background: var(--border-tertiary);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--yuanhhou-spacing-100);
+  width: var(--yuanhhou-spacing-500, 40px);
+  height: var(--yuanhhou-spacing-500, 40px);
+  color: var(--foreground-primary);
+  transition: color 0.2s ease;
+}
+
+.hamburger:hover {
+  color: var(--foreground-brand-primary);
+}
+
+.hamburger:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-small);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: var(--yuanhhou-spacing-200, 16px);
+  }
+
+  .navContainer {
+    display: block;
+  }
+
+  .navInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: var(--yuanhhou-spacing-500);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--background-primary);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    gap: 0;
+    justify-content: flex-start;
+    padding: 0;
+    z-index: 100;
+  }
+
+  .navLinks.active {
+    max-height: 300px;
+    padding: var(--yuanhhou-spacing-200, 16px) 0;
+  }
+
+  .navLinks li {
+    padding: 0 var(--yuanhhou-spacing-200, 16px);
+  }
+
+  .navLinks li a {
+    padding: var(--yuanhhou-spacing-100, 8px) 0;
+    display: block;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .settings {
+    grid-column: 1 / -1;
+  }
+
+  .settings h2 {
+    font-size: var(--yuanhhou-font-size-heading-md);
+  }
+
+  .settingGroup {
+    padding-bottom: var(--yuanhhou-spacing-300, 24px);
+    margin-bottom: var(--yuanhhou-spacing-300, 24px);
+  }
+}
+
+/* ——— MAIN CONTENT ——— */
+.main {
+  flex: 1;
+  width: 100%;
+  padding: 0 var(--yuanhhou-spacing-400);
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 0 var(--yuanhhou-spacing-200);
+  }
+}
+
+/* Content Container */
+.main > section {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Flex layout */
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-300, 24px);
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.col1 {}
+.col2 {}
+.col3 {}
+.col4 {}
+.col5 {}
+.col6 {}
+.col7 {}
+.col8 {}
+.col9 {}
+.col10 {}
+.col11 {}
+.col12 {}
+
+/* Hero Section */
+.hero {
+  margin-bottom: var(--yuanhhou-spacing-400, 40px);
+  display: flex;
+  flex-direction: row;
+  gap: var(--yuanhhou-spacing-300, 24px);
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: var(--yuanhhou-font-size-display-lg);
+  font-weight: var(--yuanhhou-font-weight-700);
+  line-height: var(--yuanhhou-line-height-display-lg);
+  color: var(--foreground-primary);
+  margin: 0 0 var(--yuanhhou-spacing-150, 12px) 0;
+}
+
+.hero p {
+  font-size: var(--yuanhhou-font-size-heading-xs);
+  color: var(--foreground-secondary);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: var(--yuanhhou-font-size-display-sm);
+  }
+
+  .hero p {
+    font-size: var(--yuanhhou-font-size-body-lg);
+  }
+}
+
+/* Content Area */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-300, 24px);
+}
+
+/* Hero columns */
+.heroLeft {
+  text-align: left;
+  flex: 1;
+}
+
+.heroRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 360px;
+}
+
+.interactionContainer {
+  background: var(--background-secondary);
+  padding: var(--yuanhhou-spacing-300, 24px);
+  border-radius: var(--radius-medium);
+  width: 100%;
+}
+
+.interactionRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-200, 16px);
+  margin-bottom: var(--yuanhhou-spacing-300, 24px);
+}
+
+.interactionLabel {
+  font-size: var(--yuanhhou-font-size-body-md);
+  color: var(--foreground-primary);
+  margin: 0 0 var(--yuanhhou-spacing-100, 8px) 0;
+}
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .heroLeft {
+    order: 1;
+  }
+
+  .heroRight {
+    order: 2;
+    margin-top: var(--yuanhhou-spacing-300, 24px);
+    width: 100%;
+  }
+}
+
+.placeholder {
+  background: var(--background-secondary);
+  border: 2px dashed var(--border-secondary);
+  border-radius: var(--radius-medium);
+  padding: var(--yuanhhou-spacing-400, 40px);
+  text-align: center;
+  color: var(--foreground-tertiary);
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder p {
+  margin: 0;
+  font-size: var(--yuanhhou-font-size-body-lg);
+}
+
+/* ——— WORK VIEW ——— */
+.workSection {
+  padding: var(--yuanhhou-spacing-400) 0;
+  overflow: hidden;
+}
+
+.workSection h2 {
+  font-size: var(--yuanhhou-font-size-heading-lg);
+  font-weight: var(--yuanhhou-font-weight-700);
+  color: var(--foreground-primary);
+  margin: 0 0 var(--yuanhhou-spacing-400) 0;
+}
+
+.workCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--yuanhhou-spacing-600);
+  width: 100%;
+  box-sizing: border-box;
+  align-items: stretch;
+}
+
+.workCards > article {
+  flex: 1 1 calc(50% - 24px);
+  max-width: calc(50% - 24px);
+  min-width: 0;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.workCards > article > div {
+  width: 100%;
+  height: 100%;
+}
+
+.bonusCard {
+}
+
+.cardBadge {
+  margin-bottom: var(--yuanhhou-spacing-150);
+}
+
+.cardLink {
+  font-size: var(--yuanhhou-font-size-body-md);
+  font-weight: var(--yuanhhou-font-weight-500);
+  color: var(--foreground-brand-primary);
+  text-decoration: none;
+}
+
+.cardLink:hover,
+.cardLink:focus {
+  text-decoration: underline;
+}
+
+.cardLink:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-small);
+}
+
+.cardLinkDisabled {
+  font-size: var(--yuanhhou-font-size-body-md);
+  color: var(--foreground-tertiary);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+  .workCards > article {
+    flex: 0 0 calc(50% - 24px);
+  }
+}
+
+@media (max-width: 768px) {
+  .workSection h2 {
+    font-size: var(--yuanhhou-font-size-heading-md);
+  }
+
+  .workCards {
+    gap: var(--yuanhhou-spacing-300);
+  }
+
+  .workCards > article {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* ——— SETTINGS VIEW ——— */
+.settings {
+}
+
+.settings h2 {
+  font-size: var(--yuanhhou-font-size-heading-lg);
+  font-weight: var(--yuanhhou-font-weight-700);
+  color: var(--foreground-primary);
+  margin: 0 0 var(--yuanhhou-spacing-400, 40px) 0;
+}
+
+.settingGroup {
+  margin-bottom: var(--yuanhhou-spacing-400, 40px);
+  padding-bottom: var(--yuanhhou-spacing-400, 40px);
+  border-bottom: 1px solid var(--border-tertiary);
+}
+
+.settingGroup:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.settingLabel {
+  display: block;
+  font-size: var(--yuanhhou-font-size-body-lg);
+  font-weight: var(--yuanhhou-font-weight-600);
+  color: var(--foreground-primary);
+  margin-bottom: var(--yuanhhou-spacing-200, 16px);
+}
+
+.languageChips {
+  margin-bottom: var(--yuanhhou-spacing-200, 16px);
+}
+
+.settingHint {
+  font-size: var(--yuanhhou-font-size-body-md);
+  color: var(--foreground-secondary);
+  margin: 0;
+  margin-top: var(--yuanhhou-spacing-100, 8px);
+}
+
+/* ——— ONBOARDING DIALOG ——— */
+.onboarding {
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-300, 24px);
+  margin-top: var(--yuanhhou-spacing-250);
+}
+
+.onboardingGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-200, 16px);
+}
+
+.onboardingQuestion {
+  font-size: var(--yuanhhou-font-size-body-lg);
+  color: var(--foreground-primary);
+  margin: 0;
+}
+
+.onboardingHint {
+  font-size: var(--yuanhhou-font-size-body-md);
+  color: var(--foreground-secondary);
+  margin: 0;
+}
+
+.onboardingActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--yuanhhou-spacing-100, 8px);
+}

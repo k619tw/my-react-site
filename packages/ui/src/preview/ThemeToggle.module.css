@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--foreground-secondary);
+}
+
+.toggle {
+  display: flex;
+  position: relative;
+  background: var(--background-interaction-primary);
+  border-radius: 8px;
+  padding: 4px;
+  gap: 0;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--foreground-secondary);
+  transition: color 0.2s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.option:hover {
+  color: var(--foreground-primary);
+}
+
+.option.active {
+  color: var(--foreground-primary);
+}
+
+.icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.slider {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(33.333% - 4px);
+  height: calc(100% - 8px);
+  background: var(--background-card-secondary);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px var(--card-shadow, rgba(0, 0, 0, 0.1));
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+}
+
+/* EOF */

@@ -1,0 +1,128 @@
+/* Toggle Component Styles */
+/* Mobile-first responsive approach */
+
+/* ——— CONTAINER ——— */
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--yuanhhou-spacing-150, 12px);
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.toggle.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* ——— HIDDEN INPUT ——— */
+.input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ——— TRACK (Background pill) ——— */
+.track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 44px;
+  height: 24px;
+  background: var(--background-toggle-off, var(--background-interaction-active));
+  border-radius: var(--yuanhhou-border-radius-circle, 9999px);
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+  border: 1px solid var(--border-tertiary);
+}
+
+/* Track checked state - uses brand color */
+.input:checked + .track {
+  background: var(--background-toggle-on);
+  border-color: transparent;
+}
+
+/* Focus ring */
+.input:focus-visible + .track {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* ——— THUMB (Circle knob) ——— */
+.thumb {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 2px;
+  background: var(--foreground-toggle-thumb, #ffffff);
+  border-radius: var(--yuanhhou-border-radius-circle, 9999px);
+  transition: transform 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* Thumb checked position - flush to right edge */
+.input:checked + .track .thumb {
+  transform: translateX(20px);
+}
+
+/* ——— LABEL ——— */
+.label {
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: var(--yuanhhou-type-body-1-font-size, 16px);
+  font-weight: var(--yuanhhou-type-body-1-font-weight, 400);
+  line-height: var(--yuanhhou-type-body-1-line-height, 1.4);
+  color: var(--foreground-primary);
+}
+
+/* Screen reader only */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ——— MOBILE OPTIMIZATIONS ——— */
+/* Mobile-first: ensure touch-friendly sizing */
+@media (max-width: 480px) {
+  .track {
+    width: 48px;
+    height: 28px;
+  }
+  
+  .thumb {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .input:checked + .track .thumb {
+    transform: translateX(20px);
+  }
+}
+
+/* Hover effect - only on devices that support hover */
+@media (hover: hover) {
+  .toggle:not(.disabled):hover .track {
+    opacity: 0.85;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .track,
+  .thumb {
+    transition: none;
+  }
+}

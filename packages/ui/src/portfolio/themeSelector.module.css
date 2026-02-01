@@ -1,0 +1,51 @@
+/* ========================================
+   THEME SELECTOR - Color Swatches
+   ======================================== */
+
+.selector {
+  display: flex;
+  gap: var(--yuanhhou-spacing-150, 12px);
+}
+
+.swatch {
+  width: var(--yuanhhou-spacing-500);
+  height: var(--yuanhhou-spacing-500);
+  border-radius: var(--radius-small, 4px);
+  border: 2px solid var(--border-secondary);
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  transition: all 0.2s ease;
+  background: none;
+}
+
+.swatch:hover {
+  border-color: var(--border-primary);
+  transform: scale(1.05);
+}
+
+.swatch:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+.swatch.active {
+  border-color: var(--foreground-brand-primary);
+  box-shadow: 0 0 0 2px var(--foreground-brand-primary);
+}
+
+.colorTop,
+.colorBottom {
+  flex: 1;
+  display: block;
+  height: 100%;
+}
+
+/* Mobile - wrap to second line */
+@media (max-width: 480px) {
+  .selector {
+    flex-wrap: wrap;
+  }
+}

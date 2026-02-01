@@ -1,0 +1,270 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 590;
+  letter-spacing: -0.4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  user-select: none;
+  position: relative;
+  text-decoration: none;
+  min-height: 44px;
+}
+
+@media (min-width: 481px) {
+  .button {
+    min-height: auto;
+  }
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+/* ========================================
+   SIZE VARIATIONS
+   Mobile-first approach
+   ======================================== */
+
+.small {
+  padding: var(--yuanhhou-spacing-125, 10px) var(--yuanhhou-spacing-200);
+  border-radius: var(--radius-button-small);
+  gap: 4px;
+}
+
+@media (min-width: 481px) {
+  .small {
+    padding: var(--yuanhhou-spacing-100) var(--yuanhhou-spacing-200);
+  }
+}
+
+.large {
+  padding: var(--yuanhhou-spacing-200);
+  border-radius: var(--radius-button);
+  gap: var(--yuanhhou-spacing-050);
+}
+
+/* ========================================
+   VARIANT: PRIMARY
+   ======================================== */
+
+.primary {
+  background: var(--background-brand-primary);
+  color: var(--foreground-brand-on-primary);
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: transparent;
+  transition: background 0.2s ease;
+  pointer-events: none;
+}
+
+.primary:hover:not(:disabled) {
+  border-color: var(--border-brand);
+}
+
+.primary:hover:not(:disabled)::before {
+  background: var(--background-interaction-hover);
+}
+
+.primary:active:not(:disabled)::before {
+  background: var(--background-interaction-active);
+}
+
+.primary:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   VARIANT: SECONDARY
+   ======================================== */
+
+.secondary {
+  background: var(--background-brand-secondary);
+  color: var(--foreground-brand-on-secondary);
+  border: 1px solid transparent;
+}
+
+.secondary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: transparent;
+  transition: 0.2s ease;
+  pointer-events: none;
+}
+
+.secondary:hover:not(:disabled) {
+  border-color: var(--border-brand);
+}
+
+.secondary:active:not(:disabled) {
+  border-color: var(--border-brand);
+  background: var(--background-brand-secondary);
+}
+
+.secondary:active:not(:disabled)::before {
+  background: var(--background-interaction-active);
+}
+
+.secondary:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   VARIANT: TERTIARY
+   ======================================== */
+
+.tertiary {
+  background: var(--background-secondary);
+  color: var(--foreground-interaction-hero);
+}
+
+.tertiary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: transparent;
+  transition: 0.2s ease;
+  pointer-events: none;
+}
+
+.tertiary:hover:not(:disabled)::before {
+  background: var(--background-interaction-hover);
+}
+
+.tertiary:active:not(:disabled)::before {
+  background: var(--background-interaction-active);
+}
+
+.tertiary:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   VARIANT: ALERT
+   ======================================== */
+
+.alert {
+  background: var(--background-danger-secondary);
+  color: var(--foreground-danger-on-secondary);
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.alert::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: transparent;
+  transition: 0.2s ease;
+  pointer-events: none;
+}
+
+.alert:hover:not(:disabled) {
+  border-color: var(--border-danger);
+}
+
+.alert:active:not(:disabled) {
+  border-color: var(--border-danger);
+}
+
+.alert:active:not(:disabled)::before {
+  background: var(--background-interaction-active);
+}
+
+.alert:focus-visible {
+  outline: 2px solid var(--border-danger);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   ICON SUPPORT
+   ======================================== */
+
+.startIcon,
+.endIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.small .startIcon,
+.small .endIcon {
+  width: var(--yuanhhou-size-250);
+  height: var(--yuanhhou-size-250);
+}
+
+.large .startIcon,
+.large .endIcon {
+  width: var(--yuanhhou-size-300);
+  height: var(--yuanhhou-size-300);
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* ========================================
+   ICON-ONLY BUTTONS
+   ======================================== */
+
+.iconOnly {
+  aspect-ratio: 1;
+  padding: 0;
+  border-radius: var(--radius-button);
+}
+
+.iconOnly.small {
+  width: var(--yuanhhou-size-500);  /* 40px */
+  height: var(--yuanhhou-size-500);
+  border-radius: var(--radius-button-small);
+}
+
+.iconOnly.large {
+  width: var(--yuanhhou-size-600);  /* 48px */
+  height: var(--yuanhhou-size-600);
+}
+
+.iconOnlyIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.iconOnly.small .iconOnlyIcon {
+  width: var(--yuanhhou-size-250);  /* 20px */
+  height: var(--yuanhhou-size-250);
+}
+
+.iconOnly.large .iconOnlyIcon {
+  width: var(--yuanhhou-size-300);  /* 24px */
+  height: var(--yuanhhou-size-300);
+}

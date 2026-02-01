@@ -1,0 +1,181 @@
+/* ===========================================
+   Card Component
+   Based on Figma node 17-537
+   Variants: transparent (no background) | filled (bg-secondary)
+   Directions: horizontal | vertical
+   Asset types: icon (32px) | image (160px)
+   =========================================== */
+
+/* ——— BASE ——— */
+.card {
+  display: flex;
+  align-items: flex-start;
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 601px) {
+  .card {
+    min-width: 240px;
+  }
+}
+
+/* ——— DIRECTION: Horizontal ——— */
+/* Mobile-first: stack vertically on small screens */
+.card--horizontal {
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-200, 16px);
+}
+
+@media (min-width: 481px) {
+  .card--horizontal {
+    flex-direction: row;
+  }
+}
+
+/* ——— DIRECTION: Vertical ——— */
+.card--vertical {
+  gap: var(--yuanhhou-spacing-200, 16px);
+}
+
+/* ——— VARIANT: Transparent (no background) ——— */
+.card--transparent {
+  background: transparent;
+  padding: var(--yuanhhou-spacing-200, 16px);
+}
+
+@media (min-width: 601px) {
+  .card--transparent {
+    padding: var(--yuanhhou-spacing-300, 24px);
+  }
+}
+
+/* ——— VARIANT: Filled (background-secondary + radius) ——— */
+.card--filled {
+  background: var(--background-secondary);
+  border-radius: var(--radius-card);
+  /* Mobile-first: compact padding */
+  padding: var(--yuanhhou-spacing-200, 16px);
+}
+
+@media (min-width: 601px) {
+  .card--filled {
+    padding: var(--yuanhhou-spacing-300, 24px);
+  }
+}
+
+/* ——— ASSET (shared) ——— */
+.asset {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon asset: just the icon colored with brand primary */
+.asset--icon {
+  width: var(--yuanhhou-size-400, 32px);
+  height: var(--yuanhhou-size-400, 32px);
+  color: var(--background-brand-primary);
+}
+
+/* Image asset: responsive sizing */
+.asset--image {
+  /* Mobile-first: smaller image */
+  width: 100%;
+  max-width: 120px;
+  height: 120px;
+  background: var(--background-secondary);
+  border-radius: var(--yuanhhou-border-radius-50, 4px);
+  overflow: hidden;
+}
+
+/* Vertical card on mobile: full width image */
+.card--vertical .asset--image {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+@media (min-width: 601px) {
+  .asset--image {
+    width: 160px;
+    max-width: 160px;
+    height: 160px;
+  }
+}
+
+.asset--image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ——— CONTENT (title + body + footer) ——— */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  flex: 1 1 0;
+  gap: var(--yuanhhou-spacing-200, 16px);
+}
+
+@media (min-width: 601px) {
+  .content {
+    gap: var(--yuanhhou-spacing-250, 20px);
+    min-width: 160px;
+  }
+}
+
+/* Text block (title + body) */
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-100, 8px);
+  width: 100%;
+}
+
+/* Title */
+.title {
+  font-family: var(--yuanhhou-font-family-primary, 'Inter', sans-serif);
+  /* Mobile-first: slightly smaller */
+  font-size: var(--yuanhhou-heading-xs-font-size, 18px);
+  font-weight: var(--yuanhhou-font-weight-600, 600);
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+  color: var(--foreground-primary);
+}
+
+@media (min-width: 601px) {
+  .title {
+    font-size: var(--yuanhhou-heading-sm-font-size, 20px);
+  }
+}
+
+/* Body */
+.body {
+  font-family: var(--yuanhhou-font-family-primary, 'Inter', sans-serif);
+  /* Mobile-first: comfortable reading size */
+  font-size: var(--yuanhhou-font-size-body-sm, 15px);
+  font-weight: var(--yuanhhou-font-weight-400, 400);
+  line-height: 1.5;
+  letter-spacing: -0.3px;
+  color: var(--foreground-secondary);
+}
+
+@media (min-width: 601px) {
+  .body {
+    font-size: var(--yuanhhou-font-size-body-md, 17px);
+    line-height: 22px;
+    letter-spacing: -0.4px;
+  }
+}
+
+/* Footer (button area) */
+.footer {
+  display: flex;
+  gap: var(--yuanhhou-spacing-100, 8px);
+}
+

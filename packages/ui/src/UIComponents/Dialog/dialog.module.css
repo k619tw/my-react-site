@@ -1,0 +1,174 @@
+/* Dialog Component Styles */
+
+/* ——— OVERLAY (Scrim) ——— */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--background-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ——— DIALOG BODY ——— */
+.dialog {
+  position: relative;
+  background: var(--background-primary);
+  border-radius: var(--radius-modal);
+  /* Mobile-first: compact padding */
+  padding: var(--yuanhhou-spacing-250, 20px);
+  max-width: 600px;
+  width: 100%;
+  margin-left: 16px;
+  margin-right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-200, 16px);
+  box-shadow: 
+    0px 4px 4px 0px rgba(12, 12, 13, 0.05),
+    0px 16px 32px 0px rgba(12, 12, 13, 0.1);
+  animation: slideIn 0.2s ease-out;
+}
+
+/* Tablet and up */
+@media (min-width: 481px) {
+  .dialog {
+    padding: var(--yuanhhou-spacing-400, 32px);
+    margin-left: 24px;
+    margin-right: 24px;
+    gap: var(--yuanhhou-spacing-300, 24px);
+  }
+}
+
+/* ——— CLOSE BUTTON ——— */
+.closeButton {
+  position: absolute;
+  top: var(--yuanhhou-spacing-100, 8px);
+  right: var(--yuanhhou-spacing-100, 8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--yuanhhou-size-500, 32px);
+  height: var(--yuanhhou-size-500, 32px);
+  padding: var(--yuanhhou-spacing-075, 6px);
+  border: none;
+  border-radius: var(--radius-full);
+  background: var(--background-interaction-primary);
+  color: var(--foreground-interaction-on-primary);
+  cursor: pointer;
+  transition: 0.15s ease, color 0.15s ease;
+}
+
+.closeButton:hover {
+  background: var(--background-interaction-hover);
+  color: var(--foreground-primary);
+}
+
+.closeButton:active {
+  background: var(--background-interaction-active);
+}
+
+.closeButton:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+.closeIcon {
+  width: var(--yuanhhou-size-250, 20px);
+  height: var(--yuanhhou-size-250, 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ——— CONTENT SECTION ——— */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-100, 8px);
+  /* Mobile-first: smaller padding for close button */
+  padding-right: 28px;
+}
+
+@media (min-width: 481px) {
+  .content {
+    gap: var(--yuanhhou-spacing-150, 12px);
+    padding-right: 32px;
+  }
+}
+
+.title {
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: var(--yuanhhou-type-headline-font-size, 24px);
+  font-weight: var(--yuanhhou-type-headline-font-weight, 600);
+  line-height: var(--yuanhhou-type-headline-line-height, 1.2);
+  letter-spacing: var(--yuanhhou-type-headline-letter-spacing, -0.48px);
+  color: var(--foreground-primary);
+  margin: 0;
+}
+
+.description {
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: var(--yuanhhou-type-body-1-font-size, 16px);
+  font-weight: var(--yuanhhou-type-body-1-font-weight, 400);
+  line-height: var(--yuanhhou-type-body-1-line-height, 1.4);
+  color: var(--foreground-secondary);
+  margin: 0;
+}
+
+/* ——— ACTIONS (Button Group) ——— */
+/* Mobile-first: stacked buttons */
+.actions {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--yuanhhou-spacing-150, 12px);
+  width: 100%;
+}
+
+.actions > * {
+  width: 100%;
+}
+
+/* Tablet and up: inline buttons */
+@media (min-width: 481px) {
+  .actions {
+    flex-direction: row;
+    gap: var(--yuanhhou-spacing-200, 16px);
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+  }
+  
+  .actions > * {
+    width: auto;
+  }
+}
+
+/* EOF */

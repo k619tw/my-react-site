@@ -1,0 +1,101 @@
+/* Generated tokens - sizing (spacing & border-radius)
+   Source: sizeAndBorderRadius.json
+*/
+:root {
+
+  /* ========================================
+     SPACING / GAPS
+     ======================================== */
+
+  /* Micro spacing - 0px to 2px */
+   --yuanhhou-spacing-0: 0px;
+   --yuanhhou-spacing-10: 1px;
+   --yuanhhou-spacing-25: 2px;
+
+  /* Extra small spacing - 4px to 8px */
+   --yuanhhou-spacing-50: 4px;
+   --yuanhhou-spacing-75: 6px;
+   --yuanhhou-spacing-100: 8px;
+
+  /* Small spacing - 10px to 16px */
+   --yuanhhou-spacing-125: 10px;
+   --yuanhhou-spacing-150: 12px;
+   --yuanhhou-spacing-200: 16px;
+
+  /* Medium spacing - 20px to 32px */
+   --yuanhhou-spacing-250: 20px;
+   --yuanhhou-spacing-300: 24px;
+   --yuanhhou-spacing-400: 32px;
+
+  /* Large spacing - 40px to 56px */
+   --yuanhhou-spacing-500: 40px;
+   --yuanhhou-spacing-600: 48px;
+   --yuanhhou-spacing-700: 56px;
+
+  /* Extra large spacing - 64px to 104px */
+   --yuanhhou-spacing-800: 64px;
+   --yuanhhou-spacing-900: 72px;
+   --yuanhhou-spacing-1000: 80px;
+   --yuanhhou-spacing-1100: 88px;
+   --yuanhhou-spacing-1200: 96px;
+   --yuanhhou-spacing-1300: 104px;
+
+  /* Jumbo spacing - 160px */
+   --yuanhhou-spacing-2000: 160px;
+
+
+  /* ========================================
+     SIZES (WIDTH / HEIGHT)
+     ======================================== */
+
+  /* Based on 8px scale + common UI sizes */
+   --yuanhhou-size-10: 1px;
+   --yuanhhou-size-25: 2px;
+   --yuanhhou-size-50: 4px;
+   --yuanhhou-size-100: 8px;
+   --yuanhhou-size-125: 10px;
+   --yuanhhou-size-150: 12px;
+   --yuanhhou-size-200: 16px;
+   --yuanhhou-size-250: 20px;
+   --yuanhhou-size-300: 24px;
+   --yuanhhou-size-400: 32px;
+   --yuanhhou-size-500: 40px;
+   --yuanhhou-size-600: 48px;
+   --yuanhhou-size-700: 56px;
+   --yuanhhou-size-800: 64px;
+   --yuanhhou-size-900: 72px;
+   --yuanhhou-size-1000: 80px;
+   --yuanhhou-size-1100: 88px;
+   --yuanhhou-size-1200: 96px;
+   --yuanhhou-size-1300: 104px;
+   --yuanhhou-size-1400: 112px;
+
+
+  /* ========================================
+     BORDER RADIUS
+     ======================================== */
+
+  /* Sharp corners */
+   --yuanhhou-border-radius-0: 0px;
+
+  /* Minimal rounding - 1px to 2px */
+   --yuanhhou-border-radius-10: 1px;
+   --yuanhhou-border-radius-25: 2px;
+
+  /* Small rounding - 4px to 8px */
+   --yuanhhou-border-radius-50: 4px;
+   --yuanhhou-border-radius-100: 8px;
+
+  /* Medium rounding - 10px to 16px */
+   --yuanhhou-border-radius-125: 10px;
+   --yuanhhou-border-radius-200: 16px;
+
+  /* Large rounding - 24px */
+   --yuanhhou-border-radius-300: 24px;
+
+  /* Fully rounded / Pill shape */
+   --yuanhhou-border-radius-circle: 9999px;
+
+}
+
+/* EOF */

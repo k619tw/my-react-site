@@ -1,0 +1,203 @@
+{
+  "header": {
+    "title": "Yuanhhou UI",
+    "currentlyViewing": "目前檢視: {{theme}}"
+  },
+  "sections": {
+    "componentLibrary": "元件庫預覽",
+    "accordion": "手風琴元件",
+    "badge": "徽章元件",
+    "button": "按鈕元件",
+    "card": "卡片元件",
+    "chip": "晶片元件",
+    "dialog": "對話框元件",
+    "toggle": "切換元件"
+  },
+  "sizes": {
+    "small": "小尺寸",
+    "large": "大尺寸",
+    "allTypes": "所有類型",
+    "withIcons": "帶圖示"
+  },
+  "accordion": {
+    "q1": {
+      "title": "這個應用程式的目的是什麼？",
+      "content": "這個應用程式旨在幫助使用者追蹤日常習慣並保持生產力。它提供可自訂的習慣追蹤、目標設定、進度視覺化和提醒等功能。"
+    },
+    "q2": {
+      "title": "如何建立新習慣？",
+      "content": "要建立新習慣，請點擊儀表板上的「新增習慣」按鈕。輸入習慣名稱，設定目標頻率（每日、每週等），選擇時間，並可選擇新增提醒。"
+    },
+    "q3": {
+      "title": "我的資料安全嗎？",
+      "content": "是的，您的資料已完全加密並安全儲存。我們使用業界標準的加密協議來保護您的個人資訊。"
+    }
+  },
+  "badges": {
+    "neutral": "中性",
+    "danger": "危險",
+    "warning": "警告",
+    "success": "成功",
+    "promote": "推廣"
+  },
+  "buttons": {
+    "primary": "主要按鈕",
+    "secondary": "次要按鈕",
+    "tertiary": "第三按鈕",
+    "alert": "警示按鈕",
+    "createNew": "建立新項目",
+    "saveChanges": "儲存變更",
+    "addFavorite": "加入收藏",
+    "deleteItem": "刪除項目",
+    "continue": "繼續",
+    "learnMore": "了解更多",
+    "viewDetails": "檢視詳情",
+    "proceedWithCaution": "謹慎進行",
+    "add": "新增",
+    "save": "儲存",
+    "favorite": "收藏",
+    "delete": "刪除",
+    "next": "下一步",
+    "more": "更多",
+    "details": "詳情",
+    "remove": "移除",
+    "disabled": "已停用",
+    "primaryDisabled": "主要 已停用",
+    "secondaryDisabled": "次要 已停用",
+    "tertiaryDisabled": "第三 已停用",
+    "alertDisabled": "警示 已停用"
+  },
+  "variants": {
+    "allVariants": "所有變體",
+    "withStartIcons": "帶前置圖示",
+    "withEndIcons": "帶後置圖示",
+    "disabledStates": "停用狀態"
+  },
+  "card": {
+    "title": "標題",
+    "body": "這是您想說的內容的正文文字。可以添加主要要點、引述、軼事，甚至是一個非常短的故事。",
+    "iconHorizontal": "圖示 — 水平",
+    "iconVertical": "圖示 — 垂直",
+    "imageHorizontal": "圖片 — 水平",
+    "imageVertical": "圖片 — 垂直",
+    "invertedHorizontal": "反轉（深色）— 水平",
+    "invertedVertical": "反轉（深色）— 垂直"
+  },
+  "dialog": {
+    "openDefault": "開啟預設對話框",
+    "openInfo": "開啟資訊對話框",
+    "openDanger": "開啟危險對話框",
+    "openCustom": "開啟自訂對話框",
+    "defaultTitle": "對話框標題",
+    "defaultBody": "這是對話框的正文文字。您可以在此放置任何內容，以告知或詢問使用者重要的事情。",
+    "infoTitle": "資訊",
+    "infoBody": "這是您應該知道的有用資訊。此對話框使用資訊變體樣式。",
+    "dangerTitle": "刪除項目",
+    "dangerBody": "您確定要刪除此項目嗎？此操作無法復原。",
+    "customTitle": "自訂樣式對話框",
+    "customBody": "此對話框具有包含多個元素的自訂內容。",
+    "cancel": "取消",
+    "confirm": "確認",
+    "gotIt": "知道了",
+    "delete": "刪除",
+    "customAction": "自訂操作"
+  },  "chip": {
+    "states": "狀態",
+    "unselected": "未選中",
+    "selected": "已選中",
+    "singleSelection": "單選",
+    "multipleSelection": "多選"
+  },
+  "chip": {
+    "states": "狀態",
+    "unselected": "未選中",
+    "selected": "已選中",
+    "singleSelection": "單選",
+    "multipleSelection": "多選",
+    "selectOption": "選擇選項",
+    "filterOptions": "篩選選項",
+    "option1": "選項 1",
+    "option2": "選項 2",
+    "option3": "選項 3",
+    "option4": "選項 4",
+    "filter1": "篩選 1",
+    "filter2": "篩選 2",
+    "filter3": "篩選 3",
+    "filter4": "篩選 4",
+    "filter5": "篩選 5"
+  },
+  "toggle": {
+    "title": "切換元件",
+    "enableNotifications": "啟用通知",
+    "notificationsDesc": "接收提醒和更新",
+    "darkMode": "深色模式",
+    "darkModeDesc": "切換到深色主題",
+    "autoSave": "自動儲存",
+    "autoSaveDesc": "自動儲存變更",
+    "on": "開啟",
+    "off": "關閉"
+  },
+  "language": {
+    "label": "語言",
+    "en": "English",
+    "ja": "日本語",
+    "zh": "繁體中文"
+  },
+  "portfolio": {
+    "logo": "作品集",
+    "nav": {
+      "home": "首頁",
+      "about": "關於",
+      "work": "作品",
+      "contact": "聯絡",
+      "settings": "設定"
+    },
+    "hero": {
+      "title": "歡迎來到我的作品集",
+      "subtitle": "使用設計令牌和無障礙元件構建"
+    },
+    "placeholder": "您的作品集內容將顯示在這裡",
+    "settings": {
+      "title": "設定",
+      "language": "語言",
+      "languageHint": "選擇您偏好的語言",
+      "theme": "主題",
+      "themeHint": "選擇符合您心情的主題"
+    },
+    "work": {
+      "title": "作品",
+      "card1": {
+        "title": "作品集 UI 元件",
+        "body": "在 Visual Studio Code 中使用 Figma MCP 與 Claude AI 打造的完整設計系統。從建立 UI 基礎、定義設計基元、語意令牌到間距系統，探索 AI 輔助開發如何簡化設計系統架構。包含智慧色彩系統、排版比例表，以及以無障礙優先方式使用現代設計令牌構建的元件。",
+        "link": "查看預覽 →",
+        "badge": "加分"
+      },
+      "card2": {
+        "title": "專案 Alpha",
+        "body": "一個用於任務管理和提高生產力的行動應用程式設計。",
+        "link": "即將推出"
+      },
+      "card3": {
+        "title": "專案 Beta",
+        "body": "為新創公司設計的品牌識別和網頁設計。",
+        "link": "即將推出"
+      },
+      "card4": {
+        "title": "專案 Gamma",
+        "body": "設計系統文檔和元件庫。",
+        "link": "即將推出"
+      }
+    },
+    "onboarding": {
+      "greeting": {
+        "morning": "早安",
+        "afternoon": "午安",
+        "evening": "晚上好"
+      },
+      "languageStep": "您想用哪種語言瀏覽？",
+      "themeStep": "選擇符合您心情的主題",
+      "settingsHint": "您可以隨時在設定中更改",
+      "letsGo": "開始瀏覽"
+    }
+  }
+}

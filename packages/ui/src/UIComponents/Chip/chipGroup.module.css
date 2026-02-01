@@ -1,0 +1,11 @@
+/* ===========================================
+   Chip Group Component
+   Container for multiple chip items
+   =========================================== */
+
+.chipGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--yuanhhou-spacing-100, 8px);
+  align-items: center;
+}

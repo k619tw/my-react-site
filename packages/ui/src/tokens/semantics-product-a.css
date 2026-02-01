@@ -1,0 +1,161 @@
+/* ========================================
+   SEMANTIC TOKENS - PRODUCT A (Light Theme)
+   ========================================
+   Maps primitive tokens to semantic meaning.
+   This is the default/light theme for Product A.
+   
+   Usage: 
+   - Default: applies to :root
+   - Explicit: use [data-theme="product-a"]
+   
+   ═══════════════════════════════════════════
+   COLOR PAIRING PRINCIPLES
+   ═══════════════════════════════════════════
+   
+   1. foreground.{category}.primary
+      → Pairs with: background-primary, background-secondary,
+                    background-card-primary, background-card-secondary
+      → Use for: general text/icons on neutral surfaces
+   
+   2. foreground.{category}.on-primary
+      → Pairs with: background-{category}-primary
+      → Use for: text/icons on filled/solid backgrounds
+   
+   3. foreground.{category}.on-secondary
+      → Pairs with: background-{category}-secondary
+      → Use for: text/icons on tinted/subtle backgrounds
+   
+   ═══════════════════════════════════════════
+   ======================================== */
+
+:root,
+[data-theme="product-a"] {
+  
+  /* ——— BACKGROUNDS ——— */
+  
+  /* Primary page/surface backgrounds */
+  --background-primary: var(--yuanhhou-grey-0-alpha-100);
+  --background-secondary: var(--yuanhhou-grey-50-alpha-100);
+
+  /* Card surfaces */
+  --background-card-primary: var(--yuanhhou-grey-50-alpha-100);
+  --background-card-secondary: var(--yuanhhou-grey-0-alpha-100);
+  --background-card-inverted: var(--yuanhhou-grey-900-alpha-100);
+
+  /* Brand backgrounds */
+  --background-brand-primary: var(--yuanhhou-blue-550-alpha-100);
+  --background-brand-secondary: var(--yuanhhou-blue-50-alpha-100);
+
+  /* Status backgrounds - emphasized for badges */
+  --background-success-primary: var(--yuanhhou-green-500-alpha-100);
+  --background-success-secondary: var(--yuanhhou-green-100-alpha-100);  /* stronger green tint */
+  --background-danger-primary: var(--yuanhhou-red-500-alpha-100);
+  --background-danger-secondary: var(--yuanhhou-red-100);               /* #ffebee - visible red */
+  --background-warning-primary: var(--yuanhhou-orange-500);
+  --background-warning-secondary: var(--yuanhhou-orange-100);           /* visible orange */
+  --background-info-primary: var(--yuanhhou-blue-550-alpha-100);
+  --background-info-secondary: var(--yuanhhou-blue-100-alpha-100);      /* stronger blue */
+
+  /* Premium/Promotion backgrounds */
+  --background-promote-primary: var(--yuanhhou-purple-600);
+  --background-promote-secondary: var(--yuanhhou-purple-100);
+
+  /* Interactive backgrounds */
+  --background-interaction-primary: var(--yuanhhou-grey-800-alpha-05);
+  --background-interaction-hover: var(--yuanhhou-grey-800-alpha-10);
+  --background-interaction-active: var(--yuanhhou-grey-800-alpha-15);
+
+  /* Overlays & modals */
+  --background-overlay: var(--yuanhhou-grey-1000-alpha-20);
+
+
+  /* ——— BORDERS ——— */
+  
+  /* Neutral borders */
+  --border-primary: var(--yuanhhou-grey-800-alpha-60);
+  --border-secondary: var(--yuanhhou-grey-800-alpha-35);
+  --border-tertiary: var(--yuanhhou-grey-800-alpha-20);
+  --border-inverted: var(--yuanhhou-grey-0-alpha-100);
+
+  /* Semantic borders */
+  --border-brand: var(--yuanhhou-blue-500-alpha-100);
+  --border-success: var(--yuanhhou-green-500-alpha-100);
+  --border-danger: var(--yuanhhou-red-500-alpha-100);
+  --border-warning: var(--yuanhhou-orange-500);
+  --border-info: var(--yuanhhou-blue-500-alpha-100);
+  --border-promote: var(--yuanhhou-purple-600);
+
+  /* Focus states */
+  --border-focus: var(--yuanhhou-blue-500-alpha-100);
+  --border-focus-inset: var(--yuanhhou-grey-0-alpha-100);
+
+
+  /* ——— FOREGROUNDS (TEXT & ICONS) ——— */
+  
+  /* Primary text colors */
+  --foreground-primary: var(--yuanhhou-grey-900-alpha-100);
+  --foreground-secondary: var(--yuanhhou-grey-600-alpha-100);
+  --foreground-tertiary: var(--yuanhhou-grey-500-alpha-100);
+  --foreground-disabled: var(--yuanhhou-grey-400-alpha-100);
+
+  /* On dark/inverted surfaces */
+  --foreground-on-primary: var(--yuanhhou-grey-0-alpha-100);
+
+  /* Brand foregrounds */
+  --foreground-brand-primary: var(--yuanhhou-blue-550-alpha-100);
+  --foreground-brand-on-primary: var(--yuanhhou-grey-0-alpha-100);
+  --foreground-brand-on-secondary: var(--yuanhhou-blue-550-alpha-100);
+
+  /* Status foregrounds */
+  --foreground-success-primary: var(--yuanhhou-green-500-alpha-100);
+  --foreground-success-on-primary: var(--yuanhhou-grey-0-alpha-100);
+  --foreground-success-on-secondary: var(--yuanhhou-green-700-alpha-100);
+  --foreground-danger-primary: var(--yuanhhou-red-500-alpha-100);
+  --foreground-danger-on-primary: var(--yuanhhou-grey-0-alpha-100);
+  --foreground-danger-on-secondary: var(--yuanhhou-red-500-alpha-100);
+  --foreground-warning-primary: var(--yuanhhou-orange-500);
+  --foreground-warning-on-primary: var(--yuanhhou-orange-900);
+  --foreground-warning-on-secondary: var(--yuanhhou-orange-800);
+  --foreground-info-primary: var(--yuanhhou-blue-550-alpha-100);
+  --foreground-info-on-primary: var(--yuanhhou-grey-0-alpha-100);
+  --foreground-info-on-secondary: var(--yuanhhou-blue-800-alpha-100);
+
+  /* Promote foregrounds */
+  --foreground-promote-primary: var(--yuanhhou-purple-600);          /* 7:1 on light backgrounds ✓ */
+  --foreground-promote-on-primary: var(--yuanhhou-grey-0-alpha-100); /* white on purple-600 = 7:1 ✓ */
+  --foreground-promote-on-secondary: var(--yuanhhou-purple-700);     /* dark purple on purple-100 = 5:1 ✓ */
+
+  /* Interactive foregrounds */
+  --foreground-interaction-hero: var(--yuanhhou-blue-550-alpha-100);
+  --foreground-interaction-primary: var(--yuanhhou-grey-600-alpha-100);
+  --foreground-interaction-on-primary: var(--yuanhhou-grey-900-alpha-100);
+  --foreground-interaction-on-inverted: var(--yuanhhou-bright-blue-500-alpha-100);
+
+  /* Toggle component */
+  --background-toggle-off: var(--yuanhhou-grey-300-alpha-100);      /* neutral grey */
+  --background-toggle-on: var(--background-brand-primary);          /* brand blue */
+  --foreground-toggle-thumb: var(--yuanhhou-grey-0-alpha-100);      /* white thumb */
+
+
+  /* ——— BORDER RADIUS ——— */
+  
+  /* Product A: Clean, professional - subtle rounding */
+  --radius-none: var(--yuanhhou-border-radius-0);
+  --radius-small: var(--yuanhhou-border-radius-50);        /* 4px */
+  --radius-medium: var(--yuanhhou-border-radius-100);      /* 8px */
+  --radius-large: var(--yuanhhou-border-radius-125);       /* 10px */
+  --radius-xlarge: var(--yuanhhou-border-radius-200);      /* 16px */
+  --radius-full: var(--yuanhhou-border-radius-circle);     /* pill */
+  
+  /* Component-specific semantic radii */
+  --radius-card: var(--yuanhhou-border-radius-100);        /* 8px - standard cards */
+  --radius-button: var(--yuanhhou-border-radius-100);      /* 8px - buttons */
+  --radius-button-small: var(--yuanhhou-border-radius-circle); /* pill for small */
+  --radius-input: var(--yuanhhou-border-radius-100);       /* 8px - inputs */
+  --radius-badge: var(--yuanhhou-border-radius-circle);    /* pill - badges */
+  --radius-accordion: var(--yuanhhou-border-radius-100);   /* 8px - accordion */
+  --radius-modal: var(--yuanhhou-border-radius-200);       /* 16px - modals */
+  --radius-tooltip: var(--yuanhhou-border-radius-50);      /* 4px - tooltips */
+}
+
+/* EOF */

@@ -1,0 +1,68 @@
+/* ===========================================
+   Chip Component Atom
+   Based on Figma node 32-2084
+   States: unselected (background-secondary) | selected (brand-primary)
+   =========================================== */
+
+/* ——— BASE ——— */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: var(--yuanhhou-spacing-100, 8px) var(--yuanhhou-spacing-200, 16px);
+  border-radius: 9999px;
+  border: 1px solid var(--border-brand);
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+/* ——— STATE: Unselected ——— */
+.chip--unselected {
+  background: var(--background-secondary);
+  color: var(--foreground-brand-primary);
+}
+
+.chip--unselected:hover {
+  background: var(--background-tertiary);
+}
+
+.chip--unselected:active {
+  background: var(--background-quaternary);
+}
+
+/* ——— STATE: Selected ——— */
+.chip--selected {
+  background: var(--background-brand-primary);
+  color: var(--foreground-brand-on-primary);
+}
+
+.chip--selected:hover {
+  opacity: 0.9;
+}
+
+.chip--selected:active {
+  opacity: 0.8;
+}
+
+/* ——— ICON ——— */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

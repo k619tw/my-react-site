@@ -1,0 +1,197 @@
+{
+  "header": {
+    "title": "Yuanhhou UI",
+    "currentlyViewing": "Currently viewing: {{theme}}"
+  },
+  "sections": {
+    "componentLibrary": "Component Library Preview",
+    "accordion": "Accordion Component",
+    "badge": "Badge Component", 
+    "button": "Button Component",
+    "card": "Card Component",
+    "chip": "Chip Component",
+    "dialog": "Dialog Component",
+    "toggle": "Toggle Component"
+  },
+  "sizes": {
+    "small": "Small Size",
+    "large": "Large Size",
+    "allTypes": "All Types",
+    "withIcons": "With Icons"
+  },
+  "accordion": {
+    "q1": {
+      "title": "What is the purpose of this app?",
+      "content": "This app was designed to help users track their daily habits and stay productive. It offers features such as customisable habit tracking, goal setting, progress visualisation, and reminders to keep you on track."
+    },
+    "q2": {
+      "title": "How do I create a new habit?",
+      "content": "To create a new habit, click the \"Add Habit\" button on the dashboard. Enter the habit name, set your target frequency (daily, weekly, etc.), choose a time, and optionally add reminders."
+    },
+    "q3": {
+      "title": "Is my data secure?",
+      "content": "Yes, your data is fully encrypted and stored securely. We use industry-standard encryption protocols to protect your personal information."
+    }
+  },
+  "badges": {
+    "neutral": "Neutral",
+    "danger": "Danger",
+    "warning": "Warning",
+    "success": "Success",
+    "promote": "Promote"
+  },
+  "buttons": {
+    "primary": "Primary Button",
+    "secondary": "Secondary Button",
+    "tertiary": "Tertiary Button",
+    "alert": "Alert Button",
+    "createNew": "Create New",
+    "saveChanges": "Save Changes",
+    "addFavorite": "Add Favorite",
+    "deleteItem": "Delete Item",
+    "continue": "Continue",
+    "learnMore": "Learn More",
+    "viewDetails": "View Details",
+    "proceedWithCaution": "Proceed with Caution",
+    "add": "Add",
+    "save": "Save",
+    "favorite": "Favorite",
+    "delete": "Delete",
+    "next": "Next",
+    "more": "More",
+    "details": "Details",
+    "remove": "Remove",
+    "disabled": "Disabled",
+    "primaryDisabled": "Primary Disabled",
+    "secondaryDisabled": "Secondary Disabled",
+    "tertiaryDisabled": "Tertiary Disabled",
+    "alertDisabled": "Alert Disabled"
+  },
+  "variants": {
+    "allVariants": "All Variants",
+    "withStartIcons": "With Start Icons",
+    "withEndIcons": "With End Icons",
+    "disabledStates": "Disabled States"
+  },
+  "card": {
+    "title": "Title",
+    "body": "Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story.",
+    "iconHorizontal": "Icon — Horizontal",
+    "iconVertical": "Icon — Vertical",
+    "imageHorizontal": "Image — Horizontal",
+    "imageVertical": "Image — Vertical",
+    "invertedHorizontal": "Inverted (Dark) — Horizontal",
+    "invertedVertical": "Inverted (Dark) — Vertical"
+  },
+  "chip": {
+    "states": "States",
+    "unselected": "Unselected",
+    "selected": "Selected",
+    "singleSelection": "Single Selection",
+    "multipleSelection": "Multiple Selection",
+    "selectOption": "Select an option",
+    "filterOptions": "Filter options",
+    "option1": "Option 1",
+    "option2": "Option 2",
+    "option3": "Option 3",
+    "option4": "Option 4",
+    "filter1": "Filter 1",
+    "filter2": "Filter 2",
+    "filter3": "Filter 3",
+    "filter4": "Filter 4",
+    "filter5": "Filter 5"
+  },
+  "dialog": {
+    "openDefault": "Open Default Dialog",
+    "openInfo": "Open Info Dialog",
+    "openDanger": "Open Danger Dialog",
+    "openCustom": "Open Custom Dialog",
+    "defaultTitle": "Dialog Title",
+    "defaultBody": "This is the dialog body text. You can put any content here to inform or ask the user something important.",
+    "infoTitle": "Information",
+    "infoBody": "Here's some helpful information you should know about. This dialog uses the info variant styling.",
+    "dangerTitle": "Delete Item",
+    "dangerBody": "Are you sure you want to delete this item? This action cannot be undone.",
+    "customTitle": "Custom Styled Dialog",
+    "customBody": "This dialog has custom content with multiple elements.",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "gotIt": "Got it",
+    "delete": "Delete",
+    "customAction": "Custom Action"
+  },
+  "toggle": {
+    "title": "Toggle Component",
+    "enableNotifications": "Enable Notifications",
+    "notificationsDesc": "Receive alerts and updates",
+    "darkMode": "Dark Mode",
+    "darkModeDesc": "Switch to dark theme",
+    "autoSave": "Auto-save",
+    "autoSaveDesc": "Automatically save changes",
+    "on": "On",
+    "off": "Off"
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "ja": "日本語",
+    "zh": "繁體中文"
+  },
+  "portfolio": {
+    "logo": "Portfolio",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "work": "Work",
+      "contact": "Contact",
+      "settings": "Settings"
+    },
+    "hero": {
+      "title": "Welcome to My Portfolio",
+      "subtitle": "Built with design tokens and accessible components"
+    },
+    "placeholder": "Your portfolio content goes here",
+    "settings": {
+      "title": "Settings",
+      "language": "Language",
+      "languageHint": "Choose your preferred language",
+      "theme": "Theme",
+      "themeHint": "Pick a theme that matches your mood"
+    },
+    "work": {
+      "title": "Work",
+      "card1": {
+        "title": "Portfolio UI Components",
+        "body": "A comprehensive design system built in Visual Studio Code using Figma MCP and Claude AI. From establishing UI foundations to defining design primitives, semantic tokens, and spacing systems—explore how AI-assisted development streamlines design system architecture. Features intelligent colour systems, typography scales, and accessibility-first components built with modern design tokens.",
+        "link": "View Preview →",
+        "badge": "Bonus"
+      },
+      "card2": {
+        "title": "Project Alpha",
+        "body": "A mobile app design for task management and productivity.",
+        "link": "Coming Soon"
+      },
+      "card3": {
+        "title": "Project Beta",
+        "body": "Brand identity and web design for a startup company.",
+        "link": "Coming Soon"
+      },
+      "card4": {
+        "title": "Project Gamma",
+        "body": "Design system documentation and component library.",
+        "link": "Coming Soon"
+      }
+    },
+    "onboarding": {
+      "greeting": {
+        "morning": "Good morning",
+        "afternoon": "Good afternoon",
+        "evening": "Good evening"
+      },
+      "languageStep": "What language would you like to view?",
+      "themeStep": "Pick a theme that matches your mood",
+      "settingsHint": "You can change these anytime in Settings",
+      "letsGo": "Enjoy"
+    }
+  }
+}

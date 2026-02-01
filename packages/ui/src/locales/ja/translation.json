@@ -1,0 +1,197 @@
+{
+  "header": {
+    "title": "Yuanhhou UI",
+    "currentlyViewing": "現在表示中: {{theme}}"
+  },
+  "sections": {
+    "componentLibrary": "コンポーネントライブラリ プレビュー",
+    "accordion": "アコーディオン コンポーネント",
+    "badge": "バッジ コンポーネント",
+    "button": "ボタン コンポーネント",
+    "card": "カード コンポーネント",
+    "chip": "チップ コンポーネント",
+    "dialog": "ダイアログ コンポーネント",
+    "toggle": "トグル コンポーネント"
+  },
+  "sizes": {
+    "small": "小サイズ",
+    "large": "大サイズ",
+    "allTypes": "全タイプ",
+    "withIcons": "アイコン付き"
+  },
+  "accordion": {
+    "q1": {
+      "title": "このアプリの目的は何ですか？",
+      "content": "このアプリは、ユーザーが日々の習慣を追跡し、生産性を維持できるように設計されています。カスタマイズ可能な習慣追跡、目標設定、進捗の可視化、リマインダーなどの機能を提供しています。"
+    },
+    "q2": {
+      "title": "新しい習慣を作成するにはどうすればよいですか？",
+      "content": "新しい習慣を作成するには、ダッシュボードの「習慣を追加」ボタンをクリックしてください。習慣名を入力し、目標頻度（毎日、毎週など）を設定し、時間を選択し、オプションでリマインダーを追加できます。"
+    },
+    "q3": {
+      "title": "データは安全ですか？",
+      "content": "はい、データは完全に暗号化され、安全に保存されています。業界標準の暗号化プロトコルを使用して、個人情報を保護しています。"
+    }
+  },
+  "badges": {
+    "neutral": "ニュートラル",
+    "danger": "危険",
+    "warning": "警告",
+    "success": "成功",
+    "promote": "プロモート"
+  },
+  "buttons": {
+    "primary": "プライマリボタン",
+    "secondary": "セカンダリボタン",
+    "tertiary": "ターシャリボタン",
+    "alert": "アラートボタン",
+    "createNew": "新規作成",
+    "saveChanges": "変更を保存",
+    "addFavorite": "お気に入りに追加",
+    "deleteItem": "アイテムを削除",
+    "continue": "続行",
+    "learnMore": "詳細を見る",
+    "viewDetails": "詳細を表示",
+    "proceedWithCaution": "注意して続行",
+    "add": "追加",
+    "save": "保存",
+    "favorite": "お気に入り",
+    "delete": "削除",
+    "next": "次へ",
+    "more": "もっと見る",
+    "details": "詳細",
+    "remove": "削除",
+    "disabled": "無効",
+    "primaryDisabled": "プライマリ 無効",
+    "secondaryDisabled": "セカンダリ 無効",
+    "tertiaryDisabled": "ターシャリ 無効",
+    "alertDisabled": "アラート 無効"
+  },
+  "variants": {
+    "allVariants": "全バリアント",
+    "withStartIcons": "先頭アイコン付き",
+    "withEndIcons": "末尾アイコン付き",
+    "disabledStates": "無効状態"
+  },
+  "card": {
+    "title": "タイトル",
+    "body": "お伝えしたい内容のボディテキストです。主なポイント、引用、エピソード、または短いストーリーを追加できます。",
+    "iconHorizontal": "アイコン — 横向き",
+    "iconVertical": "アイコン — 縦向き",
+    "imageHorizontal": "画像 — 横向き",
+    "imageVertical": "画像 — 縦向き",
+    "invertedHorizontal": "反転（ダーク）— 横向き",
+    "invertedVertical": "反転（ダーク）— 縦向き"
+  },
+  "dialog": {
+    "openDefault": "デフォルトダイアログを開く",
+    "openInfo": "情報ダイアログを開く",
+    "openDanger": "危険ダイアログを開く",
+    "openCustom": "カスタムダイアログを開く",
+    "defaultTitle": "ダイアログタイトル",
+    "defaultBody": "これはダイアログのボディテキストです。ユーザーに何か重要なことを伝えたり尋ねたりするための内容を入れることができます。",
+    "infoTitle": "情報",
+    "infoBody": "知っておくべき役立つ情報です。このダイアログは情報バリアントのスタイリングを使用しています。",
+    "dangerTitle": "アイテムを削除",
+    "dangerBody": "このアイテムを削除してもよろしいですか？この操作は取り消せません。",
+    "customTitle": "カスタムスタイルダイアログ",
+    "customBody": "このダイアログには複数の要素を持つカスタムコンテンツがあります。",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "gotIt": "了解",
+    "delete": "削除",
+    "customAction": "カスタムアクション"
+  },
+  "chip": {
+    "states": "状態",
+    "unselected": "未選択",
+    "selected": "選択済み",
+    "singleSelection": "単一選択",
+    "multipleSelection": "複数選択",
+    "selectOption": "オプションを選択",
+    "filterOptions": "フィルタオプション",
+    "option1": "オプション 1",
+    "option2": "オプション 2",
+    "option3": "オプション 3",
+    "option4": "オプション 4",
+    "filter1": "フィルタ 1",
+    "filter2": "フィルタ 2",
+    "filter3": "フィルタ 3",
+    "filter4": "フィルタ 4",
+    "filter5": "フィルタ 5"
+  },
+  "toggle": {
+    "title": "トグル コンポーネント",
+    "enableNotifications": "通知を有効にする",
+    "notificationsDesc": "アラートと更新を受け取る",
+    "darkMode": "ダークモード",
+    "darkModeDesc": "ダークテーマに切り替え",
+    "autoSave": "自動保存",
+    "autoSaveDesc": "変更を自動的に保存",
+    "on": "オン",
+    "off": "オフ"
+  },
+  "language": {
+    "label": "言語",
+    "en": "English",
+    "ja": "日本語",
+    "zh": "繁體中文"
+  },
+  "portfolio": {
+    "logo": "ポートフォリオ",
+    "nav": {
+      "home": "ホーム",
+      "about": "紹介",
+      "work": "作品",
+      "contact": "連絡先",
+      "settings": "設定"
+    },
+    "hero": {
+      "title": "ポートフォリオへようこそ",
+      "subtitle": "デザイントークンとアクセシブルなコンポーネントで構築"
+    },
+    "placeholder": "ポートフォリオのコンテンツはここに表示されます",
+    "settings": {
+      "title": "設定",
+      "language": "言語",
+      "languageHint": "ご希望の言語を選択してください",
+      "theme": "テーマ",
+      "themeHint": "気分に合わせてテーマを選んでください"
+    },
+    "work": {
+      "title": "作品",
+      "card1": {
+        "title": "ポートフォリオUIコンポーネント",
+        "body": "Visual Studio CodeでFigma MCPとClaude AIを使用して構築された包括的なデザインシステム。UI基盤の確立から設計プリミティブ、セマンティックトークン、スペーシングシステムの定義まで、AI支援開発がどのようにデザインシステムアーキテクチャを合理化するかをご覧ください。インテリジェントなカラーシステム、タイポグラフィスケール、モダンなデザイントークンで構築されたアクセシビリティファーストコンポーネントを搭載しています。",
+        "link": "プレビューを見る →",
+        "badge": "ボーナス"
+      },
+      "card2": {
+        "title": "プロジェクトアルファ",
+        "body": "タスク管理と生産性向上のためのモバイルアプリデザイン。",
+        "link": "近日公開"
+      },
+      "card3": {
+        "title": "プロジェクトベータ",
+        "body": "スタートアップ企業のブランドアイデンティティとウェブデザイン。",
+        "link": "近日公開"
+      },
+      "card4": {
+        "title": "プロジェクトガンマ",
+        "body": "デザインシステムのドキュメンテーションとコンポーネントライブラリ。",
+        "link": "近日公開"
+      }
+    },
+    "onboarding": {
+      "greeting": {
+        "morning": "おはようございます",
+        "afternoon": "こんにちは",
+        "evening": "こんばんは"
+      },
+      "languageStep": "どの言語で表示しますか？",
+      "themeStep": "気分に合うテーマを選んでください",
+      "settingsHint": "設定でいつでも変更できます",
+      "letsGo": "見てみましょう"
+    }
+  }
+}

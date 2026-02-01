@@ -1,0 +1,36 @@
+/* ========================================
+   MAIN STYLES ENTRY POINT
+   ======================================== */
+
+/* Design Tokens */
+@import './tokens/index.css';       /* Color tokens (primitives + semantics) */
+@import './tokens-typography.css';
+@import './tokens-sizing.css';
+
+/* ========================================
+   GLOBAL RESETS
+   ======================================== */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+:root {
+  --ui-gap: var(--yuanhhou-spacing-100, 8px);
+}
+
+body {
+  font-family: var(--yuanhhou-font-family-primary);
+  background-color: var(--background-primary);
+  color: var(--foreground-primary);
+}
