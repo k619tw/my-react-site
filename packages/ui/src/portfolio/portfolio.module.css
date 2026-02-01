@@ -555,9 +555,9 @@
 }
 
 /* ——— ENHANCED CONTRAST MODE ——— */
-/* Increase contrast: darker text, higher opacity, more visible borders */
+/* Light themes: darker text and higher opacity */
 .enhancedContrast {
-  --foreground-primary: rgba(0, 0, 0, 1) !important; /* opaque black for light themes */
+  --foreground-primary: rgba(0, 0, 0, 1) !important; /* opaque black */
   --foreground-secondary: rgba(0, 0, 0, 0.9) !important; /* high opacity */
   --foreground-tertiary: rgba(0, 0, 0, 0.8) !important; /* more visible */
   --border-primary: rgba(0, 0, 0, 0.5) !important; /* darker, more visible borders */
@@ -565,7 +565,8 @@
   --border-tertiary: rgba(0, 0, 0, 0.25) !important;
 }
 
-/* For dark theme (product-b), apply lighter text and stronger contrast */
+/* Dark theme (product-b): lighter text for proper contrast on dark backgrounds */
+[data-theme="product-b"] .enhancedContrast,
 [data-theme="product-b"].enhancedContrast {
   --foreground-primary: rgba(255, 255, 255, 1) !important; /* opaque white */
   --foreground-secondary: rgba(255, 255, 255, 0.95) !important;
