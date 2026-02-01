@@ -53,8 +53,8 @@
   --background-brand-secondary: var(--yuanhhou-camel-100);          /* #f5ebdc - light natural */
 
   /* Status backgrounds - muted, natural tones */
-  --background-success-primary: var(--yuanhhou-sage-600);           /* #69785f - muted green */
-  --background-success-secondary: var(--yuanhhou-sage-100);         /* soft sage */
+  --background-success-primary: var(--yuanhhou-sage-600);           /* vibrant, more saturated green */
+  --background-success-secondary: var(--yuanhhou-sage-400);         /* soft sage */
   --background-danger-primary: var(--yuanhhou-red-600);             /* muted red */
   --background-danger-secondary: var(--yuanhhou-red-100);           /* soft red */
   --background-warning-primary: var(--yuanhhou-camel-500);          /* earthy amber */

@@ -10,7 +10,7 @@ import { Chip, ChipGroup } from '../UIComponents/Chip';
 import { Dialog } from '../UIComponents/Dialog/Dialog';
 import { Toggle } from '../UIComponents/Toggle/Toggle';
 import { Portfolio } from '../portfolio';
-import { ThemeToggle } from './ThemeToggle';
+import { ThemeSelector } from '../portfolio/ThemeSelector';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { useTheme } from '../ThemeProvider';
 
@@ -105,7 +105,7 @@ export default function App() {
                 height: 24, 
                 background: 'var(--border-tertiary)' 
               }} />
-              <ThemeToggle />
+              <ThemeSelector />
             </div>
           </header>
 
