@@ -142,10 +142,7 @@
   border-radius: var(--radius-small);
 }
 
-/* Make link focus visible across browsers */
-.navLinks a:focus {
-  outline: none;
-}
+/* Focus visible for navigation links */
 .navLinks a:focus-visible {
   outline: 2px solid var(--border-focus);
   outline-offset: 2px;
@@ -264,19 +261,6 @@
   margin: 0 auto;
   width: 100%;
 }
-
-.col1 {}
-.col2 {}
-.col3 {}
-.col4 {}
-.col5 {}
-.col6 {}
-.col7 {}
-.col8 {}
-.col9 {}
-.col10 {}
-.col11 {}
-.col12 {}
 
 /* Hero Section */
 .hero {
@@ -427,9 +411,6 @@
   height: 100%;
 }
 
-.bonusCard {
-}
-
 .cardBadge {
   margin-bottom: var(--yuanhhou-spacing-150);
 }
@@ -481,9 +462,6 @@
 }
 
 /* ——— SETTINGS VIEW ——— */
-.settings {
-}
-
 .settings h2 {
   font-size: var(--yuanhhou-font-size-heading-lg);
   font-weight: var(--yuanhhou-font-weight-700);

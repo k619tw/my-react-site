@@ -106,13 +106,6 @@
     "unselected": "未選中",
     "selected": "已選中",
     "singleSelection": "單選",
-    "multipleSelection": "多選"
-  },
-  "chip": {
-    "states": "狀態",
-    "unselected": "未選中",
-    "selected": "已選中",
-    "singleSelection": "單選",
     "multipleSelection": "多選",
     "selectOption": "選擇選項",
     "filterOptions": "篩選選項",
