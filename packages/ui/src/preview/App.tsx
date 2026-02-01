@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { CheckCircle, Star, ArrowRight, Plus, Info, Trash, PencilSimple, Heart, MagnifyingGlass, BracketsAngle } from '@phosphor-icons/react';
 import { iconSize } from '../utils/iconSize';
@@ -14,10 +14,25 @@ import { ThemeToggle } from './ThemeToggle';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { useTheme } from '../ThemeProvider';
 
+// Get initial view from URL hash
+const getViewFromHash = (): 'components' | 'portfolio' => {
+  const hash = window.location.hash.slice(1);
+  return hash === 'components' ? 'components' : 'portfolio';
+};
+
 export default function App() {
   const { theme } = useTheme();
   const { t } = useTranslation();
-  const [currentView, setCurrentView] = useState<'components' | 'portfolio'>('portfolio');
+  const [currentView, setCurrentView] = useState<'components' | 'portfolio'>(getViewFromHash);
+
+  // Listen for hash changes
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentView(getViewFromHash());
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [dialogVariant, setDialogVariant] = useState<'default' | 'info' | 'danger' | 'custom'>('default');
   const [toggleStates, setToggleStates] = useState({
@@ -65,8 +80,8 @@ export default function App() {
               </span>
             </div>
             <div style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
-              <button
-                onClick={() => setCurrentView(currentView === 'components' ? 'portfolio' : 'components')}
+              <a
+                href={currentView === 'components' ? '#portfolio' : '#components'}
                 style={{
                   padding: '8px 16px',
                   background: 'var(--background-brand-primary)',
@@ -77,12 +92,13 @@ export default function App() {
                   fontSize: '14px',
                   fontWeight: 600,
                   transition: 'opacity 0.2s ease',
+                  textDecoration: 'none',
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.9')}
                 onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
               >
                 {currentView === 'components' ? 'View Portfolio' : 'View Components'}
-              </button>
+              </a>
               <LanguageSwitcher />
               <div style={{ 
                 width: 1, 

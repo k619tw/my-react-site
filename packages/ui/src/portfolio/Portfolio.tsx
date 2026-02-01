@@ -193,7 +193,7 @@ export const Portfolio: React.FC = () => {
                       </>
                     }
                     body={t('portfolio.work.card1.body')}
-                    footer={<a href="/" className={styles.cardLink} aria-label={`${t('portfolio.work.card1.title')} - ${t('portfolio.work.card1.link')}`}>{t('portfolio.work.card1.link')}</a>}
+                    footer={<a href="#components" className={styles.cardLink} aria-label={`${t('portfolio.work.card1.title')} - ${t('portfolio.work.card1.link')}`}>{t('portfolio.work.card1.link')}</a>}
                   />
                 </article>
               </div>
@@ -240,7 +240,7 @@ export const Portfolio: React.FC = () => {
       {/* Onboarding Dialog */}
       <Dialog
         open={showOnboarding}
-        onClose={() => {}}
+        onClose={handleOnboardingComplete}
         closeOnOverlayClick={false}
         closeOnEscape={false}
         title={onboardingTitle}
