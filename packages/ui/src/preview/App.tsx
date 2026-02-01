@@ -17,7 +17,7 @@ import { useTheme } from '../ThemeProvider';
 export default function App() {
   const { theme } = useTheme();
   const { t } = useTranslation();
-  const [currentView, setCurrentView] = useState<'components' | 'portfolio'>('components');
+  const [currentView, setCurrentView] = useState<'components' | 'portfolio'>('portfolio');
   const [dialogOpen, setDialogOpen] = useState(false);
   const [dialogVariant, setDialogVariant] = useState<'default' | 'info' | 'danger' | 'custom'>('default');
   const [toggleStates, setToggleStates] = useState({
