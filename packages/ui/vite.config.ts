@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  // User site (yuanhhou.github.io) serves from root
-  base: '/',
+  // GitHub Pages project site
+  base: '/my-react-site/',
   build: {
     outDir: 'dist',
     // Uncomment below if you also want library output
