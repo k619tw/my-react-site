@@ -267,29 +267,9 @@
   align-items: center;
 }
 
-.hero h1 {
-  font-size: var(--yuanhhou-font-size-display-lg);
-  font-weight: var(--yuanhhou-font-weight-700);
-  line-height: var(--yuanhhou-line-height-display-lg);
-  color: var(--foreground-primary);
-  margin: 0 0 var(--yuanhhou-spacing-150, 12px) 0;
-}
-
-.hero p {
-  font-size: var(--yuanhhou-font-size-body-lg);
-  color: var(--foreground-secondary);
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: var(--yuanhhou-font-size-display-sm);
-  }
-
-  .hero p {
-    font-size: var(--yuanhhou-font-size-body-lg);
-  }
-}
+/* Typography for hero is managed by the `Hero` component's CSS module.
+   Removed page-level heading/paragraph overrides to avoid specificity
+   conflicts with the component's generated class names. */
 
 /* Specific hero title/subtitle utility classes so copy can be tweaked */
 .heroTitle {
