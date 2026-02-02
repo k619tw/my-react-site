@@ -232,3 +232,34 @@
 :global([class*="_hero_"]) {
   padding-bottom: var(--yuanhhou-spacing-500, 40px);
 }
+
+/* Circle selfie styles (static variant, animation removed) */
+.circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  background: var(--background-surface, #fff);
+}
+
+.circleImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 1;
+}
+
+/* Responsive sizing for circle */
+@media (min-width: 600px) {
+  .circle { width: 260px; height: 260px; }
+}
+
+@media (min-width: 900px) {
+  .circle { width: 320px; height: 320px; }
+}

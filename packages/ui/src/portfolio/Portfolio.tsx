@@ -11,6 +11,7 @@ import { Toggle } from '../UIComponents/Toggle/Toggle'
 import { Card } from '../UIComponents/Card/Card'
 import { useTheme } from '../ThemeProvider'
 import styles from './portfolio.module.css'
+import heroImg from '../assets/hero.jpeg'
 
 const ONBOARDING_KEY = 'portfolio-onboarding-complete'
 
@@ -138,13 +139,13 @@ export const Portfolio: React.FC = () => {
               <Hero
                 title={t('portfolio.hero.title')}
                 subtitle={t('portfolio.hero.subtitle')}
-                imageSrc="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=60"
-                imageAlt="Abstract design shapes"
+                imageSrc={heroImg}
+                imageAlt={t('portfolio.hero.imageAlt')}
+                imageVariant="circle"
                 className={styles.heroLeft}
                 ctaLabel={t('portfolio.hero.cta') || 'View recent work'}
                 ctaHref="#work"
               />
-              
             </section>
 
             {/* Content Area */}

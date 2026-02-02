@@ -10,6 +10,8 @@ export type HeroProps = {
   imageSrc?: string
   imageAlt?: string
   className?: string
+  /** Image visual variant: 'default' or 'circle' */
+  imageVariant?: 'default' | 'circle'
   /** Visual variant: 'default' or 'brand' */
   type?: 'default' | 'brand'
   /** Heading level for accessibility (h1..h6) */
@@ -28,6 +30,7 @@ export const Hero: React.FC<HeroProps> = ({
   imageSrc,
   imageAlt = 'Hero image',
   className,
+  imageVariant = 'default',
   type = 'default',
   headingLevel = 'h1',
   ctaLabel,
@@ -43,7 +46,13 @@ export const Hero: React.FC<HeroProps> = ({
     .join(' ')
 
   const media = imageSrc ? (
-    <img src={imageSrc} alt={imageAlt} className={styles.image} loading="lazy" />
+    imageVariant === 'circle' ? (
+      <div className={styles.circle} aria-hidden={false}>
+        <img src={imageSrc} alt={imageAlt} className={styles.circleImage} loading="lazy" />
+      </div>
+    ) : (
+      <img src={imageSrc} alt={imageAlt} className={styles.image} loading="lazy" />
+    )
   ) : (
     <div className={styles.placeholder} aria-hidden={true} />
   )
