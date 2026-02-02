@@ -1,3 +1,5 @@
+// Package-level exports for UI components
+export * from './UIComponents'
 // Components
 export { Accordion } from './UIComponents/Accordion/Accordion';
 export { Badge } from './UIComponents/Badge/Badge';

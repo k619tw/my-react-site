@@ -1,0 +1,182 @@
+/* Mobile-first: stack content by default for best a11y/responsiveness */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-300, 24px);
+  align-items: stretch;
+  width: 100%;
+  box-sizing: border-box;
+  padding-block: 56px;
+  padding-inline: var(--yuanhhou-spacing-400, 32px);
+  border-radius: var(--radius-medium);
+  background: var(--background-secondary);
+}
+
+.text {
+  /* text area — full width on mobile, constrained on desktop */
+  flex: 0 0 auto;
+}
+
+.title {
+  /* Use Display MD tokens for heading size and rhythm */
+  font-size: var(--yuanhhou-display-md-font-size);
+  line-height: var(--yuanhhou-display-md-line-height);
+  font-weight: var(--yuanhhou-display-md-font-weight);
+  letter-spacing: var(--yuanhhou-display-md-letter-spacing);
+  color: var(--foreground-primary);
+  margin: 0 0 var(--yuanhhou-spacing-300, 24px) 0;
+}
+
+.subtitle {
+  /* Subtitle uses Heading XS font-size only (keep other properties) */
+  font-size: var(--yuanhhou-heading-xs-font-size);
+  color: var(--foreground-secondary);
+  margin: 0;
+}
+
+.media {
+  /* media is full-width on mobile, constrained on desktop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  border-radius: var(--radius-medium);
+  box-shadow: 0 8px 24px rgba(16,24,40,0.08);
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+  /* responsive max-height: mobile -> tablet -> desktop */
+  max-height: 320px;
+}
+
+@media (min-width: 600px) {
+  .image {
+    max-height: 400px;
+  }
+}
+
+@media (min-width: 900px) {
+  .image {
+    max-height: 480px;
+  }
+}
+
+.placeholder {
+  width: 100%;
+  max-width: 480px;
+  height: 220px;
+  background: var(--background-secondary);
+  border-radius: var(--radius-medium);
+}
+
+@media (min-width: 900px) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    /* distribute space between text and media on wide screens */
+    justify-content: space-between;
+    /* gap removed to allow even spacing via justify-content */
+    /* ensure the hero has enough height so the image can visually cover the background */
+    min-height: 520px;
+    padding-inline: 48px;
+  }
+
+  /* restore desktop line-height variable for headings */
+  .title {
+    /* Desktop: use Display MD tokens (larger display scale) */
+    font-size: var(--yuanhhou-display-md-font-size);
+    line-height: var(--yuanhhou-display-md-line-height);
+    font-weight: var(--yuanhhou-display-md-font-weight);
+    letter-spacing: var(--yuanhhou-display-md-letter-spacing);
+    margin: 0 0 var(--yuanhhou-spacing-400, 32px) 0;
+  }
+
+  .text {
+    /* allow text area to take ~38% but shrink if needed */
+    flex: 0 1 38%;
+    text-align: left;
+  }
+
+  .media {
+    /* allow media to take ~58% but shrink if needed */
+    flex: 0 1 58%;
+    /* make media match the hero height and clip overflow so the image looks like a cover */
+    height: 100%;
+    overflow: hidden;
+    /* give the media a subtle radius to match the container */
+    border-radius: calc(var(--radius-medium) - 2px);
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Brand variant: productB uses a more rounded feel */
+.hero.productB {
+  border-radius: var(--radius-large, 24px);
+}
+
+.hero.productB .media {
+  border-radius: calc(var(--radius-large, 24px) - 4px);
+}
+
+/* make sure image centers nicely */
+.image {
+  object-position: center center;
+}
+
+/* smaller screens keep compact spacing */
+@media (max-width: 899px) {
+  .hero {
+    gap: var(--yuanhhou-spacing-300, 24px);
+    text-align: center;
+  }
+
+  .title {
+    /* use heading-sm line-height on mobile */
+    line-height: var(--yuanhhou-line-height-heading-sm);
+    /* remove bottom margin on mobile so heading and subtitle sit closer */
+    margin-bottom: 0;
+  }
+
+  .text {
+    order: 1;
+  }
+
+  .media {
+    order: 2;
+    width: 100%;
+    margin-top: var(--yuanhhou-spacing-300, 24px);
+  }
+
+  .image {
+    max-width: 100%;
+  }
+}
+
+/* Reduce vertical padding on very small screens and ensure image is full-bleed width */
+@media (max-width: 599px) {
+  .hero {
+    padding-block: 24px;
+    padding-inline: var(--yuanhhou-spacing-200, 16px);
+  }
+
+  .media {
+    width: 100%;
+  }
+
+  .image {
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+  }
+}
+
+/* (CTA removed) */

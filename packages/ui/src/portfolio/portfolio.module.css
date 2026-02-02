@@ -7,6 +7,8 @@
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   overflow: hidden;
 }
 
@@ -239,12 +241,6 @@
   overflow-x: hidden;
 }
 
-@media (max-width: 768px) {
-  .main {
-    padding: 0 var(--yuanhhou-spacing-200);
-  }
-}
-
 /* Content Container */
 .main > section {
   max-width: 1440px;
@@ -280,7 +276,7 @@
 }
 
 .hero p {
-  font-size: var(--yuanhhou-font-size-heading-xs);
+  font-size: var(--yuanhhou-font-size-body-lg);
   color: var(--foreground-secondary);
   margin: 0;
 }
@@ -295,6 +291,30 @@
   }
 }
 
+/* Specific hero title/subtitle utility classes so copy can be tweaked */
+.heroTitle {
+  font-size: calc(var(--yuanhhou-font-size-display-lg) + 4px);
+  font-weight: var(--yuanhhou-font-weight-700);
+  line-height: var(--yuanhhou-line-height-display-lg);
+  margin: 0 0 var(--yuanhhou-spacing-200, 16px) 0;
+}
+
+.heroSubtitle {
+  font-size: var(--yuanhhou-font-size-body-lg);
+  color: var(--foreground-secondary);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: var(--yuanhhou-font-size-display-sm);
+  }
+
+  .heroSubtitle {
+    font-size: var(--yuanhhou-font-size-body-lg);
+  }
+}
+
 /* Content Area */
 .content {
   display: flex;
@@ -302,28 +322,16 @@
   gap: var(--yuanhhou-spacing-300, 24px);
 }
 
-/* Hero columns */
-.heroLeft {
-  text-align: left;
-  flex: 1;
-}
-
-.heroRight {
+/* Hero Section
+   Styles for layout are provided by the reusable `Hero` component's
+   CSS module. Remove heading/paragraph overrides here to avoid
+   conflicting rules and let `Hero` control typography and spacing. */
+.hero {
+  margin-bottom: var(--yuanhhou-spacing-400, 40px);
   display: flex;
+  flex-direction: row;
+  gap: var(--yuanhhou-spacing-300, 24px);
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 360px;
-}
-
-.interactionContainer {
-  background: var(--background-secondary);
-  padding: var(--yuanhhou-spacing-300, 24px);
-  border-radius: var(--radius-medium);
-  width: 100%;
-}
-
-.interactionRow {
   display: flex;
   flex-direction: column;
   gap: var(--yuanhhou-spacing-200, 16px);

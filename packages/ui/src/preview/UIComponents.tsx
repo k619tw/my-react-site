@@ -109,7 +109,7 @@ export default function App() {
             </div>
           </header>
 
-      <div style={{ padding: 24, maxWidth: 1200 }}>
+      <div style={{ padding: 24, maxWidth: 1440, margin: '0 auto' }}>
         <h1 style={{ marginBottom: 32, color: 'var(--foreground-primary)' }}>{t('sections.componentLibrary')}</h1>
 
       {/* Accordion Component */}
@@ -325,7 +325,7 @@ export default function App() {
           {/* Row 1: Icon + Horizontal */}
           <div>
             <h3 style={{ marginBottom: 16, fontSize: 18, fontWeight: 500, color: 'var(--foreground-secondary)' }}>{t('card.iconHorizontal')}</h3>
-            <div style={{ display: 'flex', gap: 24 }}>
+            <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
               {/* Default (transparent) */}
               <Card
                 title={t('card.title')}
@@ -352,7 +352,7 @@ export default function App() {
           {/* Row 2: Icon + Vertical */}
           <div>
             <h3 style={{ marginBottom: 16, fontSize: 18, fontWeight: 500, color: 'var(--foreground-secondary)' }}>{t('card.iconVertical')}</h3>
-            <div style={{ display: 'flex', gap: 24 }}>
+            <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
               {/* Default (transparent) */}
               <Card
                 title={t('card.title')}
@@ -379,7 +379,7 @@ export default function App() {
           {/* Row 3: Image + Horizontal */}
           <div>
             <h3 style={{ marginBottom: 16, fontSize: 18, fontWeight: 500, color: 'var(--foreground-secondary)' }}>{t('card.imageHorizontal')}</h3>
-            <div style={{ display: 'flex', gap: 24 }}>
+            <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
               {/* Default (transparent) */}
               <Card
                     title={t('card.title')}
@@ -406,7 +406,7 @@ export default function App() {
               {/* Row 4: Image + Vertical */}
               <div>
                 <h3 style={{ marginBottom: 16, fontSize: 18, fontWeight: 500, color: 'var(--foreground-secondary)' }}>{t('card.imageVertical')}</h3>
-                <div style={{ display: 'flex', gap: 24 }}>
+                <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
                   {/* Default (transparent) */}
                   <Card
                     title={t('card.title')}

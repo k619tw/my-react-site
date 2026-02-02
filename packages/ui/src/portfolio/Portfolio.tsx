@@ -6,6 +6,7 @@ import { Dialog } from '../UIComponents/Dialog/Dialog'
 import { Button } from '../UIComponents/Button/Button'
 import { Badge } from '../UIComponents/Badge/Badge'
 import { ThemeSelector } from './ThemeSelector'
+import { Hero } from '../UIComponents/Hero/Hero'
 import { Toggle } from '../UIComponents/Toggle/Toggle'
 import { Card } from '../UIComponents/Card/Card'
 import { useTheme } from '../ThemeProvider'
@@ -44,8 +45,7 @@ export const Portfolio: React.FC = () => {
     }
   }
 
-  const [heroFilterSelected, setHeroFilterSelected] = useState<(string | number)[]>([])
-  const [heroToggle, setHeroToggle] = useState(false)
+  // hero right-side controls removed (moved into dedicated pages/components if needed)
   const [enhancedContrast, setEnhancedContrast] = useState(false)
 
   const handleOnboardingComplete = () => {
@@ -118,40 +118,15 @@ export const Portfolio: React.FC = () => {
         {currentView === 'home' ? (
           <div className={styles.grid}>
             <section className={styles.hero}>
-                <div className={styles.heroLeft}>
-                  <h1>{t('portfolio.hero.title')}</h1>
-                  <p>{t('portfolio.hero.subtitle')}</p>
-                </div>
-
-                <div className={styles.heroRight}>
-                  <div className={styles.interactionContainer}>
-                    <div className={styles.interactionRow}>
-                      <label className={styles.interactionLabel}>My skillset</label>
-                      <ChipGroup
-                        items={[
-                          { id: 'design', label: 'Design' },
-                          { id: 'dev', label: 'Dev' },
-                          { id: 'writing', label: 'Writing' },
-                        ]}
-                        selected={heroFilterSelected}
-                        onChange={(s) => setHeroFilterSelected(s)}
-                        multiple={true}
-                      />
-                    </div>
-
-                    <div className={styles.interactionRow}>
-                      <label className={styles.interactionLabel}>Preferences</label>
-                      <div className={styles.toggleRow}>
-                        <Toggle
-                          checked={heroToggle}
-                          onChange={(v) => setHeroToggle(v)}
-                          label="Enable feature"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
+              <Hero
+                title={t('portfolio.hero.title')}
+                subtitle={t('portfolio.hero.subtitle')}
+                imageSrc="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=60"
+                imageAlt="Abstract design shapes"
+                className={styles.heroLeft}
+              />
+              
+            </section>
 
             {/* Content Area */}
             <section className={styles.content}>

@@ -147,8 +147,9 @@
       "settings": "Settings"
     },
     "hero": {
-      "title": "Welcome to My Portfolio",
-      "subtitle": "Built with design tokens and accessible components"
+      "title": "I'm a multidisciplinary design-systems designer — obsessed with craft.",
+      "subtitle": "I build and maintain design systems and components across digital products, blending accessible design with production ready code.",
+      "cta": "View my work"
     },
     "placeholder": "Your portfolio content goes here",
     "settings": {
