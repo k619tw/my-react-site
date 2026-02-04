@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-// using inline SVGs for hamburger/close icons (no external icon lib)
+import { List, X } from '@phosphor-icons/react'
 import { ChipGroup } from '../UIComponents/Chip'
 import { Dialog } from '../UIComponents/Dialog/Dialog'
 import { Button } from '../UIComponents/Button/Button'
@@ -99,16 +99,25 @@ export const Portfolio: React.FC = () => {
 
             {/* Nav Links */}
             <ul id="primary-navigation" className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
-              <li>
-                <a href="#about">{t('portfolio.nav.about')}</a>
+              {/* Theme Selector for mobile menu - at top */}
+              <li className={styles.mobileThemeSelector}>
+                <ThemeSelector />
               </li>
               <li>
-                <a href="#work" onClick={() => { setCurrentView('work'); setIsMenuOpen(false); }} className={currentView === 'work' ? styles.active : ''}>{t('portfolio.nav.work')}</a>
+                <a href="#about" aria-current={currentView === 'home' ? 'page' : undefined} className={currentView === 'home' ? styles.active : ''}>{t('portfolio.nav.about')}</a>
               </li>
               <li>
-                <a href="#settings" onClick={() => { setCurrentView('settings'); setIsMenuOpen(false); }} className={currentView === 'settings' ? styles.active : ''}>{t('portfolio.nav.settings')}</a>
+                <a href="#work" onClick={() => { setCurrentView('work'); setIsMenuOpen(false); }} aria-current={currentView === 'work' ? 'page' : undefined} className={currentView === 'work' ? styles.active : ''}>{t('portfolio.nav.work')}</a>
+              </li>
+              <li>
+                <a href="#settings" onClick={() => { setCurrentView('settings'); setIsMenuOpen(false); }} aria-current={currentView === 'settings' ? 'page' : undefined} className={currentView === 'settings' ? styles.active : ''}>{t('portfolio.nav.settings')}</a>
               </li>
             </ul>
+
+            {/* Theme Selector for desktop - right side */}
+            <div className={styles.desktopThemeSelector}>
+              <ThemeSelector />
+            </div>
 
             {/* Hamburger Menu */}
             <button
@@ -119,13 +128,9 @@ export const Portfolio: React.FC = () => {
               aria-controls="primary-navigation"
             >
               {isMenuOpen ? (
-                <svg className={styles.icon} viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                  <path d="M18.3 5.71a1 1 0 0 0-1.41 0L12 10.59 7.11 5.7A1 1 0 0 0 5.7 7.11L10.59 12l-4.89 4.89a1 1 0 1 0 1.41 1.41L12 13.41l4.89 4.89a1 1 0 0 0 1.41-1.41L13.41 12l4.89-4.89a1 1 0 0 0 0-1.4z" fill="currentColor" />
-                </svg>
+                <X size={24} weight="bold" aria-hidden="true" />
               ) : (
-                <svg className={styles.icon} viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                  <path d="M3 6h18a1 1 0 0 0 0-2H3a1 1 0 0 0 0 2zm18 5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2zm0 7H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2z" fill="currentColor" />
-                </svg>
+                <List size={24} weight="bold" aria-hidden="true" />
               )}
             </button>
           </div>
@@ -215,7 +220,7 @@ export const Portfolio: React.FC = () => {
 
               {/* Language Selection */}
               <div className={styles.settingGroup}>
-                <label className={styles.settingLabel}>{t('portfolio.settings.language')}</label>
+                <span id="language-label" className={styles.settingLabel}>{t('portfolio.settings.language')}</span>
                 <ChipGroup
                   items={[
                     { id: 'en', label: 'English' },
@@ -230,14 +235,15 @@ export const Portfolio: React.FC = () => {
                   }}
                   multiple={false}
                   className={styles.languageChips}
+                  aria-labelledby="language-label"
                 />
                 <p className={styles.settingHint}>{t('portfolio.settings.languageHint')}</p>
               </div>
 
               {/* Theme Selection */}
               <div className={styles.settingGroup}>
-                <label className={styles.settingLabel}>{t('portfolio.settings.theme')}</label>
-                <ThemeSelector />
+                <span id="theme-label" className={styles.settingLabel}>{t('portfolio.settings.theme')}</span>
+                <ThemeSelector aria-labelledby="theme-label" />
                 <p className={styles.settingHint}>{t('portfolio.settings.themeHint')}</p>
               </div>
 

@@ -203,6 +203,8 @@
   .decoratedImage {
     max-width: 280px;
     max-height: 360px;
+    /* Slightly larger nudge on tablet to align baseline */
+    transform: translateY(var(--yuanhhou-spacing-50, 4px));
   }
 
   .square {
@@ -225,6 +227,8 @@
   .decoratedImage {
     max-width: 400px;
     max-height: 515px;
+    /* Desktop uses small nudge */
+    transform: translateY(var(--yuanhhou-spacing-25, 2px));
   }
 
   .square {

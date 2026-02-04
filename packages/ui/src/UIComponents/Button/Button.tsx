@@ -65,12 +65,17 @@ export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, Bu
     );
 
     if (isLink(props)) {
-      const { href, ...linkRest } = rest as Omit<ButtonAsLink, keyof ButtonBaseProps>;
+      const { href, rel, target, ...linkRest } = rest as Omit<ButtonAsLink, keyof ButtonBaseProps> & { rel?: string; target?: string };
+      // Auto-add security attributes for external links (WCAG best practice)
+      const isExternal = href.startsWith('http://') || href.startsWith('https://') || target === '_blank';
+      const safeRel = isExternal && !rel ? 'noopener noreferrer' : rel;
       return (
-        <a 
-          ref={ref as React.Ref<HTMLAnchorElement>} 
-          href={href} 
-          className={combined} 
+        <a
+          ref={ref as React.Ref<HTMLAnchorElement>}
+          href={href}
+          rel={safeRel}
+          target={target}
+          className={combined}
           {...linkRest}
         >
           {content}

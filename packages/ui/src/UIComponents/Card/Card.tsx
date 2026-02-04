@@ -18,6 +18,8 @@ export type CardProps = {
   direction?: 'horizontal' | 'vertical'
   /** Variant: 'transparent' = no background, 'filled' = background-secondary with border-radius */
   variant?: 'transparent' | 'filled'
+  /** Semantic heading level for the title (WCAG 1.3.1) */
+  titleAs?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'div'
 }
 
 export const Card: React.FC<CardProps> = ({
@@ -29,6 +31,7 @@ export const Card: React.FC<CardProps> = ({
   assetType = 'icon',
   direction = 'horizontal',
   variant = 'transparent',
+  titleAs = 'div',
 }) => {
   const rootClasses = [
     styles.card,
@@ -42,13 +45,15 @@ export const Card: React.FC<CardProps> = ({
     assetType === 'image' ? styles['asset--image'] : styles['asset--icon'],
   ].join(' ')
 
+  const TitleTag = titleAs as React.ElementType
+
   return (
     <div className={rootClasses}>
       {asset && <div className={assetClasses}>{asset}</div>}
 
       <div className={styles.content}>
         <div className={styles.text}>
-          {title && <div className={styles.title}>{title}</div>}
+          {title && <TitleTag className={styles.title}>{title}</TitleTag>}
           {body && <div className={styles.body}>{body}</div>}
         </div>
 

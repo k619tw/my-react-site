@@ -105,7 +105,7 @@ export const Hero: React.FC<HeroProps> = ({
         )}
       </div>
 
-      <div className={styles.media} aria-hidden={!imageSrc}>
+      <div className={styles.media}>
         {media}
       </div>
     </section>

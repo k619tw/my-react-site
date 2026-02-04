@@ -1,7 +1,8 @@
 /* ===========================================
    Chip Component Atom
    Based on Figma node 32-2084
-   States: unselected (background-secondary) | selected (brand-primary)
+   States: unselected (brand-secondary) | selected (brand-primary)
+   Color pairing: foreground.brand.on-{state} pairs with background.brand.{state}
    =========================================== */
 
 /* ——— BASE ——— */
@@ -11,7 +12,7 @@
   justify-content: center;
   gap: 4px;
   padding: var(--yuanhhou-spacing-100, 8px) var(--yuanhhou-spacing-200, 16px);
-  border-radius: 9999px;
+  border-radius: var(--radius-button-small);
   border: 1px solid var(--border-brand);
   font-family: var(--yuanhhou-font-family-primary);
   font-size: 15px;
@@ -25,16 +26,16 @@
 
 /* ——— STATE: Unselected ——— */
 .chip--unselected {
-  background: var(--background-secondary);
-  color: var(--foreground-brand-primary);
+  background: var(--background-brand-secondary);
+  color: var(--foreground-brand-on-secondary);
 }
 
 .chip--unselected:hover {
-  background: var(--background-tertiary);
+  opacity: 0.9;
 }
 
 .chip--unselected:active {
-  background: var(--background-quaternary);
+  opacity: 0.8;
 }
 
 /* ——— STATE: Selected ——— */

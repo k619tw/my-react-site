@@ -114,6 +114,7 @@ body {
   list-style: none;
   gap: var(--yuanhhou-spacing-300, 24px);
   margin: 0;
+  margin-left: auto;
   padding: 0;
 }
 
@@ -198,6 +199,18 @@ body {
   color: inherit;
 }
 
+/* Desktop Theme Selector - right side of navbar with spacing */
+.desktopThemeSelector {
+  display: flex;
+  align-items: center;
+  margin-left: var(--yuanhhou-spacing-300, 24px);
+}
+
+/* Mobile Theme Selector - hidden on desktop */
+.mobileThemeSelector {
+  display: none;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .navbar {
@@ -219,6 +232,20 @@ body {
     display: flex;
   }
 
+  /* Hide desktop theme selector on mobile */
+  .desktopThemeSelector {
+    display: none;
+  }
+
+  /* Show mobile theme selector at top of menu */
+  .mobileThemeSelector {
+    display: block;
+    padding: var(--yuanhhou-spacing-100, 8px) var(--yuanhhou-spacing-200, 16px);
+    padding-bottom: var(--yuanhhou-spacing-200, 16px);
+    /* Add token-based spacing between the theme selector and nav items */
+    margin-bottom: var(--yuanhhou-spacing-200, 16px);
+  }
+
   .navLinks {
     position: absolute;
     top: 100%;
@@ -231,13 +258,14 @@ body {
     transition: max-height 0.3s ease;
     gap: 0;
     justify-content: flex-start;
+    margin-left: 0;
     padding: 0;
     z-index: 100;
     box-shadow: 0 6px 16px rgba(0,0,0,0.08);
   }
 
   .navLinks.active {
-    max-height: 300px;
+    max-height: 350px;
     padding: var(--yuanhhou-spacing-200, 16px) 0;
   }
 
