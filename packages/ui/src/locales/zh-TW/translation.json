@@ -11,8 +11,8 @@
     "card": "卡片元件",
     "chip": "晶片元件",
     "dialog": "對話框元件",
-    "toggle": "切換元件"
-    ,"hero": "Hero 元件"
+    "toggle": "切換元件",
+    "hero": "Hero 元件"
   },
   "sizes": {
     "small": "小尺寸",
@@ -101,8 +101,8 @@
     "confirm": "確認",
     "gotIt": "知道了",
     "delete": "刪除",
-    "customAction": "自訂操作"
-    ,"close": "關閉"
+    "customAction": "自訂操作",
+    "close": "關閉"
   },  "chip": {
     "states": "狀態",
     "unselected": "未選中",
@@ -142,7 +142,7 @@
     "logo": "作品集",
     "nav": {
       "home": "首頁",
-      "about": "關於",
+      "about": "關於我",
       "work": "作品",
       "contact": "聯絡",
       "settings": "設定",
@@ -206,6 +206,141 @@
     "skipToContent": "前往主要內容",
     "languageChanged": "語言已變更為 {{lang}}",
     "viewChanged": "檢視已切換為 {{view}}"
+  },
+  "interestingFacts": {
+    "title": "有趣的事實",
+    "subtitle": "一些你可能想知道的事",
+    "companies": {
+      "title": "公司與產品\n我曾參與的項目"
+    },
+    "tools": {
+      "label": "我使用的創意工具"
+    },
+    "sporty": {
+      "title": "運動愛好者",
+      "cta": "來看看我的三分球"
+    },
+    "band": {
+      "title": "最喜歡的樂團",
+      "name": "ヨルシカ"
+    },
+    "years": {
+      "number": "5年",
+      "label": "行業經驗"
+    },
+    "testimonial": {
+      "title": "設計專家對我的評價",
+      "placeholder": "這是一個佔位符",
+      "quote": "Yuan是一位在澳洲非常有才華的設計師，在幫助Bupa APAC的設計系統團隊確保高質量、無障礙的組件方面發揮著關鍵作用。他應對企業挑戰的戰略方法總是恰到好處。",
+      "author": "Rifan Thamrin",
+      "role": "首席設計系統設計師"
+    },
+    "travel": {
+      "title": "今年我要去"
+    },
+    "stats": {
+      "number": "31K",
+      "text": "用戶在2個月內下載了我參與的新上線應用"
+    }
+  },
+  "footer": {
+    "rights": "版權所有。",
+    "socialLinksLabel": "社群連結",
+    "resumeLabel": "下載履歷（在新分頁開啟）",
+    "linkedinLabel": "LinkedIn 個人檔案（在新分頁開啟）",
+    "spotifyLabel": "Spotify 個人檔案（在新分頁開啟）"
+  },
+  "about": {
+    "linkedinLabel": "LinkedIn 個人檔案（在新分頁開啟）",
+    "tagline": "專精於企業交付、設計系統和無障礙設計的設計專家。",
+    "skillsTitle": "技能",
+    "toolsTitle": "工具",
+    "educationTitle": "教育背景",
+    "experienceTitle": "工作經歷",
+    "responsibilitiesTitle": "主要職責",
+    "skills": {
+      "designSystems": "設計系統",
+      "uiUxDesign": "UI / UX 設計",
+      "webDesign": "網頁設計",
+      "frontEnd": "前端開發",
+      "threeD": "3D 建模與動畫",
+      "videoPhoto": "影片/照片編輯",
+      "prototype": "互動原型",
+      "visualEffects": "視覺特效設計",
+      "motionGraphics": "動態圖像",
+      "hciResearch": "人機互動研究"
+    },
+    "jobs": {
+      "bupa": {
+        "title": "設計系統設計師 at Bupa",
+        "date": "2023 - 現在",
+        "location": "布里斯本",
+        "description": "在設計系統團隊中建構和優化數位元件，支援 Bupa APAC 的網頁和應用程式體驗。",
+        "resp1": "維護設計系統模式和元件在所有數位體驗中的一致性",
+        "resp2": "制定可用性和無障礙標準文件，確保最佳實踐在設計過程中落實",
+        "resp3": "與前端開發人員密切合作，將設計轉化為簡潔、高效能的程式碼",
+        "resp4": "運用分析和用戶洞察，改善設計系統的效能和成果"
+      },
+      "bupaSecondment": {
+        "title": "體驗設計師（借調）at Bupa",
+        "date": "2025 - 2026",
+        "location": "布里斯本",
+        "description": "支援企業計畫，擔任體驗設計師，協助新應用程式 Blua 的開發。",
+        "resp1": "為新行動應用程式建立完整的入職引導、健康數據同步和帳戶管理體驗",
+        "resp2": "與海外工程師團隊合作，在 APAC 區域成功上線應用程式",
+        "resp3": "與內容、品牌、行銷等團隊合作，完成 App Store / Google Play 的上架準備",
+        "resp4": "與原生設計系統團隊協作，識別和設計所需元件"
+      },
+      "ctm": {
+        "title": "產品設計師（設計系統）at Compare the Market",
+        "date": "2022 - 2023",
+        "location": "布里斯本",
+        "description": "主導設計系統 Mecha，從零開始建立並發展為持續性專案。Mecha 元件現已應用於公司網站和寵物保險產品。",
+        "resp1": "建立包含字體排版、色彩系統、圖示和設計原則的品牌識別設計系統",
+        "resp2": "依循 Apple HIG、Google Material Design、WCAG 等標準，確保元件品質",
+        "resp3": "與跨職能團隊合作，將設計系統整合到開發流程，加速產品迭代",
+        "resp4": "支援可用性測試，在實施前驗證設計概念"
+      },
+      "etrainu": {
+        "title": "數位學習設計師/開發者 at etrainu",
+        "date": "2021 - 2022",
+        "location": "布里斯本",
+        "description": "在數位學習公司使用 Chameleon、Articulate 360 和 Adobe 套件開發符合無障礙標準的學習模組。",
+        "resp1": "跨裝置開發動態用戶體驗（網站、手機、平板）",
+        "resp2": "建立互動式設計以提升學習參與度",
+        "resp3": "設計和開發行銷素材",
+        "resp4": "為新模組進行 HTML 程式碼除錯"
+      },
+      "hyphen": {
+        "title": "UI/UX 開發者 at Studio Hyphen IO",
+        "date": "2021",
+        "location": "布里斯本",
+        "description": "在數位設計公司使用 WordPress、Bootstrap、PHP 和 Figma，從設計到開發完成專案交付。",
+        "resp1": "跨數位平台提供 UX、UI 和前端開發支援",
+        "resp2": "優化各裝置的視覺設計呈現",
+        "resp3": "使用 Figma 設計 EDM，並在 Mailchimp 進行測試"
+      }
+    },
+    "education": {
+      "uq": {
+        "school": "昆士蘭大學",
+        "degree": "互動設計碩士",
+        "location": "布里斯本",
+        "date": "2020 - 2021"
+      },
+      "rmit": {
+        "school": "皇家墨爾本理工大學",
+        "degree": "設計學士（數位媒體）",
+        "location": "墨爾本",
+        "date": "2019"
+      },
+      "shihChien": {
+        "school": "實踐大學",
+        "degree": "企業管理學士",
+        "location": "台北",
+        "date": "2014 - 2018"
+      }
+    }
   },
   "preview": {
     "header": {

@@ -1,0 +1,71 @@
+/* ========================================
+   FOOTER COMPONENT
+   ======================================== */
+
+.footer {
+  width: 100%;
+  padding: var(--yuanhhou-spacing-400) var(--yuanhhou-spacing-300);
+  margin-top: auto;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--yuanhhou-spacing-300);
+}
+
+.copyright {
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: var(--yuanhhou-body-sm-font-size);
+  font-weight: var(--yuanhhou-font-weight-400);
+  line-height: 18px;
+  color: var(--foreground-secondary);
+  margin: 0;
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: var(--yuanhhou-spacing-200);
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-medium);
+  color: var(--foreground-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.socialLink:hover {
+  color: var(--foreground-primary);
+  background-color: var(--background-interaction-hover);
+}
+
+.socialLink:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+.socialLink:active {
+  background-color: var(--background-interaction-active);
+}
+
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--yuanhhou-spacing-200);
+  }
+}

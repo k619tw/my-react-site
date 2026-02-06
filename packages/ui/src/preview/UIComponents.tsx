@@ -10,6 +10,7 @@ import { Chip, ChipGroup } from '../UIComponents/Chip';
 import { Dialog } from '../UIComponents/Dialog/Dialog';
 import { Hero } from '../UIComponents/Hero/Hero';
 import { Toggle } from '../UIComponents/Toggle/Toggle';
+import { Footer } from '../UIComponents/Footer';
 import { Portfolio } from '../portfolio';
 import { ThemeSelector } from '../portfolio/ThemeSelector';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -109,37 +110,97 @@ export default function App() {
       {/* Accordion Component */}
       <section style={{ marginBottom: 48 }}>
         <h2 style={{ marginBottom: 24, fontSize: 24, fontWeight: 600, color: 'var(--foreground-primary)' }}>{t('sections.accordion')}</h2>
-        <Accordion
-          items={[
-            { 
-              id: '1', 
-              title: t('accordion.q1.title'), 
-              content: (
-                <p>
-                  {t('accordion.q1.content')}
-                </p>
-              )
-            },
-            { 
-              id: '2', 
-              title: t('accordion.q2.title'), 
-              content: (
-                <p>
-                  {t('accordion.q2.content')}
-                </p>
-              )
-            },
-            { 
-              id: '3', 
-              title: t('accordion.q3.title'), 
-              content: (
-                <p>
-                  {t('accordion.q3.content')}
-                </p>
-              )
-            },
-          ]}
-        />
+
+        {/* Default Accordion (single selection) */}
+        <div style={{ marginBottom: 32 }}>
+          <h3 style={{ marginBottom: 16, fontSize: 16, fontWeight: 500, color: 'var(--foreground-secondary)' }}>Default (Single Selection)</h3>
+          <Accordion
+            items={[
+              {
+                id: '1',
+                title: t('accordion.q1.title'),
+                content: (
+                  <p>
+                    {t('accordion.q1.content')}
+                  </p>
+                )
+              },
+              {
+                id: '2',
+                title: t('accordion.q2.title'),
+                content: (
+                  <p>
+                    {t('accordion.q2.content')}
+                  </p>
+                )
+              },
+              {
+                id: '3',
+                title: t('accordion.q3.title'),
+                content: (
+                  <p>
+                    {t('accordion.q3.content')}
+                  </p>
+                )
+              },
+            ]}
+          />
+        </div>
+
+        {/* Accordion with allowMultiple and defaultOpen */}
+        <div style={{ marginBottom: 32 }}>
+          <h3 style={{ marginBottom: 16, fontSize: 16, fontWeight: 500, color: 'var(--foreground-secondary)' }}>Multiple Selection + Default Open</h3>
+          <Accordion
+            items={[
+              {
+                id: 'faq1',
+                title: t('accordion.q1.title'),
+                subtitle: 'General question',
+                content: <p>{t('accordion.q1.content')}</p>
+              },
+              {
+                id: 'faq2',
+                title: t('accordion.q2.title'),
+                subtitle: 'Getting started',
+                content: <p>{t('accordion.q2.content')}</p>
+              },
+              {
+                id: 'faq3',
+                title: t('accordion.q3.title'),
+                subtitle: 'Security & Privacy',
+                content: <p>{t('accordion.q3.content')}</p>
+              },
+            ]}
+            allowMultiple
+            defaultOpen={['faq1', 'faq3']}
+          />
+        </div>
+
+        {/* Compact Accordion */}
+        <div>
+          <h3 style={{ marginBottom: 16, fontSize: 16, fontWeight: 500, color: 'var(--foreground-secondary)' }}>Compact Mode</h3>
+          <Accordion
+            items={[
+              {
+                id: 'c1',
+                title: t('accordion.q1.title'),
+                content: <p>{t('accordion.q1.content')}</p>
+              },
+              {
+                id: 'c2',
+                title: t('accordion.q2.title'),
+                content: <p>{t('accordion.q2.content')}</p>
+              },
+              {
+                id: 'c3',
+                title: t('accordion.q3.title'),
+                content: <p>{t('accordion.q3.content')}</p>
+              },
+            ]}
+            compact
+            allowMultiple
+          />
+        </div>
       </section>
 
       {/* Hero Component (default + brand) - stacked */}
@@ -660,6 +721,9 @@ export default function App() {
         </div>
       </section>
       </div>
+
+      {/* Footer */}
+      <Footer />
         </>
       )}
     </div>

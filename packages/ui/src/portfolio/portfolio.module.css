@@ -466,7 +466,13 @@ body {
 /* Ensure all top-level sections in the grid start at the same vertical position
    so headings align consistently across views (hero/work/settings). */
 .grid > section {
-  padding-top: var(--yuanhhou-spacing-400);
+  padding-top: 0;
+}
+
+/* Work and Settings sections need consistent top spacing to align with hero */
+.workSection,
+.settings {
+  margin-top: var(--yuanhhou-spacing-400);
 }
 
 .workCards {

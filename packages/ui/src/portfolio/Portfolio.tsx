@@ -9,6 +9,9 @@ import { ThemeSelector } from './ThemeSelector'
 import { Hero } from '../UIComponents/Hero/Hero'
 import { Toggle } from '../UIComponents/Toggle/Toggle'
 import { Card } from '../UIComponents/Card/Card'
+import { InterestingFacts } from '../UIComponents/InterestingFacts'
+import { Footer } from '../UIComponents/Footer'
+import { About } from '../UIComponents/About'
 import { useTheme } from '../ThemeProvider'
 import styles from './portfolio.module.css'
 import heroImg from '../assets/hero.png'
@@ -19,7 +22,7 @@ export const Portfolio: React.FC = () => {
   const { t, i18n } = useTranslation()
   useTheme()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [currentView, setCurrentView] = useState<'home' | 'work' | 'settings'>('home')
+  const [currentView, setCurrentView] = useState<'home' | 'about' | 'work' | 'settings'>('home')
   const [selectedLanguage, setSelectedLanguage] = useState<(string | number)[]>([i18n.language])
   
   // Onboarding dialog state
@@ -72,8 +75,9 @@ export const Portfolio: React.FC = () => {
   }, [i18n.language, t])
 
   useEffect(() => {
-    // Announce view changes (home/work/settings)
-    setAnnouncement(t('aria.viewChanged', { view: t(`portfolio.nav.${currentView === 'home' ? 'about' : currentView}`) }))
+    // Announce view changes
+    const viewName = currentView === 'home' ? 'home' : currentView
+    setAnnouncement(t('aria.viewChanged', { view: t(`portfolio.nav.${viewName}`) }))
   }, [currentView, t])
 
   return (
@@ -104,7 +108,7 @@ export const Portfolio: React.FC = () => {
                 <ThemeSelector />
               </li>
               <li>
-                <a href="#about" aria-current={currentView === 'home' ? 'page' : undefined} className={currentView === 'home' ? styles.active : ''}>{t('portfolio.nav.about')}</a>
+                <a href="#about" onClick={() => { setCurrentView('about'); setIsMenuOpen(false); }} aria-current={currentView === 'about' ? 'page' : undefined} className={currentView === 'about' ? styles.active : ''}>{t('portfolio.nav.about')}</a>
               </li>
               <li>
                 <a href="#work" onClick={() => { setCurrentView('work'); setIsMenuOpen(false); }} aria-current={currentView === 'work' ? 'page' : undefined} className={currentView === 'work' ? styles.active : ''}>{t('portfolio.nav.work')}</a>
@@ -146,7 +150,6 @@ export const Portfolio: React.FC = () => {
                 subtitle={t('portfolio.hero.subtitle')}
                 imageSrc={heroImg}
                 imageAlt={t('portfolio.hero.imageAlt')}
-                imageVariant="decorated"
                 className={styles.heroLeft}
                 ctaLabel={t('portfolio.hero.cta') || 'View recent work'}
                 ctaHref="#work"
@@ -154,12 +157,12 @@ export const Portfolio: React.FC = () => {
               />
             </section>
 
-            {/* Content Area */}
-            <section className={styles.content}>
-              <div className={styles.placeholder}>
-                <p>{t('portfolio.placeholder')}</p>
-              </div>
-            </section>
+            {/* Interesting Facts Section */}
+            <InterestingFacts />
+          </div>
+        ) : currentView === 'about' ? (
+          <div className={styles.grid}>
+            <About />
           </div>
         ) : currentView === 'work' ? (
           <div className={styles.grid}>
@@ -261,6 +264,9 @@ export const Portfolio: React.FC = () => {
           </div>
         )}
       </main>
+
+      {/* Footer */}
+      <Footer />
 
       {/* Onboarding Dialog */}
       <Dialog

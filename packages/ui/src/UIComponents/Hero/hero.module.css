@@ -57,9 +57,22 @@
 
 .placeholder { width: 100%; max-width: 480px; height: 220px; background: var(--background-secondary); border-radius: var(--radius-medium); }
 
+/* Video - shares same dimensions and styling as image */
+.video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: var(--radius-medium);
+  box-shadow: none;
+  object-fit: contain;
+  object-position: center bottom;
+  max-height: 400px;
+}
+
 /* Tablet (600 - 899px) */
 @media (min-width: 600px) and (max-width: 899px) {
-  .image { max-height: 400px; object-position: center center; }
+  .image, .video { max-height: 400px; object-position: center center; }
   .media { overflow: visible; }
 }
 
@@ -68,14 +81,14 @@
   .hero { flex-direction: row; align-items: center; justify-content: space-between; min-height: 520px; padding-inline: 48px; }
   .text { flex: 0 1 38%; }
   .media { flex: 0 1 58%; height: 100%; overflow: hidden; border-radius: calc(var(--radius-medium) - 2px); padding: 0; display: flex; align-items: flex-end; justify-content: flex-end; }
-  .image { max-height: 100%; width: auto; object-position: right bottom; }
+  .image, .video { max-height: 100%; width: auto; object-position: right bottom; }
 }
 
 /* Small screens adjustments */
 @media (max-width: 599px) {
   .hero { padding-block-start: var(--yuanhhou-spacing-300, 24px); padding-block-end: var(--yuanhhou-spacing-500, 40px); padding-inline: var(--yuanhhou-spacing-200, 16px); }
   .media { width: 100%; overflow: visible; }
-  .image { max-height: 400px; object-position: center bottom; }
+  .image, .video { max-height: 400px; object-position: center bottom; }
 }
 
 /* For viewports 900px and below: place media above text */
@@ -86,7 +99,7 @@
   .title { text-align: left; }
   .subtitle { text-align: left; }
   .actions { text-align: left; }
-  .image { object-position: center top; }
+  .image, .video { object-position: center top; }
 }
 
 /* Brand variant rounding */
@@ -96,151 +109,6 @@
 /* Circle variant */
 .circle { width: 220px; height: 220px; border-radius: 50%; overflow: hidden; position: relative; display: inline-block; box-shadow: none; background: transparent; }
 .circleImage { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; }
-
-/* ========================================
-   Decorated variant - Mobile first (< 600px)
-   Proportional scaling like desktop
-   ======================================== */
-.decoratedContainer {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Scaled proportionally: desktop is 420x480, mobile ~50% */
-  width: 210px;
-  min-height: 270px;
-  /* Keep the decorated container clipped to a matching radius so corners match the media container */
-  border-radius: var(--radius-medium);
-  overflow: hidden;
-}
-
-.imageWrapper {
-  position: relative;
-  z-index: 1;
-  /* Ensure the image also respects the container radius */
-  border-radius: inherit;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.decoratedImage {
-  display: block;
-  width: auto;
-  /* Scaled proportionally: desktop is 400x515, mobile ~50% */
-  max-width: 200px;
-  max-height: 258px;
-  height: auto;
-  object-fit: contain;
-  object-position: center bottom;
-  position: relative;
-  z-index: 2;
-  /* Nudge image down slightly to align with staircase row baseline */
-  transform: translateY(var(--yuanhhou-spacing-25, 2px));
-}
-
-/* Overlay effect - subtle silhouette behind image */
-.imageOverlay {
-  position: absolute;
-  inset: 0;
-  background: var(--foreground-brand-primary, #0070be);
-  opacity: 0.08;
-  filter: blur(20px);
-  transform: scale(1.1);
-  z-index: 0;
-  border-radius: 50%;
-}
-
-/* Staircase squares base styles */
-.staircaseTopLeft,
-.staircaseBottomRight {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  gap: 0; /* vertical gap removed */
-  z-index: 0;
-}
-
-.staircaseTopLeft {
-  top: 0;
-  left: 0;
-}
-
-.staircaseBottomRight {
-  bottom: 0;
-  right: 0;
-  align-items: flex-end;
-  z-index: 3; /* On top of image */
-}
-
-.squareRow {
-  display: flex;
-  gap: 0; /* horizontal gap removed */
-}
-
-.staircaseBottomRight .squareRow {
-  justify-content: flex-end;
-}
-
-/* Square - uses theme token for multi-theme support */
-.square {
-  width: 20px;
-  height: 20px;
-  background-color: var(--foreground-brand-primary, #0070be);
-  flex-shrink: 0;
-  transform-origin: center center;
-}
-
-/* Animation removed: squares are static decorative elements now */
-
-/* Tablet (600px - 899px) - proportional scaling ~70% of desktop */
-@media (min-width: 600px) and (max-width: 899px) {
-  .decoratedContainer {
-    width: 294px;
-    min-height: 378px;
-  }
-
-  .decoratedImage {
-    max-width: 280px;
-    max-height: 360px;
-    /* Slightly larger nudge on tablet to align baseline */
-    transform: translateY(var(--yuanhhou-spacing-50, 4px));
-  }
-
-  .square {
-    width: 28px;
-    height: 28px;
-  }
-
-  .imageOverlay {
-    filter: blur(25px);
-  }
-}
-
-/* Desktop (900px+) - full size */
-@media (min-width: 900px) {
-  .decoratedContainer {
-    width: 420px;
-    min-height: 520px;
-  }
-
-  .decoratedImage {
-    max-width: 400px;
-    max-height: 515px;
-    /* Desktop uses small nudge */
-    transform: translateY(var(--yuanhhou-spacing-25, 2px));
-  }
-
-  .square {
-    width: 40px;
-    height: 40px;
-  }
-
-  .imageOverlay {
-    filter: blur(30px);
-    transform: scale(1.15);
-  }
-}
 
 /* Global fallbacks for generated classnames */
 :global(._hero_tceyh_2), :global([class*="_hero_"]) { padding-bottom: var(--yuanhhou-spacing-500, 40px); }

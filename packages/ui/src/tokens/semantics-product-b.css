@@ -158,4 +158,14 @@
   --radius-accordion: var(--yuanhhou-border-radius-200);   /* 16px - rounded accordion */
   --radius-modal: var(--yuanhhou-border-radius-300);       /* 24px - modals */
   --radius-tooltip: var(--yuanhhou-border-radius-100);     /* 8px - tooltips */
+
+
+  /* ——— SHADOWS ——— */
+
+  /* Card hover shadow - glowing EVA effect */
+  --shadow-card-hover: 0 8px 32px rgba(160, 255, 60, 0.15), 0 4px 12px rgba(128, 0, 200, 0.2);
+  /* Card active/pressed shadow */
+  --shadow-card-active: 0 2px 8px rgba(128, 0, 200, 0.3);
+  /* Elevated elements (modals, dropdowns) */
+  --shadow-elevated: 0 16px 48px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(128, 0, 200, 0.2);
 }

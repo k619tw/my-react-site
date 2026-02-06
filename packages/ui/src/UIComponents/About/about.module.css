@@ -1,0 +1,342 @@
+/* About section - Two column layout with Education and Work Experience */
+
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-400);
+}
+
+/* Screen reader only */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ===== Two Column Grid ===== */
+.twoColumnGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-300);
+}
+
+/* ===== Card Base Styles ===== */
+.educationCard,
+.experienceCard {
+  background: var(--background-card-primary);
+  border-radius: var(--radius-large);
+  padding: var(--yuanhhou-spacing-300);
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-300);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--yuanhhou-spacing-150);
+}
+
+.cardIcon {
+  width: var(--yuanhhou-size-300);
+  height: var(--yuanhhou-size-300);
+  color: var(--foreground-brand-primary);
+  flex-shrink: 0;
+}
+
+.cardTitle {
+  font-size: var(--yuanhhou-heading-md-font-size);
+  font-weight: var(--yuanhhou-heading-md-font-weight);
+  line-height: var(--yuanhhou-heading-md-line-height);
+  color: var(--foreground-primary);
+  margin: 0;
+}
+
+/* ===== Education Card ===== */
+.educationList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-200);
+}
+
+.educationItem {
+  display: flex;
+  gap: var(--yuanhhou-spacing-200);
+  flex: 1;
+}
+
+.timelineConnector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: var(--yuanhhou-spacing-50);
+}
+
+.timelineDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--foreground-brand-primary);
+  flex-shrink: 0;
+}
+
+.timelineLine {
+  width: 2px;
+  flex: 1;
+  background: var(--border-secondary);
+  margin-top: var(--yuanhhou-spacing-100);
+}
+
+.educationContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-50);
+}
+
+.schoolName {
+  font-size: var(--yuanhhou-type-body-3-font-size);
+  line-height: var(--yuanhhou-type-body-3-line-height);
+  font-weight: var(--yuanhhou-font-weight-regular);
+  color: var(--foreground-secondary);
+  margin: 0;
+}
+
+.degree {
+  font-size: var(--yuanhhou-type-body-3-font-size);
+  line-height: var(--yuanhhou-type-body-3-line-height);
+  color: var(--foreground-secondary);
+  margin: 0;
+}
+
+.educationMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--yuanhhou-spacing-200);
+  margin-top: var(--yuanhhou-spacing-50);
+}
+
+.location {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--yuanhhou-spacing-50);
+  font-size: var(--yuanhhou-type-body-3-font-size);
+  color: var(--foreground-secondary);
+}
+
+.location svg {
+  width: var(--yuanhhou-size-150);
+  height: var(--yuanhhou-size-150);
+  flex-shrink: 0;
+}
+
+.date {
+  font-size: var(--yuanhhou-type-body-2-font-size);
+  line-height: var(--yuanhhou-type-body-2-line-height);
+  font-weight: var(--yuanhhou-font-weight-semibold);
+  color: var(--foreground-primary);
+}
+
+/* ===== Work Experience Card (Custom Disclosure) ===== */
+.jobsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.jobItem {
+  /* No divider lines */
+}
+
+.jobTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--yuanhhou-spacing-200) 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: var(--yuanhhou-spacing-150);
+  transition: color 0.15s ease;
+}
+
+.jobTrigger:hover {
+  color: var(--foreground-brand-primary);
+}
+
+.jobTrigger:hover .jobIcon {
+  color: var(--foreground-brand-primary);
+}
+
+.jobTrigger:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+.jobTitleWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-50);
+}
+
+.jobTitle {
+  font-size: var(--yuanhhou-type-body-2-font-size);
+  font-weight: var(--yuanhhou-font-weight-semibold);
+  line-height: var(--yuanhhou-type-body-2-line-height);
+  color: var(--foreground-primary);
+}
+
+.jobMeta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--yuanhhou-spacing-50);
+  font-size: var(--yuanhhou-type-body-3-font-size);
+  font-weight: var(--yuanhhou-font-weight-regular);
+  line-height: var(--yuanhhou-type-body-3-line-height);
+  color: var(--foreground-tertiary);
+}
+
+.jobIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--foreground-secondary);
+  transition: transform 220ms ease, color 0.15s ease;
+}
+
+.jobPanel {
+  padding: 0 0 var(--yuanhhou-spacing-250) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-200);
+  overflow: hidden;
+  transition: opacity 200ms ease;
+}
+
+.jobPanel[hidden] {
+  display: none;
+}
+
+.jobDescription {
+  font-size: var(--yuanhhou-type-body-3-font-size);
+  line-height: var(--yuanhhou-type-body-3-line-height);
+  color: var(--foreground-secondary);
+  margin: 0;
+}
+
+.responsibilities {
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-150);
+}
+
+.responsibilitiesTitle {
+  font-size: var(--yuanhhou-type-body-3-font-size);
+  line-height: var(--yuanhhou-type-body-3-line-height);
+  font-weight: var(--yuanhhou-font-weight-semibold);
+  color: var(--foreground-primary);
+  margin: 0;
+}
+
+.responsibilitiesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-100);
+}
+
+.responsibilityItem {
+  position: relative;
+  padding-left: var(--yuanhhou-spacing-200);
+  font-size: var(--yuanhhou-type-body-3-font-size);
+  line-height: var(--yuanhhou-type-body-3-line-height);
+  color: var(--foreground-tertiary);
+}
+
+.responsibilityItem::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--foreground-brand-primary);
+}
+
+/* ===== Tablet Layout ===== */
+@media (min-width: 640px) {
+  .educationCard,
+  .experienceCard {
+    padding: var(--yuanhhou-spacing-400);
+  }
+}
+
+/* ===== Desktop Layout (Two Columns: 25% + 75%) ===== */
+@media (min-width: 1024px) {
+  .twoColumnGrid {
+    flex-direction: row;
+    gap: var(--yuanhhou-spacing-400);
+    align-items: stretch;
+  }
+
+  .educationCard {
+    flex: 0 0 25%;
+    min-width: 280px;
+  }
+
+  .educationList {
+    flex: 1;
+  }
+
+  .educationItem:last-child {
+    flex: 0;
+  }
+
+  .experienceCard {
+    flex: 1;
+  }
+}
+
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  .jobTrigger,
+  .jobIcon,
+  .jobPanel {
+    transition: none;
+  }
+}
+
+/* ===== Animation on scroll ===== */
+@media (prefers-reduced-motion: no-preference) {
+  .educationCard,
+  .experienceCard {
+    animation: fadeInUp 0.4s ease-out;
+  }
+
+  .educationCard { animation-delay: 0.1s; }
+  .experienceCard { animation-delay: 0.2s; }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

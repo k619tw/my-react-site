@@ -1,0 +1,769 @@
+/* ========================================
+   INTERESTING FACTS - BENTO GRID SECTION
+   ========================================
+   A bento-style grid layout showcasing personal facts.
+   Desktop-first with mobile-responsive structure.
+   ======================================== */
+
+/* Section container */
+.section {
+  width: 100%;
+  padding-block: var(--yuanhhou-spacing-500);
+}
+
+/* Inner container with max-width */
+.container {
+  background: var(--background-secondary);
+  border-radius: var(--radius-large);
+  /* Reduced horizontal padding for more card flexibility */
+  padding: var(--yuanhhou-spacing-1000) var(--yuanhhou-spacing-800);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* === HEADER === */
+.header {
+  /* 32px gap between subtitle and card grid on desktop */
+  margin-bottom: var(--yuanhhou-spacing-400);
+}
+
+.title {
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: var(--yuanhhou-display-lg-font-size);
+  font-weight: var(--yuanhhou-font-weight-600);
+  line-height: 41px;
+  letter-spacing: -0.1px;
+  color: var(--foreground-primary);
+  /* 48px spacing between title and subtitle */
+  margin: 0 0 var(--yuanhhou-spacing-600) 0;
+}
+
+.subtitle {
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: var(--yuanhhou-heading-sm-font-size);
+  font-weight: var(--yuanhhou-font-weight-600);
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: var(--foreground-secondary);
+  margin: 0;
+}
+
+/* === MAIN GRID CONTAINER === */
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-200);
+}
+
+/* === TOP ROW === */
+.topRow {
+  display: flex;
+  gap: 14px;
+}
+
+/* === MIDDLE SECTION (CSS Grid Layout) === */
+.middleSection {
+  display: grid;
+  /*
+   * Grid columns:
+   * - Left area (band + years combined ~510px)
+   * - Center (gradient card 312px)
+   * - Right (testimonial flexible ~400px)
+   * Bottom row: travel gets slightly more, stats gets remaining width
+   */
+  grid-template-columns: 1.15fr 1fr 312px 1.5fr;
+  grid-template-rows: auto auto auto;
+  gap: 14px;
+  position: relative;
+  overflow: visible;
+}
+
+/* Grid placement for each card */
+.sportyCard {
+  grid-column: 1 / 3; /* Spans first two columns */
+  grid-row: 1;
+}
+
+.gradientCard {
+  grid-column: 3;
+  grid-row: 1 / 3; /* Spans rows 1-2 */
+}
+
+.testimonialCard {
+  grid-column: 4;
+  grid-row: 1 / 4; /* Spans all 3 rows */
+}
+
+.bandCard {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.yearsCard {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.travelCard {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.statsCard {
+  grid-column: 2 / 4; /* Stats spans 2 columns - more width for longer text */
+  grid-row: 3;
+}
+
+/* === SHARED CARD STYLES === */
+.sportyCard,
+.bandCard,
+.yearsCard,
+.testimonialCard,
+.travelCard,
+.statsCard {
+  background: var(--background-primary);
+  border-radius: var(--radius-large);
+  overflow: hidden;
+  /* Hover micro-interaction */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Card hover effect - lift and shadow */
+.sportyCard:hover,
+.bandCard:hover,
+.yearsCard:hover,
+.testimonialCard:hover,
+.travelCard:hover,
+.statsCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Companies and Tools cards use theme tokens for consistency */
+.companiesCard,
+.toolsCard {
+  background: var(--background-primary);
+  border-radius: var(--radius-large);
+  overflow: hidden;
+  /* Hover micro-interaction */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Card hover effect for top row cards */
+.companiesCard:hover,
+.toolsCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Theme-aware text color for companies card title */
+.companiesCard .cardTitle {
+  color: var(--foreground-primary);
+}
+
+/* Theme-aware text color for tools card label */
+.toolsCard .toolsLabel {
+  color: var(--foreground-primary);
+}
+
+/* === TOP ROW - COMPANIES CARD (Fixed 402px) === */
+.companiesCard {
+  width: 402px;
+  min-height: 300px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center content vertically within card */
+  justify-content: center;
+  /* Consistent padding across all cards */
+  padding: var(--yuanhhou-spacing-400);
+}
+
+.cardTitle {
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: var(--yuanhhou-heading-sm-font-size);
+  font-weight: var(--yuanhhou-font-weight-600);
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: var(--foreground-primary);
+  text-align: center;
+  margin: 0 0 var(--yuanhhou-spacing-400) 0;
+}
+
+.cardTitleLeft {
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: var(--yuanhhou-heading-sm-font-size);
+  font-weight: var(--yuanhhou-font-weight-600);
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: var(--foreground-primary);
+  margin: 0 0 var(--yuanhhou-spacing-100) 0;
+}
+
+.cardTitleCenter {
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: var(--yuanhhou-heading-sm-font-size);
+  font-weight: var(--yuanhhou-font-weight-600);
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: var(--foreground-primary);
+  text-align: center;
+  margin: 0;
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--yuanhhou-spacing-300);
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--yuanhhou-spacing-300);
+}
+
+.logoBupa {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logoBlua {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logoCtm {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* === TOP ROW - TOOLS CARD (Flexible) === */
+.toolsCard {
+  flex: 1;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Consistent padding across all cards */
+  padding: var(--yuanhhou-spacing-400);
+  gap: var(--yuanhhou-spacing-400);
+}
+
+.toolsGrid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--yuanhhou-spacing-400);
+}
+
+.toolsGridBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--yuanhhou-spacing-300);
+}
+
+.toolIcon {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+}
+
+.toolIconProtopie {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+.toolIconVSCode {
+  height: 59px;
+  width: auto;
+  object-fit: contain;
+}
+
+.toolIconClaude {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+.adobeIcon {
+  height: 64px;
+  width: 64px;
+  object-fit: contain;
+}
+
+.toolsLabel {
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: var(--yuanhhou-heading-sm-font-size);
+  font-weight: var(--yuanhhou-font-weight-600);
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: var(--foreground-primary);
+  text-align: center;
+  margin: 0;
+}
+
+/* === MIDDLE SECTION - SPORTY CARD === */
+.sportyCard {
+  /* Grid handles width */
+  min-height: 127px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--yuanhhou-spacing-400);
+}
+
+.sportyContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-100);
+}
+
+.sportyCTA {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--yuanhhou-spacing-50);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: 15px;
+  font-weight: var(--yuanhhou-font-weight-600);
+  line-height: 20px;
+  letter-spacing: -0.4px;
+  color: var(--foreground-brand-primary);
+  transition: opacity 0.2s ease;
+}
+
+.sportyCTA:hover {
+  opacity: 0.8;
+}
+
+.sportyCTA:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-small);
+}
+
+.sportyIcon {
+  color: var(--foreground-brand-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Basketball rotation animation on hover */
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Rotate basketball icon clockwise when hovering sporty card */
+.sportyCard:hover .sportyIcon {
+  transform: rotate(360deg);
+}
+
+/* === MIDDLE SECTION - BAND CARD === */
+.bandCard {
+  /* Grid handles width */
+  min-height: 232px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--yuanhhou-spacing-400);
+}
+
+.bandImage {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: var(--yuanhhou-spacing-200) 0;
+}
+
+.bandName {
+  font-family: var(--yuanhhou-font-family-primary), 'Noto Sans JP', sans-serif;
+  font-size: var(--yuanhhou-heading-sm-font-size);
+  font-weight: var(--yuanhhou-font-weight-600);
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: var(--foreground-primary);
+  text-align: center;
+  margin: 0;
+}
+
+/* === MIDDLE SECTION - YEARS CARD === */
+.yearsCard {
+  /* Grid handles width */
+  min-height: 232px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--yuanhhou-spacing-400);
+  /* 32px gap between number and label */
+  gap: var(--yuanhhou-spacing-400);
+}
+
+.yearsNumber {
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: var(--yuanhhou-display-lg-font-size);
+  font-weight: var(--yuanhhou-font-weight-700);
+  line-height: 41px;
+  letter-spacing: -0.1px;
+  color: var(--foreground-primary);
+  text-align: center;
+}
+
+.yearsLabel {
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: var(--yuanhhou-heading-sm-font-size);
+  font-weight: var(--yuanhhou-font-weight-600);
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: var(--foreground-primary);
+  text-align: center;
+}
+
+/* === MIDDLE SECTION - TRAVEL CARD === */
+.travelCard {
+  /* Grid handles width - fills row 3 column 1 */
+  /* Height stretches to match stats card in same row */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--yuanhhou-spacing-400);
+  gap: var(--yuanhhou-spacing-200);
+}
+
+.flags {
+  display: flex;
+  align-items: center;
+  gap: var(--yuanhhou-spacing-100);
+}
+
+.flag {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 0.533px solid var(--border-secondary);
+}
+
+.flagLarge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 0.6px solid var(--border-tertiary);
+}
+
+/* === MIDDLE SECTION - GRADIENT CARD WITH OVERFLOW === */
+.gradientCard {
+  width: 312px;
+  height: 380px;
+  flex-shrink: 0;
+  border-radius: var(--yuanhhou-border-radius-125);
+  overflow: visible;
+  position: relative;
+  /* Custom gradient: info-primary (top-left) to success-primary (bottom-right) */
+  background: linear-gradient(
+    141.56deg,
+    var(--background-info-primary) 3.58%,
+    var(--background-success-primary) 97.98%
+  );
+}
+
+.gradientImageWrapper {
+  position: absolute;
+  /* Even larger image - hand extends outside container (top/left only) */
+  width: 380px;
+  height: 580px;
+  left: -35px;
+  top: -200px;
+  overflow: visible;
+}
+
+.gradientImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  pointer-events: none;
+}
+
+/* === MIDDLE SECTION - STATS CARD === */
+.statsCard {
+  /* Grid handles width - spans 2 columns for more space (longer text) */
+  /* Height stretches to match travel card in same row */
+  display: flex;
+  align-items: center;
+  padding: var(--yuanhhou-spacing-400);
+  gap: var(--yuanhhou-spacing-200);
+}
+
+.statsNumber {
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: 60px;
+  font-weight: var(--yuanhhou-font-weight-700);
+  line-height: 73px;
+  letter-spacing: -0.2px;
+  color: var(--foreground-primary);
+  flex-shrink: 0;
+}
+
+.statsText {
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: var(--yuanhhou-heading-sm-font-size);
+  font-weight: var(--yuanhhou-font-weight-600);
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: var(--foreground-primary);
+  margin: 0;
+}
+
+/* === MIDDLE SECTION - TESTIMONIAL CARD === */
+.testimonialCard {
+  /* Grid handles width and height - spans all 3 rows */
+  display: flex;
+  flex-direction: column;
+  padding: var(--yuanhhou-spacing-400);
+  position: relative;
+}
+
+.testimonialTitle {
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: var(--yuanhhou-heading-sm-font-size);
+  font-weight: var(--yuanhhou-font-weight-700);
+  line-height: 25px;
+  letter-spacing: -0.4px;
+  color: var(--foreground-primary);
+  margin: 0;
+  max-width: 265px;
+}
+
+.testimonialPlaceholder {
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: var(--yuanhhou-body-sm-font-size);
+  font-weight: var(--yuanhhou-font-weight-400);
+  line-height: 18px;
+  letter-spacing: -0.4px;
+  color: var(--foreground-secondary);
+  margin: var(--yuanhhou-spacing-100) 0 var(--yuanhhou-spacing-200) 0;
+}
+
+.quoteWrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Opening quote - top left, rotated 180deg */
+.quoteIconOpen {
+  width: 56px;
+  height: 56px;
+  transform: rotate(180deg);
+  color: var(--foreground-brand-primary);
+  flex-shrink: 0;
+}
+
+/* Closing quote - bottom right, under the quote text */
+.quoteIconClose {
+  width: 56px;
+  height: 56px;
+  color: var(--foreground-brand-primary);
+  align-self: flex-end;
+  margin-top: var(--yuanhhou-spacing-100);
+}
+
+.testimonialQuote {
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: var(--yuanhhou-heading-sm-font-size);
+  font-weight: var(--yuanhhou-font-weight-600);
+  font-style: italic;
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: var(--foreground-brand-primary);
+  margin: 0;
+}
+
+.testimonialFooter {
+  display: flex;
+  align-items: center;
+  gap: var(--yuanhhou-spacing-150);
+  margin-top: auto;
+  padding-top: var(--yuanhhou-spacing-300);
+}
+
+.testimonialAvatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonialAuthor {
+  display: flex;
+  flex-direction: column;
+  gap: var(--yuanhhou-spacing-50);
+}
+
+.authorName {
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: var(--yuanhhou-heading-sm-font-size);
+  font-weight: var(--yuanhhou-font-weight-700);
+  line-height: 25px;
+  letter-spacing: -0.4px;
+  color: var(--foreground-primary);
+  font-style: normal;
+}
+
+.authorRole {
+  font-family: var(--yuanhhou-font-family-primary);
+  font-size: 17px;
+  font-weight: var(--yuanhhou-font-weight-400);
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: var(--foreground-primary);
+}
+
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+
+/* Tablet and below */
+@media (max-width: 1200px) {
+  .container {
+    padding: var(--yuanhhou-spacing-600) var(--yuanhhou-spacing-400);
+  }
+
+  .topRow {
+    flex-direction: column;
+  }
+
+  /* Switch to single-column grid on tablet */
+  .middleSection {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  /* All cards become full-width */
+  .companiesCard,
+  .toolsCard,
+  .sportyCard,
+  .testimonialCard,
+  .bandCard,
+  .yearsCard,
+  .travelCard,
+  .statsCard {
+    width: 100%;
+  }
+
+  /* Band and years side by side on tablet */
+  .bandCard,
+  .yearsCard {
+    display: inline-flex;
+    width: calc(50% - 7px);
+  }
+
+  /* Hide gradient card (hero image) on tablet - not meaningful on smaller screens */
+  .gradientCard {
+    display: none;
+  }
+
+  .testimonialCard {
+    min-height: 400px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .section {
+    padding-block: var(--yuanhhou-spacing-300);
+  }
+
+  .container {
+    padding: var(--yuanhhou-spacing-400) var(--yuanhhou-spacing-300);
+    border-radius: var(--radius-medium);
+  }
+
+  /* Smaller gap between header and cards on mobile */
+  .header {
+    margin-bottom: var(--yuanhhou-spacing-200);
+  }
+
+  .title {
+    font-size: var(--yuanhhou-display-sm-font-size);
+    line-height: 40px;
+    /* Keep 48px spacing between title and subtitle on mobile too */
+    margin-bottom: var(--yuanhhou-spacing-600);
+  }
+
+  .subtitle {
+    font-size: var(--yuanhhou-body-lg-font-size);
+  }
+
+  /* All cards full width on mobile */
+  .bandCard,
+  .yearsCard {
+    width: 100%;
+    min-height: 180px;
+  }
+
+  /* Card title adjustments */
+  .cardTitle,
+  .cardTitleLeft,
+  .cardTitleCenter,
+  .testimonialTitle {
+    text-align: left;
+  }
+
+  /* Tools grid wrap for mobile */
+  .toolsGrid,
+  .toolsGridBottom {
+    flex-wrap: wrap;
+    gap: var(--yuanhhou-spacing-200);
+  }
+
+  /* Stats card stacks on mobile */
+  .statsCard {
+    flex-direction: column;
+    text-align: center;
+    min-height: 128px;
+  }
+
+  .statsNumber {
+    font-size: var(--yuanhhou-display-lg-font-size);
+    line-height: 56px;
+  }
+
+  .travelCard {
+    width: 100%;
+    min-height: 128px;
+  }
+
+  /* Sporty card on mobile - left align content */
+  .sportyCard {
+    min-height: 127px;
+    justify-content: flex-start;
+    gap: var(--yuanhhou-spacing-400);
+  }
+
+  .sportyIcon {
+    order: -1;
+  }
+
+  /* Gradient card hidden on mobile (inherited from tablet) */
+
+  /* Testimonial card on mobile */
+  .testimonialCard {
+    min-height: auto;
+  }
+}

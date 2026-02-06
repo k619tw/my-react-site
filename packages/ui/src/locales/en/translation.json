@@ -11,8 +11,8 @@
     "card": "Card Component",
     "chip": "Chip Component",
     "dialog": "Dialog Component",
-    "toggle": "Toggle Component"
-    ,"hero": "Hero Component"
+    "toggle": "Toggle Component",
+    "hero": "Hero Component"
   },
   "sizes": {
     "small": "Small Size",
@@ -119,8 +119,8 @@
     "confirm": "Confirm",
     "gotIt": "Got it",
     "delete": "Delete",
-    "customAction": "Custom Action"
-    ,"close": "Close"
+    "customAction": "Custom Action",
+    "close": "Close"
   },
   "toggle": {
     "title": "Toggle Component",
@@ -143,7 +143,7 @@
     "logo": "Portfolio",
     "nav": {
       "home": "Home",
-      "about": "About",
+      "about": "About Me",
       "work": "Work",
       "contact": "Contact",
       "settings": "Settings",
@@ -208,6 +208,141 @@
     "skipToContent": "Skip to main content",
     "languageChanged": "Language changed to {{lang}}",
     "viewChanged": "View changed to {{view}}"
+  },
+  "interestingFacts": {
+    "title": "Interesting facts",
+    "subtitle": "A few things you may want to know",
+    "companies": {
+      "title": "Company & Products\nI have worked with"
+    },
+    "tools": {
+      "label": "Creative tools I use"
+    },
+    "sporty": {
+      "title": "Sporty person",
+      "cta": "Check out my three-point shot"
+    },
+    "band": {
+      "title": "Favourite band",
+      "name": "ヨルシカ"
+    },
+    "years": {
+      "number": "5 years",
+      "label": "in industry"
+    },
+    "testimonial": {
+      "title": "What a design expert says about me",
+      "placeholder": "This is a placeholder",
+      "quote": "Yuan is an incredibly talented designer in Australia who plays a key role in helping the Design Systems team at Bupa APAC ensure high-quality, accessible components. His strategic approach to tackling enterprise challenges is always spot on.",
+      "author": "Rifan Thamrin",
+      "role": "Lead Design System Designer"
+    },
+    "travel": {
+      "title": "This year I am going to"
+    },
+    "stats": {
+      "number": "31K",
+      "text": "users downloaded a newly launched app I worked on within 2 months"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "socialLinksLabel": "Social links",
+    "resumeLabel": "Download resume (opens in new tab)",
+    "linkedinLabel": "LinkedIn profile (opens in new tab)",
+    "spotifyLabel": "Spotify profile (opens in new tab)"
+  },
+  "about": {
+    "linkedinLabel": "LinkedIn profile (opens in new tab)",
+    "tagline": "Design specialist with expertise in enterprise delivery, design systems, and accessibility.",
+    "skillsTitle": "Skills",
+    "toolsTitle": "Tools",
+    "educationTitle": "Education",
+    "experienceTitle": "Work Experience",
+    "responsibilitiesTitle": "Key Responsibilities",
+    "skills": {
+      "designSystems": "Design Systems",
+      "uiUxDesign": "UI / UX Design",
+      "webDesign": "Web Design",
+      "frontEnd": "Front-End Development",
+      "threeD": "3D Modelling & Animation",
+      "videoPhoto": "Video/Photo Editing",
+      "prototype": "Interactive Prototyping",
+      "visualEffects": "Visual Effects",
+      "motionGraphics": "Motion Graphics",
+      "hciResearch": "HCI Research"
+    },
+    "jobs": {
+      "bupa": {
+        "title": "Design System Designer at Bupa",
+        "date": "May 2023 - Present",
+        "location": "Brisbane, Australia",
+        "description": "Part of the Design System team, building and optimising digital components that power customer-facing web and app experiences across Bupa APAC.",
+        "resp1": "Maintain a cohesive digital experience across all design system patterns and components.",
+        "resp2": "Define usability and accessibility standards, ensuring best practices are applied throughout the design process.",
+        "resp3": "Partner closely with front-end developers to translate designs into code, prioritising simplicity, performance, and quality.",
+        "resp4": "Use analytics and user insights to continuously improve design system performance and customer outcomes."
+      },
+      "bupaSecondment": {
+        "title": "Experience Designer (Secondment) at Bupa",
+        "date": "Feb 2025 - Jan 2026",
+        "location": "Brisbane, Australia",
+        "description": "Seconded to support a key enterprise initiative, working as an experience designer on Blua, a new mobile health app.",
+        "resp1": "Design end-to-end onboarding, health data sync, and account access experiences for the new mobile app.",
+        "resp2": "Collaborate with international engineering teams to successfully launch the app across the APAC region.",
+        "resp3": "Work with Content, Brand, and Marketing teams on App Store and Play Store submissions.",
+        "resp4": "Partner with the Native Design System team to identify and design reusable components."
+      },
+      "ctm": {
+        "title": "Product Designer (Design System) at Compare the Market",
+        "date": "Jul 2022 - May 2023",
+        "location": "Brisbane, Australia",
+        "description": "Led the creation of Mecha, Compare the Market's design system, from the ground up. The system is now live across the main website and Pet Insurance product, serving as a foundation for all future products.",
+        "resp1": "Built a comprehensive design system covering typography, colour palette, iconography, and design principles.",
+        "resp2": "Applied UX/UI best practices from Apple HIG, Material Design, and WCAG to ensure high-quality components.",
+        "resp3": "Worked with cross-functional teams to integrate the design system into development workflows, improving iteration speed and reducing design debt.",
+        "resp4": "Conducted usability testing to validate concepts before implementation."
+      },
+      "etrainu": {
+        "title": "eLearning Designer/Developer at etrainu",
+        "date": "Nov 2021 - Jun 2022",
+        "location": "Brisbane, Australia",
+        "description": "Created accessible eLearning modules for a platform serving over 1,000 clients, using Chameleon, Articulate 360, VS Code, and the Adobe suite.",
+        "resp1": "Built responsive learning experiences across web, mobile, and tablet devices.",
+        "resp2": "Designed and programmed interactive elements to maximise learner engagement.",
+        "resp3": "Created marketing and promotional materials for course launches.",
+        "resp4": "Debugged and maintained HTML code across new and existing modules."
+      },
+      "hyphen": {
+        "title": "UI/UX Developer at Studio Hyphen IO",
+        "date": "Jul 2021 - Oct 2021",
+        "location": "Brisbane, Australia",
+        "description": "Worked at a digital agency handling projects from design through to development, using WordPress, Bootstrap, PHP, and Figma.",
+        "resp1": "Delivered UX, UI, and front-end development across digital platforms.",
+        "resp2": "Improved visual design consistency across web and mobile assets.",
+        "resp3": "Designed and developed email campaigns in Figma and tested them in Mailchimp."
+      }
+    },
+    "education": {
+      "uq": {
+        "school": "The University of Queensland",
+        "degree": "Master of Interaction Design",
+        "location": "Brisbane, Australia",
+        "date": "2020 - 2021"
+      },
+      "rmit": {
+        "school": "RMIT University",
+        "degree": "Bachelor of Design (Digital Media)",
+        "location": "Melbourne, Australia",
+        "date": "2019"
+      },
+      "shihChien": {
+        "school": "Shih-Chien University",
+        "degree": "Bachelor of Business Administration",
+        "location": "Taipei, Taiwan",
+        "date": "2014 - 2018"
+      }
+    }
   },
   "preview": {
     "header": {

@@ -1,0 +1,129 @@
+/* IconButton component styles */
+
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: var(--radius-medium);
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+  text-decoration: none;
+}
+
+.iconButton:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+.iconButton:active:not(.disabled) {
+  transform: scale(0.95);
+}
+
+/* Size variants - button size with icon inside */
+.sm {
+  width: var(--yuanhhou-size-400);   /* 32px */
+  height: var(--yuanhhou-size-400);
+  padding: var(--yuanhhou-spacing-100);
+}
+
+.sm .icon {
+  width: var(--yuanhhou-size-200);   /* 16px */
+  height: var(--yuanhhou-size-200);
+}
+
+.md {
+  width: var(--yuanhhou-size-500);   /* 40px */
+  height: var(--yuanhhou-size-500);
+  padding: var(--yuanhhou-spacing-100);
+}
+
+.md .icon {
+  width: var(--yuanhhou-size-250);   /* 20px */
+  height: var(--yuanhhou-size-250);
+}
+
+.lg {
+  width: var(--yuanhhou-size-600);   /* 48px */
+  height: var(--yuanhhou-size-600);
+  padding: var(--yuanhhou-spacing-150);
+}
+
+.lg .icon {
+  width: var(--yuanhhou-size-300);   /* 24px */
+  height: var(--yuanhhou-size-300);
+}
+
+/* Variant: default */
+.default {
+  color: var(--foreground-secondary);
+  background: var(--background-interaction-primary);
+}
+
+.default:hover:not(.disabled) {
+  color: var(--foreground-primary);
+  background: var(--background-interaction-hover);
+}
+
+.default:active:not(.disabled) {
+  background: var(--background-interaction-active);
+}
+
+/* Variant: ghost (no background until hover) */
+.ghost {
+  color: var(--foreground-secondary);
+  background: transparent;
+}
+
+.ghost:hover:not(.disabled) {
+  color: var(--foreground-primary);
+  background: var(--background-interaction-hover);
+}
+
+.ghost:active:not(.disabled) {
+  background: var(--background-interaction-active);
+}
+
+/* Variant: brand */
+.brand {
+  color: var(--foreground-brand-on-primary);
+  background: var(--background-brand-primary);
+}
+
+.brand:hover:not(.disabled) {
+  filter: brightness(1.1);
+}
+
+.brand:active:not(.disabled) {
+  filter: brightness(0.95);
+}
+
+/* Variant: danger */
+.danger {
+  color: var(--foreground-danger-primary);
+  background: transparent;
+}
+
+.danger:hover:not(.disabled) {
+  color: var(--foreground-danger-on-primary);
+  background: var(--background-danger-primary);
+}
+
+.danger:active:not(.disabled) {
+  filter: brightness(0.95);
+}
+
+/* Disabled state */
+.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Icon fills the space allocated by size */
+.icon {
+  display: block;
+  flex-shrink: 0;
+}
